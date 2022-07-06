@@ -4,6 +4,8 @@ import Navbar from "./Navbar";
 import NotFound from "./NotFound";
 import HomePage from "./pages/HomePage";
 import Service from "./pages/Service";
+import LogIn from "./pages/LogIn";
+import Register from "./pages/Register";
 
 function Main() {
   return (
@@ -15,6 +17,8 @@ function Main() {
               <Routes>
               <Route exact path="/" element={<HomePage/>}/>
               <Route   path="/service" element={<Service/>}/>
+              <Route   path="/login" element={<LogIn/>}/>
+              <Route   path="/register" element={<Register/>}/>
               <Route path="*" element={<NotFound/>}/>
               </Routes> 
           </main>
