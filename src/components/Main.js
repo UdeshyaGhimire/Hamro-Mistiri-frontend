@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import NotFound from "./NotFound";
 import HomePage from "./pages/HomePage";
 import Service from "./pages/Service";
+import Plumber from "./pages/Plumber";
 
 function Main() {
   return (
@@ -15,6 +16,7 @@ function Main() {
               <Routes>
               <Route exact path="/" element={<HomePage/>}/>
               <Route   path="/service" element={<Service/>}/>
+              <Route   path="/plumber" element={<Plumber/>}/>
               <Route path="*" element={<NotFound/>}/>
               </Routes> 
           </main>
