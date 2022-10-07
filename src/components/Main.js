@@ -4,11 +4,13 @@ import Navbar from "./Navbar";
 import NotFound from "./NotFound";
 import HomePage from "./pages/HomePage";
 import Service from "./pages/Service";
+import LogInUser from "./pages/LogInUser";
+import LogInMistiri from "./pages/LogInMistiri";
+import RegisterUser from "./pages/RegisterUser";
+import RegisterMistiri from "./pages/RegisterMistiri";
 
 import Plumber from "./pages/Plumber";
 
-import LogIn from "./pages/LogIn";
-import Register from "./pages/Register";
 
 
 function Main() {
@@ -22,10 +24,12 @@ function Main() {
               <Route exact path="/" element={<HomePage/>}/>
               <Route   path="/service" element={<Service/>}/>
 
+              <Route   path="/loginuser" element={<LogInUser/>}/>
+              <Route   path="/loginmistiri" element={<LogInMistiri/>}/>
+              <Route   path="/registeruser" element={<RegisterUser/>}/>
+              <Route   path="/registermistiri" element={<RegisterMistiri/>}/>
+            
               <Route   path="/plumber" element={<Plumber/>}/>
-
-              <Route   path="/login" element={<LogIn/>}/>
-              <Route   path="/register" element={<Register/>}/>
 
               <Route path="*" element={<NotFound/>}/>
               </Routes> 
