@@ -9,6 +9,10 @@ import LogInMistiri from "./pages/LogInMistiri";
 import RegisterUser from "./pages/RegisterUser";
 import RegisterMistiri from "./pages/RegisterMistiri";
 
+import Plumber from "./pages/Plumber";
+
+
+
 function Main() {
   return (
     <Router>
@@ -19,10 +23,14 @@ function Main() {
               <Routes>
               <Route exact path="/" element={<HomePage/>}/>
               <Route   path="/service" element={<Service/>}/>
+
               <Route   path="/loginuser" element={<LogInUser/>}/>
               <Route   path="/loginmistiri" element={<LogInMistiri/>}/>
               <Route   path="/registeruser" element={<RegisterUser/>}/>
               <Route   path="/registermistiri" element={<RegisterMistiri/>}/>
+            
+              <Route   path="/plumber" element={<Plumber/>}/>
+
               <Route path="*" element={<NotFound/>}/>
               </Routes> 
           </main>
