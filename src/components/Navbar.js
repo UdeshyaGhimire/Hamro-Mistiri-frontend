@@ -10,11 +10,11 @@ const Navbar = () => {
       <div className='hidden md:flex pr-4'>
         <div className=' px-2 flex flex-row-reverse items-center w-full h-full'>
          
-        <a href="Register"><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300'>Register</button></a>
+        <a href="RegisterUser"><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300'>Register</button></a>
           
           <div className='text-[#fea72b] mr-4'>/</div> 
 
-           <a href="LogIn"><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-4 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300'>Log In</button></a>
+           <a href="LogInUser"><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-4 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300'>Log In</button></a>
 
         </div>
       </div>
@@ -41,14 +41,14 @@ const Navbar = () => {
 
         </div>
         <ul className={!nav ? 'hidden' : 'absolute text-white bg-zinc-800 w-full px-8'}>
-          <li className='border-b-2 border-zinc-300 w-full'>Home</li>
+        <a href="HomepPage"><li className='border-b-2 border-zinc-300 w-full'>Home</li></a>
           <li className='border-b-2 border-zinc-300 w-full'>Our Services</li>
           <li className='border-b-2 border-zinc-300 w-full'>Become a Professional</li>
           <li className='border-b-2 border-zinc-300 w-full'>About Us</li>
           <li className='border-b-2 border-zinc-300 w-full'>Contact Us</li>
           <div className='flex flex-col my-4'>
-          <a href="LogIn"><button className='border-b-2 border-zinc-300 w-full bg-transparent px-8 py-3 mb-4'>Log In</button></a>
-          <a href="Register"><button className=' px-8 py-3'>Register</button></a>
+          <a href="LogInUser"><button className='border-b-2 border-zinc-300 w-full bg-transparent px-8 py-3 mb-4'>Log In</button></a>
+          <a href="RegisterUser"><button className=' w-full px-8 py-3'>Register</button></a>
           </div>
         </ul>
 
