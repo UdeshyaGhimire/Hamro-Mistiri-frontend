@@ -5,6 +5,8 @@ import NotFound from "./NotFound";
 import HomePage from "./pages/HomePage";
 import Service from "./pages/Service";
 import Plumber from "./pages/Plumber";
+import Services from "./pages/Services";
+
 
 function Main() {
   return (
@@ -17,6 +19,8 @@ function Main() {
               <Route exact path="/" element={<HomePage/>}/>
               <Route   path="/service" element={<Service/>}/>
               <Route   path="/plumber" element={<Plumber/>}/>
+              <Route   path="/services" element={<Services/>}/>
+
               <Route path="*" element={<NotFound/>}/>
               </Routes> 
           </main>
