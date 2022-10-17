@@ -3,18 +3,17 @@ import LogInImg from '../../assets/login.jpg'
 
 function RegisterUser() {
   return (
+    // background
 
 
     <div className='relative w-full h-[900px] bg-zinc-900/80'>
       <img className='absolute w-full h-full object-cover mix-blend-overlay' src={LogInImg} alt="/" />
       <div className='flex justify-center items-center h-full'>
+           {/* Form */}
 
         <form className='max-w-[600px] w-full mx-auto bg-white p-9 pt-2'>
           <h2 className='text-4xl text-[#30333a]  font-bold text-center py-4'>User Registration</h2>
-          {/* 
-          <div>
-            <p></p>
-          </div> */}
+         
 
           <div className='flex flex-col mb-4'>
             <input className='border relative bg-gray-100 p-2 ' placeholder="First Name" type="text" />
@@ -50,6 +49,7 @@ function RegisterUser() {
           <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
             Register
           </button>
+            {/* Link to mistiri login */}
 
           <p className='text-lg text-center mt-8'>Want to Register as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="RegisterMistiri">Mistiri</a> instead?</p>
 
