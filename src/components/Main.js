@@ -7,6 +7,9 @@ import LogInUser from "./pages/LogInUser";
 import LogInMistiri from "./pages/LogInMistiri";
 import RegisterUser from "./pages/RegisterUser";
 import RegisterMistiri from "./pages/RegisterMistiri";
+import HireMeForm from "./pages/HireMeForm";
+import EditInfoForm from "./pages/EditInfoForm";
+
 
 function Main() {
   return (
@@ -21,6 +24,11 @@ function Main() {
             <Route path="/loginmistiri" element={<LogInMistiri />} />
             <Route path="/registeruser" element={<RegisterUser />} />
             <Route path="/registermistiri" element={<RegisterMistiri />} />
+            <Route path="/hiremeform" element={<HireMeForm />} />
+            <Route path="/editinfoform" element={<EditInfoForm />} />
+    
+
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

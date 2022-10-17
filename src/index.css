@@ -3,13 +3,5 @@
 @tailwind utilities;
 
 @layer base{
-    li{
-        @apply p-4
-        hover:text-[#f9bb65] hover:cursor-pointer
-    }
-    button{
-        @apply text-white rounded-md
-        hover:bg-transparent hover:text-[#3d414a]  hover:bg-[#fea72b] hover:border-[#fea72b]
-    }
- 
+
 }

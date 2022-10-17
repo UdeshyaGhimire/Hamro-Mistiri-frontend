@@ -4,11 +4,12 @@ import LogInImg from '../../assets/login.jpg'
 
 function LogInUser() {
   return (
-
+    // background
     <div className='relative w-full h-screen bg-zinc-900/80'>
       <img className='absolute w-full h-full object-cover mix-blend-overlay' src={LogInImg} alt="/" />
        <div className='flex justify-center items-center h-full'>
-
+        {/* Form */}
+  
         <form className='max-w-[400px] w-full mx-auto bg-white p-8'>
           <h2 className='text-4xl font-bold text-center py-4 text-[#30333a]'>User Log In</h2>
           <div>
@@ -30,6 +31,7 @@ function LogInUser() {
               Sign In
             </button>
           </div>
+          {/* Link to mistiri login */}
           <div className=' text-center mt-8'>
           <p className='text-lg text-center mt-8'>Want to Log In as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="LogInMistiri">Mistiri</a> instead?</p>
 
