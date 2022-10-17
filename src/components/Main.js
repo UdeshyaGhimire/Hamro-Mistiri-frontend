@@ -7,8 +7,13 @@ import LogInUser from "./pages/LogInUser";
 import LogInMistiri from "./pages/LogInMistiri";
 import RegisterUser from "./pages/RegisterUser";
 import RegisterMistiri from "./pages/RegisterMistiri";
+
 import HireMeForm from "./pages/HireMeForm";
 import EditInfoForm from "./pages/EditInfoForm";
+
+import Plumber from "./pages/Plumber";
+import Painter from "./pages/Painter";
+
 
 
 function Main() {
@@ -22,6 +27,8 @@ function Main() {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/loginuser" element={<LogInUser />} />
             <Route path="/loginmistiri" element={<LogInMistiri />} />
+            <Route   path="/Plumber" element={<Plumber/>}/>
+            <Route   path="/Painter" element={<Painter/>}/>
             <Route path="/registeruser" element={<RegisterUser />} />
             <Route path="/registermistiri" element={<RegisterMistiri />} />
             <Route path="/hiremeform" element={<HireMeForm />} />
