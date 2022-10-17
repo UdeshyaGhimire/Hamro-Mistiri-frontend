@@ -12,9 +12,10 @@ return (
       
      
     <section>
-      
+    <div class="text-painter"><p><b>PAINTER</b></p></div>
     <div class="container-painter">
-  <div class="card">
+ 
+  <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
   <div class="card__name">
     <p >Abhiyan Dev Rimal</p> </div>
@@ -23,6 +24,8 @@ return (
       <div class="grid-child-posts">
         Gangabu
       </div>
+      
+  
     
 
       
@@ -40,10 +43,12 @@ return (
     <button class="btn draw-border">Hire Me</button>
     <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
+    
+
 
 
   </div>
-  <div class="card">
+  <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Miss Tracy</p>
     <div class="grid-container">
@@ -66,9 +71,11 @@ return (
     <button class="btn draw-border">Hire Me</button>
     <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
+    
+
 
   </div>
-  <div class="card">
+  <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Anuragh Baskota</p>
     <div class="grid-container">
@@ -92,11 +99,13 @@ return (
     <button class="btn draw-border">Hire Me</button>
     <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
+    
+
 
     
   </div>
   
-  <div class="card">
+  <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Udeshya Ghimire</p>
     <div class="grid-container">
@@ -120,10 +129,11 @@ return (
     <button class="btn draw-border">Hire Me</button>
     <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
+
 
   </div>
 
-  <div class="card">
+  <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Udeshya Ghimire</p>
     <div class="grid-container">
@@ -136,6 +146,7 @@ return (
 
     </div>
     <div class="rating">
+      
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
@@ -147,9 +158,11 @@ return (
     <button class="btn draw-border">Hire Me</button>
     <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
+    
+
 
   </div>
-  <div class="card">
+  <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Udeshya Ghimire</p>
     <div class="grid-container">
@@ -173,6 +186,7 @@ return (
     <button class="btn draw-border">Hire Me</button>
     <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
+
 
   </div>
 </div>

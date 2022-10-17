@@ -9,22 +9,35 @@
   
 
 } 
+.text-painter{
+padding-top: 110px;
+background-color: #5a6170;
+text-align: center;
+
+
+font-size: 2em;
+color: white;
+
+
+}
 .container-painter {
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-gap: 20px;
+  grid-gap: 40px;
   justify-content: center;
   align-items: center;
   height: auto;
-  background-color: #f5f5f5;
+  background-color: #5a6170;
   font-family: 'Baloo Paaji 2', cursive;
+  padding-bottom: 5px;
+  
 }
 
-.card {
-  background-color: #EC7420;
+.card-painter {
+  background-color: #fea72b;
   height: auto;
   border-radius: 20px;
-  margin-top:100px;
+  margin-top:10px;
   width: auto;
   display: flex;
   flex-direction: column;
