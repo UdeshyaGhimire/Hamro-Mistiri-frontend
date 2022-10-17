@@ -33,7 +33,7 @@ function Main() {
             <Route path="/registermistiri" element={<RegisterMistiri />} />
             <Route path="/hiremeform" element={<HireMeForm />} />
             <Route path="/editinfoform" element={<EditInfoForm />} />
-    
+           
 
 
             <Route path="*" element={<NotFound />} />

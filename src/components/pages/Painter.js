@@ -13,7 +13,7 @@ return (
      
     <section>
       
-    <div class="container">
+    <div class="container-painter">
   <div class="card">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
   <div class="card__name">
