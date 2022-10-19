@@ -1,5 +1,5 @@
 import React from 'react';
-import LogInImg from '../../assets/login.jpg'
+import Building from '../../assets/building.jpg'
 
 function RegisterUser() {
   return (
@@ -7,7 +7,7 @@ function RegisterUser() {
 
 
     <div className='relative w-full h-[900px] bg-zinc-900/80'>
-      <img className='absolute w-full h-full object-cover mix-blend-overlay' src={LogInImg} alt="/" />
+      <img className='absolute w-full h-full object-cover mix-blend-overlay' src={Building} alt="/" />
       <div className='flex justify-center items-center h-full'>
            {/* Form */}
 
@@ -23,9 +23,7 @@ function RegisterUser() {
             <input className='border relative bg-gray-100 p-2 ' placeholder="Last Name" type="text" />
           </div>
 
-          <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Username" type="text" />
-          </div>
+          
 
           <div className='flex flex-col mb-4'>
             <input className='border relative bg-gray-100 p-2 ' placeholder="Email" type="email" />

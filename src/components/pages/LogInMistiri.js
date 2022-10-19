@@ -19,7 +19,7 @@ function LogInMistiri() {
           </div>
           <div className='flex flex-col mb-4'>
 
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Username" type="text" />
+            <input className='border relative bg-gray-100 p-2 ' placeholder="Email" type="text" />
 
 
           </div>
