@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import Carpenter1 from '../../assets/carpenter1.svg'
 import Engineer from '../../assets/engineer.svg'
 import Mechanics from '../../assets/mechanics.svg'
@@ -18,7 +18,7 @@ export default function OurServices() {
 
 
         <div id='Our Services' className='md:h-full flex-items-center text-grey-600 bg-grey-[#30333a] '>
-           
+
 
             <div className='container px-0 py-14 mx-auto'>
                 <div className='text-center mb-12 -mt-2'>
@@ -48,7 +48,7 @@ export default function OurServices() {
                     </a>
 
                     <a className='' href="Plumber">
-                        <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
+                        <div className='w-[470px] h-[225px] p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                             <div className='h-full  overflow-hidden '>
                                 <div className='flex justify-center '>
                                     <img src={Engineer} alt="image" className='lg:h-10 md:h-48 w-10 ' />
@@ -63,21 +63,23 @@ export default function OurServices() {
                         </div>
                     </a>
 
-                    <div>
-                        <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
-                            <div className='h-full  overflow-hidden '>
-                                <div className='flex justify-center '>
-                                    <img src={Plumber} alt="image" className='lg:h-10 md:h-48 w-10 ' />
-                                </div>
+                    <a className='' href="Plumber">
+                        <div>
+                            <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
+                                <div className='h-full  overflow-hidden '>
+                                    <div className='flex justify-center '>
+                                        <img src={Plumber} alt="image" className='lg:h-10 md:h-48 w-10 ' />
+                                    </div>
 
-                                <div className=' text-center'>
-                                    <h1 className='text-2xl font-semi-bold mb-3'> Plumber</h1>
-                                    <h2 className='leading-relaxed mb-3'>A plumber is a person whose job is to connect and repair things such as water and drainage pipes, baths, and toilets.</h2>
+                                    <div className=' text-center'>
+                                        <h1 className='text-2xl font-semi-bold mb-3'> Plumber</h1>
+                                        <h2 className='leading-relaxed mb-3'>A plumber is a person whose job is to connect and repair things such as water and drainage pipes, baths, and toilets.</h2>
 
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                     <a className='' href="LogInMistiri">
                         <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
@@ -111,7 +113,7 @@ export default function OurServices() {
                         </div>
                     </a>
 
-                    <a className='' href="LogInMistiri">
+                    <a className='' href="Painter">
                         <div className='w-[470px] h-56 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                             <div className='h-full  overflow-hidden '>
                                 <div className='flex justify-center '>
@@ -131,7 +133,7 @@ export default function OurServices() {
 
                 </div>
             </div>
-            
+
         </div>
 
 

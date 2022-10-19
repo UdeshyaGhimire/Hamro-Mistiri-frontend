@@ -1,57 +1,117 @@
-import React from 'react';
-import HireImg from '../../assets/hire.jpg'
+import React, { useState, useEffect } from 'react';
+import High from '../../assets/high.jpg'
 
 
 function EditInfoForm() {
-  return(
-  
-
-      <div  className='fixed inset-0 bg-clack bg-opacity-30 backdrop-blur-sm flex justify-center items-center'> 
-    
-      <div className='rounded-xl border-[5px] border-[#484949] mt-[165px]  grid grid-cols-1 md:grid-cols-2 bg-white m-auto h-[550px] shadow-lg  shadow-gray-200 sm:max-w-[900px]  '>
-        <div className=' flex w-full h-[540px] hidden md:block'>
-          <img className='inline w-full h-full' src={HireImg} alt="/" />
-        </div>
-        <div className='p-4 flex flex-col justify-around '>
-
-          <form >
 
 
-          <h2 className='text-4xl font-bold text-center pt-0 py-4'>Hirfe Me</h2>
-          <div>
-            <p></p>
+  return (
+    <div className='relative w-full h-[1250px] bg-black/80'>
+      <img className='absolute w-full h-full object-cover mix-blend-overlay' src={High} alt="/" />
+      <div className='flex justify-center items-center h-full'>
+        {/* Form */}
+
+        <form className='max-w-[700px] w-full mx-auto bg-white p-[30px] pt-2'>
+          <h2 className='text-4xl text-[#000000]  font-bold text-center py-8'>Edit Mistiri Registration</h2>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>First Name:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2  ' placeholder="First Name" type="text" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>Last Name:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="Last Name" type="text" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>Email:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="Email" type="email" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>Password:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="Password" type="password" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <div className='text-[#000000] font-bold  pt-[8px]'>Phone Number:</div>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="Phone Number" type="number" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold  pt-[8px]'>Location:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="Location" type="text" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold  pt-[8px]'>Pan Number:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="Pan Number" type="number" />
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>Service:</p>
+
+            <div className='col-span-2 w-[450px] text-base border relative bg-gray-100 p-2 text-left'>
+              <select name='service'>
+                <option value="carpenter">Carpenter</option>
+                <option value="engineer">Engineer</option>
+                <option value="plumber">Plumber</option>
+                <option value="plumber">Mechanics</option>
+                <option value="plumber">Technician</option>
+                <option value="plumber">Painter</option>
+              </select>
+            </div>
 
           </div>
-          <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Username" type="text" />
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[9px]'>Employee Status:</p>
+
+            <div className='flex flex-col mb-4 '>
+            <div className='border relative bg-gray-100 p-2 w-[450px]'>
+              
+              <div className='text-base columns-2 w-[450px]'>
+              <p><input type="radio" name="employstat" value="self" /> Self </p>
+                <input type="radio" name="employstat" value="company" /> Company
+              </div>
+            </div>
           </div>
-          
-          <div className='flex flex-col'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Password" type="text" />
           </div>
-          <div className='flex flex-col'>
-          <button className='w-full py-3 mt-8 bg-[#666668] hover:bg-[#26282e] relative text-white hover:bold'>
-            Sign In
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>Documents:</p>
+            <div className='col-span-2 w-[450px] border relative bg-gray-100 p-2 '>
+              <input className=' ' placeholder="Documents" type="file" />
+            </div>
+          </div>
+
+          <div className='grid grid-cols-4 mb-4'>
+            <p className='text-[#000000] font-bold pt-[8px]'>About You:</p>
+            <input className='col-span-2 w-[450px] border relative bg-gray-100 p-2 ' placeholder="About You" type="text" />
+          </div>
+
+          <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
+            Save
           </button>
-         </div>
-         <div className=' text-center mt-8'>
-          <p className='text-lg text-center mt-8'>Want to Log In as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="LogInUser">User</a> instead?</p>
+          {/* Link to mistiri login */}
 
-          </div>
+       
 
 
-          </form>
-          
-        </div>
+
+        </form>
       </div>
-  </div>
 
-
-
-
+    </div>
+   
 
   );
 }
-export default  EditInfoForm;
 
 
+
+
+
+
+export default EditInfoForm;

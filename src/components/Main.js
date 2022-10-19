@@ -10,6 +10,7 @@ import RegisterMistiri from "./pages/RegisterMistiri";
 
 import HireMeForm from "./pages/HireMeForm";
 import EditInfoForm from "./pages/EditInfoForm";
+import RateMeForm from "./pages/RateMeForm";
 
 import Plumber from "./pages/Plumber";
 import Painter from "./pages/Painter";
@@ -33,6 +34,7 @@ function Main() {
             <Route path="/registermistiri" element={<RegisterMistiri />} />
             <Route path="/hiremeform" element={<HireMeForm />} />
             <Route path="/editinfoform" element={<EditInfoForm />} />
+            <Route path="/ratemeform" element={<RateMeForm />} />
            
 
 
