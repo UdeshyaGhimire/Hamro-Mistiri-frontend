@@ -25,10 +25,10 @@ function HireMeForm() {
 
               <h2 className='text-4xl font-bold text-center pt-0 py-8 hover:text-[#f09e2a]'>Hire Us!</h2>
 
-              <div className='flex  flex-col mb-4 '>
-                <div className='border relative bg-gray-100 p-2 text-left rounded-md'>
+              <div className=' '>
+                <div className='grid grid-cols-4  mb-4 border relative bg-gray-100 p-2 text-left rounded-md'>
                   Service:
-                  <div className='text-base '>
+                  <div className='col-span-2 text-base '>
                     <select name='service'>
                       <option value="carpenter">Carpenter</option>
                       <option value="engineer">Engineer</option>
@@ -41,9 +41,9 @@ function HireMeForm() {
                 </div>
               </div>
 
-              <textarea class=" form-control block w-full px-3  py-1.5 text-base font-normal text-gray-700 bg-gray-100 bg-clip-padding  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-grey-900 focus:outline-none"  id="ShortDescription" rows="3" placeholder="Short Description" maxLength={100}></textarea>
+              <textarea class="mt-[25px] form-control block w-full px-3  py-1.5 text-base font-normal text-gray-700 bg-gray-100 bg-clip-padding  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-grey-900 focus:outline-none"  id="ShortDescription" rows="3" placeholder="Short Description" maxLength={100}></textarea>
               <div className='flex flex-col'>
-                <button className='w-full py-3 mt-8 bg-[#ffb041] hover:bg-[#f89203] relative text-white hover:bold'>
+                <button className='w-full py-3 mt-[40px] bg-[#ffb041] hover:bg-[#f89203] relative text-white hover:bold'>
                   Submit
                 </button>
               </div>
