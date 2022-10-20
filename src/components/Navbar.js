@@ -30,7 +30,7 @@ const Navbar = () => {
               <a href="/"><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'> Home</li> </a>
               <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Our Services</li>
               <a href="RegisterMistiri"><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Become a Professional</li></a>
-              <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li>
+              <a href="#AboutUs"> <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></a>
               <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li>
             </ul>
           </div>
@@ -51,7 +51,11 @@ const Navbar = () => {
             <li className='border-b-2 border-zinc-300 w-full hover:text-[#f9bb65] hover:cursor-pointer p-4 '>Home</li></a>
           <li className='border-b-2 border-zinc-300 w-full hover:text-[#f9bb65] hover:cursor-pointer p-4'>Our Services</li>
           <li className='border-b-2 border-zinc-300 w-full hover:text-[#f9bb65] hover:cursor-pointer p-4'>Become a Professional</li>
-          <li className='border-b-2 border-zinc-300 w-full hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li>
+          
+          <a href="./HomePage/#AboutUs"> 
+          <li className='border-b-2 border-zinc-300 w-full hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></a>
+
+
           <li className='border-b-2 border-zinc-300 w-full hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li>
           <div className='flex flex-col my-4'>
             <a href="LogInUser"><button className='border-b-2 border-zinc-300 w-full bg-transparent px-8 py-3 mb-4  hover:text-[#3d414a]  hover:bg-[#fea72b] hover:border-[#fea72b]'>Log In</button></a>
