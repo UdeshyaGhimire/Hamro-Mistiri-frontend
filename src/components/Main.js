@@ -11,6 +11,7 @@ import RegisterMistiri from "./pages/RegisterMistiri";
 import HireMeForm from "./pages/HireMeForm";
 import EditInfoForm from "./pages/EditInfoForm";
 import RateMeForm from "./pages/RateMeForm";
+import Footer from "./pages/Footer";
 
 import Plumber from "./pages/Plumber";
 import Painter from "./pages/Painter";
@@ -41,6 +42,7 @@ function Main() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        <Footer/>
       </div>
     </Router>
   );
