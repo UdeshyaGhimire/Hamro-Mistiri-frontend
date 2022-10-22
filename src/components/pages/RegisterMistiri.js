@@ -49,9 +49,12 @@ function RegisterMistiri() {
               Service:
               <div className='text-base '>
                 <select name='service'>
-                  <option value="plumber">Plumber</option>
-                  <option value="carpenter">Carpenter</option>
-                  <option value="driver">Driver</option>
+                  <option value="plumber">Carpenter</option>
+                  <option value="carpenter">Engineer</option>
+                  <option value="carpenter">Plumber</option>
+                  <option value="carpenter">Mechanics</option>
+                  <option value="carpenter">Technician</option>
+                  <option value="driver">Painter</option>
                 </select>
               </div>
             </div>
