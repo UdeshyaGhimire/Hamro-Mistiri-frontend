@@ -9,35 +9,22 @@
   
 
 } 
-.text-painter{
-padding-top: 110px;
-background-color: #5a6170;
-text-align: center;
-
-
-font-size: 2em;
-color: white;
-
-
-}
-.container-painter {
+.container-engineer {
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-gap: 40px;
+  grid-gap: 25px;
   justify-content: center;
   align-items: center;
   height: auto;
-  background-color: #5a6170;
+  background-color: #f5f5f5;
   font-family: 'Baloo Paaji 2', cursive;
-  padding-bottom: 5px;
-  
 }
 
-.card-painter {
-  background-color: #fea72b;
+.card {
+  background-color: #EC7420;
   height: auto;
   border-radius: 20px;
-  margin-top:10px;
+  margin-top:100px;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -135,16 +122,7 @@ color: white;
 
 
 .grid-container {
-  justify-items: center;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 20px;
   font-size: 1.2em;
-  
-
-}
-.about_me{
-  justify-items: center;
-  font-size: 1em;
-  color: rgb(78, 73, 73);
-
 }

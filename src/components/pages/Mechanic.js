@@ -4,7 +4,7 @@ import '../../css/Painter.css';
 
 
 
-function Painter() {
+function Machanic () {
  
 return (
 
@@ -25,7 +25,6 @@ return (
         Gangabu
       </div>
       
-      
   
     
 
@@ -40,18 +39,15 @@ return (
 
 
                 </div>
-                <div class="about_me">
-        I am a Pro Painter
-      </div>
-                
     
     <button class="btn draw-border">Hire Me</button>
-    <button class="btn draw-border">Rate Me</button>
+    <button class="btn draw-border">About Me</button>
     <button class="btn draw-border">Message</button>
     
-    </div>
 
 
+
+  </div>
   <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Miss Tracy</p>
@@ -79,8 +75,6 @@ return (
 
 
   </div>
-
-
   <div class="card-painter">
   <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
     <p class="card__name">Anuragh Baskota</p>
@@ -204,7 +198,7 @@ return (
     </div>
   );
 }
-export default Painter;
+export default Machanic;
 
 
 
