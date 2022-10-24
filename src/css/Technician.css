@@ -9,7 +9,7 @@
   
 
 } 
-.text-painter{
+.text-technician{
 padding-top: 110px;
 background-color: #5a6170;
 text-align: center;
@@ -18,7 +18,7 @@ color: white;
 
 
 }
-.container-painter {
+.container-technician {
   display: grid;
   grid-template-columns: 300px 300px 300px;
   grid-gap: 40px;
@@ -31,7 +31,7 @@ color: white;
   
 }
 
-.card-painter {
+.card-technician {
   background-color: #fea72b;
   height: auto;
   border-radius: 20px;
