@@ -1,24 +1,24 @@
 import React from 'react';
-import '../../css/Painter.css';
+import '../../css/Carpenter.css';
 import axios from 'axios';
 
 
 
 
-function Painter() {
+function Carpenter() {
 
-  const painter = "painter"
-  const [painters, setPainters] = React.useState([]);
+  const carpenter = "carpenter"
+  const [carpenters, setCarpenters] = React.useState([]);
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
-    const url = `http://localhost:8080/mistiris/${painter}`;
+    const url = `http://localhost:8080/mistiris/${carpenter}`;
     axios.get(url)
       .then((res) => {
         // console.log(res.data);
         // console.log(res.data);
 
-        setPainters(res.data);
+        setCarpenters(res.data);
 
       })
       .catch(err => console.log(err));
@@ -28,17 +28,17 @@ function Painter() {
     <div >
 
       <section>
-        <div class="text-painter"><p><b>PAINTER</b></p></div>
-        <div class="container-painter">
-           {painters.map(painter => (
-               <div class="card-painter" key={painter.id}>
+        <div class="text-carpenter"><p><b>CARPENTERS</b></p></div>
+        <div class="container-carpenter">
+           {carpenters.map(Carpenter => (
+               <div class="card-carpenter" key={carpenter.id}>
                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
                <div class="card__name">
-                 <p >{painter.customer.firstName}</p> </div>
+                 <p >{Carpenter.customer.firstName}</p> </div>
                <div class="grid-container">
    
                  <div class="grid-child-posts">
-                 {painter.customer.loction}
+                 {Carpenter.customer.loction}
                  </div>
    
                </div>
@@ -48,11 +48,8 @@ function Painter() {
                  <i class="fas fa-star"></i>
                  <i class="fas fa-star"></i>
                </div>
-               <div class="grid-child-posts">
-                 <p>"I am a pro painter"</p>
-                 </div>
                <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
-               <button class="btn draw-border">Rate Me</button>
+               <button class="btn draw-border">About Me</button>
                <button class="btn draw-border">Message</button>
              </div>
            ))}
@@ -65,7 +62,7 @@ function Painter() {
     </div>
   );
 }
-export default Painter;
+export default Carpenter;
 
 
 

@@ -15,13 +15,22 @@ import Footer from "./pages/Footer";
 
 import Plumber from "./pages/Plumber";
 import Painter from "./pages/Painter";
+import Engineer from "./pages/Engineer";
+import Mechanic from "./pages/Mechanic";
+import Technician from "./pages/Technician";
+import Carpenter from "./pages/Carpenter";
+
 
 
 
 function Main() {
 
   const painter ="Painter";
-  const plumber ="Painter";
+  const plumber ="Plumber";
+  const engineer="Engineer";
+  const carpenter="Carpenter";
+  const mechanic="Mechanic";
+  const technican="Technician";
   return (
     <Router>
       <div >
@@ -33,6 +42,10 @@ function Main() {
             <Route path="/loginuser" element={<LogInUser />} />
             <Route path="/loginmistiri" element={<LogInMistiri />} />
             <Route   path="/mistiris/Plumber" element={<Plumber/>}/>
+            <Route   path="/mistiris/Engineer" element={<Engineer/>}/>
+            <Route   path="/mistiris/Mechanic" element={<Mechanic/>}/>
+            <Route   path="/mistiris/Technician" element={<Technician/>}/>
+            <Route   path="/mistiris/Carpenter" element={<Carpenter/>}/>
             <Route   path="/mistiris/Painter" element={<Painter/>}/>
             <Route path="/registeruser" element={<RegisterUser />} />
             <Route path="/registermistiri" element={<RegisterMistiri />} />
