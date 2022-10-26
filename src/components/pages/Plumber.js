@@ -9,10 +9,12 @@ function Plumber() {
 
   const plumber = "plumber"
   const [plumbers, setPlumbers] = React.useState([]);
+  const [address, setAddress] = React.useState([]);
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
-    const url = `http://localhost:8080/mistiris/${plumber}`;
+    const url = `http://localhost:8080/mistiris/${plumberr}/${address}`;
+    const geoLocationUrl = 'https://api.ipdata.co/?api-key=5726702f6bf320174b0e6633fcd530a6a95a833112b6c6e926fd7d55';
     axios.get(url)
       .then((res) => {
         // console.log(res.data);
@@ -21,6 +23,12 @@ function Plumber() {
         setPlumbers(res.data);
 
       })
+      axios.get(geoLocationUrl)
+      .then((response) => {
+        console.log(response.data.city);
+         setAddress(response.data.city);
+      })
+
       .catch(err => console.log(err));
   }, []);
 
