@@ -41,13 +41,13 @@ function HireMeForm() {
                 </div>
               </div>
 
-              <textarea class="mt-[25px] form-control block w-full px-3  py-1.5 text-base font-normal text-gray-700 bg-gray-100 bg-clip-padding  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-grey-900 focus:outline-none"  id="ShortDescription" rows="3" placeholder="Short Description" maxLength={100}></textarea>
+              <textarea class="mt-[25px] form-control block w-full px-3  py-1.5 text-base font-normal text-gray-700 bg-gray-100 bg-clip-padding  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-grey-900 focus:outline-none" id="ShortDescription" rows="3" placeholder="Short Description" maxLength={100}></textarea>
               <div className='flex flex-col'>
                 <button className='w-full py-3 mt-[40px] bg-[#ffb041] hover:bg-[#f89203] relative text-white hover:bold'>
                   Submit
                 </button>
               </div>
-             
+
 
             </form>
 

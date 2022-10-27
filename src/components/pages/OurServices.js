@@ -47,8 +47,10 @@ export default function OurServices() {
                         </div>
                     </a>
 
+
                     <a className='' href="Engineer">
                         <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
+
                             <div className='h-full  overflow-hidden '>
                                 <div className='flex justify-center '>
                                     <img src={Engineer} alt="image" className='lg:h-10 md:h-48 w-10 ' />
@@ -63,7 +65,10 @@ export default function OurServices() {
                         </div>
                     </a>
 
-                    <a className='' href="Plumber">
+
+
+                    <a className='' href="/mistiris/Plumber">
+
                         <div>
                             <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                                 <div className='h-full  overflow-hidden '>
