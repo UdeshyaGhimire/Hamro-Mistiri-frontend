@@ -12,6 +12,8 @@ import HireMeForm from "./pages/HireMeForm";
 import EditInfoForm from "./pages/EditInfoForm";
 import RateMeForm from "./pages/RateMeForm";
 import Footer from "./pages/Footer";
+import DashboardMistiri from "./pages/DashboardMistiri";
+import DashboardUser from "./pages/DashboardUser";
 
 import Plumber from "./pages/Plumber";
 import Painter from "./pages/Painter";
@@ -52,6 +54,8 @@ function Main() {
             <Route path="/hiremeform" element={<HireMeForm />} />
             <Route path="/editinfoform" element={<EditInfoForm />} />
             <Route path="/ratemeform" element={<RateMeForm />} />
+            <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
+            <Route path="/dashboarduser" element={<DashboardUser />} />
            
 
 

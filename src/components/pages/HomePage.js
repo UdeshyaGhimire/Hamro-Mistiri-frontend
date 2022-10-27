@@ -19,14 +19,16 @@ function HomePage() {
     <div class=' w-full h-full bg-gray-200'>
       {/* Linking to slider.js  */}
       <Slider />
+      {/* Linking to ourservices.js  */}
       <OurServices />
 
 
 
 
-
+      {/* new div */}
       <div className='w-full h-full  ' >
 
+        {/* div for Why Hamro Mistiri */}
         <div id="#AboutUs" className=' bg-[#30333a] h-full w-full p-[40px] px-[200px] text-white border-b-[9px] border-[#ffffff] '>
           <div className=' p-5  font-bold border-l-[30px] border-[#f39818]  italic'>
             <svg aria-hidden="true" class="mx-auto  w-12 h-12 text-gray-400 dark:text-[#f39818]q" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" /></svg>
@@ -39,6 +41,7 @@ function HomePage() {
           </div>
         </div>
 
+        {/* div for About Us */}
         <div className=' md:grid grid-cols-5 ' id="#AboutUs">
           <div className='col-span-2 hidden md:block grow bg-white'>
             <img className='hover:hue-rotate-15 ' src={AboutImg} alt="/" />
@@ -62,7 +65,7 @@ function HomePage() {
 
 
 
-
+        {/* div for Become a part of Hamro Mistiri Family Today! */}
         <div className=' md:grid grid-cols-5  h-[450px] w-full bg-[#f59c20] border-y-[7px] border-[#ffffff]'>
 
           <div className='py-[150px] text-right col-span-3 pl-[90px] text-xl '>
@@ -80,7 +83,7 @@ function HomePage() {
 
           </div>
         </div>
-
+{/* div for Contact us */}
         <div className=' md:grid grid-cols-2 bg-white h-[500px] w-full '>
           <div className='p-24'>
             <div className='text-2xl font-bold md:text-[35px] text-center italic pb-6 hover:text-[37px] '>
@@ -111,7 +114,7 @@ function HomePage() {
           </div>
         </div>
 
-
+{/* About us,quicklinks and follow us Secction */}
         <div className='hidden md:block'>
 
 
