@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className=' w-screen h-[65px] z-10 bg-[#3d414a] fixed drop-shadow-lg'>
         <div className=' px-2 flex justify-between items-center w-full h-full'>
 
-          <h1 className=' place-content-start font-bold text-[#3d414a] bg-[#fea72b] text-3xl sm:flex-shrink-0  mr-4 -ml-2 pl-7 pr-7 pt-3 pb-3 '>Hamro Mistiri</h1>
+          <h1 className=' place-content-start font-bold text-[#3d414a] bg-[#fea72b] text-lg md:text-3xl sm:flex-shrink-0  mr-4 -ml-2 pl-7 pr-7 pt-3 pb-3 '>Hamro Mistiri</h1>
 
           <div className=' flex items-center pr-80 mr-20'>
             <ul className='font-semibold text-white hidden md:flex  '>
