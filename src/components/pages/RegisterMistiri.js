@@ -417,7 +417,7 @@ function RegisterMistiri() {
               <div className='text-base '>
                 <select name='service' onChange={handleService} value={service}>
                   <option value="plumber">Plumber</option>
-                  <option value="plumber">Carpenter</option>
+                  <option value="carpenter">Carpenter</option>
                   <option value="engineer">Engineer</option>
                   <option value="mechanics">Mechanics</option>
                   <option value="technician">Technician</option>
