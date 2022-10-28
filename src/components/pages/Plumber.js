@@ -57,7 +57,7 @@ function Plumber() {
                  <i class="fas fa-star"></i>
                </div>
                <div class="grid-child-posts">
-                 <p>{plumber.aboutYou}</p>
+                 <p>"I am a pro painter"</p>
                  </div>
                <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
                <button class="btn draw-border">Rate Me</button>
