@@ -13,7 +13,7 @@ function Plumber() {
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
-    const url = `http://localhost:8080/mistiris/${plumberr}/${address}`;
+    const url = `http://localhost:8080/mistiris/${plumber}/${address}`;
     const geoLocationUrl = 'https://api.ipdata.co/?api-key=5726702f6bf320174b0e6633fcd530a6a95a833112b6c6e926fd7d55';
     axios.get(url)
       .then((res) => {

@@ -415,14 +415,10 @@ function RegisterMistiri() {
             <div className='border relative bg-gray-100 p-2 text-left'>
               Service:
               <div className='text-base '>
-<<<<<<< HEAD
-                <select name='service'>
+                <select name='service' onChange={handleService} value={service}>
+                  <option value="plumber">Plumber</option>
                   <option value="plumber">Carpenter</option>
                   <option value="engineer">Engineer</option>
-=======
-                <select name='service' onChange={handleService} value={service}>
->>>>>>> d0db320 (connect register with backend api)
-                  <option value="plumber">Plumber</option>
                   <option value="mechanics">Mechanics</option>
                   <option value="technician">Technician</option>
                   <option value="painter">Painter</option>
