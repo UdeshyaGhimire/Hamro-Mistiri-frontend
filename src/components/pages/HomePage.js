@@ -43,7 +43,7 @@ function HomePage() {
 
         {/* div for About Us */}
         <div className=' md:grid grid-cols-5 ' id="#AboutUs">
-          <div className='col-span-2 hidden md:block grow bg-white'>
+          <div className='col-span-2 grow bg-white'>
             <img className='hover:hue-rotate-15 ' src={AboutImg} alt="/" />
 
           </div>
@@ -66,10 +66,10 @@ function HomePage() {
 
 
         {/* div for Become a part of Hamro Mistiri Family Today! */}
-        <div className=' md:grid grid-cols-5  h-[450px] w-full bg-[#f59c20] border-y-[7px] border-[#ffffff]'>
+        <div className=' md:grid grid-cols-5  md:h-[450px] w-full bg-[#f59c20] border-y-[7px] border-[#ffffff]'>
 
           <div className='py-[150px] text-right col-span-3 pl-[90px] text-xl '>
-            <div className='text-2xl  md:text-[30px]  pb-4 font-bold '>
+            <div className='text-2xl  md:text-[30px]  md:pb-4 font-bold '>
               Become a part of Hamro Mistiri Family Today!</div>
             Get updated about latest news, offers and lots of other exiciting things. You are just a few minutes away from being part of something great. Don't miss this opportunity.
             <div className='text-center pl-[40px] pt-5'>
@@ -77,16 +77,16 @@ function HomePage() {
             </div>
 
           </div>
-          <div className='col-span-2 p-[50px] hidden md:block  '>
+          <div className='col-span-2 sm:pl-28 md:p-[50px]  '>
 
-            <img className=' hover:hue-rotate-15 ' src={Craftsmen} alt="/" />
+            <img className=' hover:hue-rotate-15 h-[250px]' src={Craftsmen} alt="/" />
 
           </div>
         </div>
 {/* div for Contact us */}
-        <div className=' md:grid grid-cols-2 bg-white h-[500px] w-full '>
-          <div className='p-24'>
-            <div className='text-2xl font-bold md:text-[35px] text-center italic pb-6 hover:text-[37px] '>
+        <div className=' md:grid grid-cols-2 bg-white md:h-[500px] w-full '>
+          <div className='p-12 pb-1 md:p-24'>
+            <div className='text-2xl font-bold md:text-[35px] text-center italic pb-6 md:hover:text-[37px] hover:text-[27px] '>
               Contact Us</div>
             <div className='  text-black m-20 mt-2'>
               <div className=' md:grid grid-cols-4 py-4'>
@@ -109,17 +109,17 @@ function HomePage() {
 
             </div>
           </div>
-          <div className='hidden md:block '>
+          <div className='h-full w-full '>
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3531.2479267161866!2d85.336958!3d27.740498!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19462d22bdff%3A0xf8bc1fa59ce305!2sNarayan%20Gopal%20Chowk%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1666223766524!5m2!1sen!2snp" width="785" height="500" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
 {/* About us,quicklinks and follow us Secction */}
-        <div className='hidden md:block'>
+        <div className=''>
 
 
-          <div className=' grid grid-cols-3 bg-[#31333a]  h-[330px] w-full  px-[250px] pt-[70px] text-white text-center '>
-            <div>
+          <div className=' md:grid grid-cols-3 bg-[#31333a]  md:h-[330px] w-full  px-[250px] pt-[70px] text-white text-center '>
+            <div className='pb-12'>
               <div className='text-xl font-bold pb-3'> About Us<hr className='border-[#f79f24] m-5 ' /> </div>
               <div class="list-none leading-loose">
                 <li>The home services system is in high demand</li>
@@ -130,7 +130,7 @@ function HomePage() {
               </div>
 
             </div>
-            <div>
+            <div className='pb-12'>
               <div className='text-xl font-bold pb-3'> QuickLinks<hr className='border-[#f79f24] m-5 ' /> </div>
               <ul class="list-none leading-loose  ">
                 <a href="LogInUser"><li className='hover:text-[#c4770d] '>Home</li></a>
@@ -141,7 +141,7 @@ function HomePage() {
               </ul>
 
             </div>
-            <div>
+            <div className='pb-12'>
               <div className='text-xl font-bold pb-3'> Follow Us<hr className='border-[#f79f24] m-5 ' /> </div>
               <ul class="list-none leading-loose  ">
                 <a href="LogInUser"><li className='hover:text-[#c4770d] '>Facebook</li></a>

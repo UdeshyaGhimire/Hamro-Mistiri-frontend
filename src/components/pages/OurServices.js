@@ -58,7 +58,7 @@ export default function OurServices() {
 
                             <div className=' text-center'>
                                 <h1 className='text-2xl font-semi-bold mb-3'> Engineer</h1>
-                                <h2 className='leading-relaxed mb-3'>Civil engineers ensure safe construction, operation and maintenance of your house.</h2>
+                                <h2 className='leading-relaxed mb-3'>Civil engineers ensure safe construction, operation and maintenance of your house. Hire an engineer today!</h2>
 
                             </div>
                         </div>
@@ -119,7 +119,7 @@ export default function OurServices() {
                 </a>
 
                 <a className='' href="Painter">
-                    <div className='w-[470px] h-56 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
+                    <div className='w-[470px] h-50  p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                         <div className='h-full  overflow-hidden '>
                             <div className='flex justify-center '>
                                 <img src={Painter} alt="image" className='lg:h-10 md:h-48 w-10 ' />
@@ -127,7 +127,7 @@ export default function OurServices() {
 
                             <div className=' text-center'>
                                 <h1 className='text-2xl font-semi-bold mb-3'> Painter</h1>
-                                <h2 className='leading-relaxed mb-3'>Painting the interior of your home is an endeavor that requires a great deal of time.</h2>
+                                <h2 className='leading-relaxed mb-3'>Painting the interior of your home is an endeavor that requires a great deal of time. Hire a painter and maske it easy for you.</h2>
 
                             </div>
                         </div>

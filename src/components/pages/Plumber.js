@@ -37,7 +37,7 @@ function Plumber() {
 
       <section>
         <div class="text-plumber"><p><b>PLUMBERS</b></p></div>
-        <div className='flex flex-row-reverse mb-4 '>
+        <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
           <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
             <div className=''>
               Your Location:
