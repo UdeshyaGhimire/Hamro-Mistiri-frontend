@@ -29,12 +29,12 @@ function HomePage() {
       <div className='w-full h-full  ' >
 
         {/* div for Why Hamro Mistiri */}
-        <div id="#AboutUs" className=' bg-[#30333a] h-full w-full p-[40px] px-[200px] text-white border-b-[9px] border-[#ffffff] '>
-          <div className=' p-5  font-bold border-l-[30px] border-[#f39818]  italic'>
+        <div id="#AboutUs" className=' bg-[#30333a] h-full w-full p-[40px] md:px-[200px] text-white border-b-[9px] border-[#ffffff] '>
+          <div className=' p-5  font-bold border-l-[10px] md:border-l-[30px] border-[#f39818]  italic'>
             <svg aria-hidden="true" class="mx-auto  w-12 h-12 text-gray-400 dark:text-[#f39818]q" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" /></svg>
             <div className='text-2xl md:text-[30px] text-center pb-4'>
               Why Hamro Mistiri ?</div>
-            <div className='text-[20px]'>
+            <div className='md:text-[20px]'>
               During this pandemic, many lost their job and those who were working abroad were forced to return to their country, this created increase in the unemployment rate. We a team of three members called 'Three Motivated Minds' decided to help those people who have skills but no employment opportunities. We create this web application so that people having some skills in plumbing, painting, etc. can find a way to earn their leaving by marketing their skills on our website. We believe in bringing smiles to the faces of those people who weren't able to even think about it.
 
             </div>
@@ -68,7 +68,7 @@ function HomePage() {
         {/* div for Become a part of Hamro Mistiri Family Today! */}
         <div className=' md:grid grid-cols-5  md:h-[450px] w-full bg-[#f59c20] border-y-[7px] border-[#ffffff]'>
 
-          <div className='py-[150px] text-right col-span-3 pl-[90px] text-xl '>
+          <div className='md:py-[150px] py-16 md:text-right col-span-3 md:pl-[90px] text-xl text-center '>
             <div className='text-2xl  md:text-[30px]  md:pb-4 font-bold '>
               Become a part of Hamro Mistiri Family Today!</div>
             Get updated about latest news, offers and lots of other exiciting things. You are just a few minutes away from being part of something great. Don't miss this opportunity.
@@ -85,7 +85,7 @@ function HomePage() {
         </div>
 {/* div for Contact us */}
         <div className=' md:grid grid-cols-2 bg-white md:h-[500px] w-full '>
-          <div className='p-12 pb-1 md:p-24'>
+          <div className='p-10 pb-1 md:p-24'>
             <div className='text-2xl font-bold md:text-[35px] text-center italic pb-6 md:hover:text-[37px] hover:text-[27px] '>
               Contact Us</div>
             <div className='  text-black m-20 mt-2'>
