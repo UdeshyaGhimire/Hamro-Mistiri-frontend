@@ -255,12 +255,12 @@ function RegisterMistiri() {
   };
 
   return (
-    <div className='relative w-full h-[1250px] bg-zinc-900/80'>
+    <div className='relative w-full h-full bg-zinc-900/80 pt-[100px]'>
       <img className='absolute w-full h-full object-cover mix-blend-overlay' src={Building} alt="/" />
       <div className='flex justify-center items-center h-full'>
         {/* Form */}
 
-        <form className='max-w-[600px] w-full mx-auto bg-white p-9 pt-2' onSubmit={handleForm}>
+        <form className='w-[600px] h-full mx-auto bg-white p-9 pt-5 mb-12' onSubmit={handleForm}>
           <h2 className='text-4xl text-[#30333a]  font-bold text-center py-4'>Mistiri Registration</h2>
 
           <div className='flex flex-col mb-4'>
