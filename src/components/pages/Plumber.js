@@ -37,6 +37,23 @@ function Plumber() {
 
       <section>
         <div class="text-plumber"><p><b>PLUMBERS</b></p></div>
+        <div className='flex flex-row-reverse mb-4 '>
+          <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
+            <div className=''>
+              Your Location:
+            </div>
+            <div className='text-base '>
+              <select name='yourlocation' >
+                <option value="kathmandu">Kathmandu</option>
+                <option value="lalitpur">Lalitpur</option>
+                <option value="bhaktapur">Bhaktapur</option>
+                <option value="biratnagar">Biratnagar</option>
+                <option value="birgunj">Birgunj</option>
+                <option value="dharan">Dharan</option>
+              </select>
+            </div>
+          </div>
+        </div>
         <div class="container-plumber">
            {plumbers.map(plumber => (
                <div class="card-plumber" key={plumber.id}>
