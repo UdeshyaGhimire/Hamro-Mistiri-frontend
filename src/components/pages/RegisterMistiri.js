@@ -3,19 +3,21 @@ import Building from '../../assets/building.jpg'
 import axios from 'axios';
 import Suggestion from './Suggestion';
 import validateEmail from './Utility';
+import SuccessText from './SuccessText';
 
 function RegisterMistiri() {
 
-  const [firstName, setFirstName] = React.useState([]);
-  const [lastName, setLastName] = React.useState([]);
-  const [email, setEmail] = React.useState([]);
-  const [password, setPassword] = React.useState([]);
-  const [phoneNumber, setPhoneNumber] = React.useState([]);
-  const [location, setLocation] = React.useState([]);
-  const [panNumber, setPanNumber] = React.useState([]);
-  const [service, setService] = React.useState([]);
-  const [emplyoeeStatus, setEmployeeStatus] = React.useState([]);
-  const [aboutYou, setAboutYou] = React.useState([]);
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [phoneNumber, setPhoneNumber] = React.useState('');
+  const [location, setLocation] = React.useState('');
+  const [panNumber, setPanNumber] = React.useState('');
+  const [service, setService] = React.useState('');
+  const [emplyoeeStatus, setEmployeeStatus] = React.useState('');
+  const [aboutYou, setAboutYou] = React.useState('');
+
   //error message
   const [firstNameErrorMessage, setFirstNameErrorMessage] = React.useState([]);
   const [lastNameErrorMessage, setLastNameErrorMessage] = React.useState([]);
@@ -28,9 +30,12 @@ function RegisterMistiri() {
   const [employeeStatusErrorMessage, setEmployeeStatusErrorMessage] = React.useState([]);
   const [aboutYouErrorMessage, setAboutYouErrorMessage] = React.useState([]);
 
+  const [postErrorMessage, setPostErrorMessage] = React.useState([]);
+  
 
-  // const [creatingSignal, setCreatingSignal] = React.useState('');
+  //successMessage
 
+  const [trueValue, setTrueValue] = React.useState([]);
 
   let formSubmissionPreventionFlag = false;
 
@@ -52,7 +57,7 @@ function RegisterMistiri() {
     setFirstNameErrorMessage("");
     setFirstName(firstNameData);
     if (firstNameData.trim() === "") {
-      setFirstNameErrorMessage("First Name cant Be Empty");
+      setFirstNameErrorMessage("First Name onclick cant Be Empty");
     }
   };
 
@@ -98,11 +103,9 @@ function RegisterMistiri() {
     const locationData = event.target.value;
     setLocationErrorMessage("");
     setLocation(locationData);
-
     if (locationData.trim() === "") {
       setLocationErrorMessage("Location cant Be Empty");
     }
-
   };
 
   const handlePanNumber = (event) => {
@@ -122,19 +125,22 @@ function RegisterMistiri() {
       formSubmissionPreventionFlag = true;
     }
 
+    console.log("The name from the state is " + firstName + " hello");
+    console.log(firstName === '');
+
     if (firstName === '') {
-      setFirstNameErrorMessage("First Name Cant Be Empty.");
       formSubmissionPreventionFlag = true;
+      setFirstNameErrorMessage("First Name Cant Be Empty.");
     }
 
     if (lastName === '') {
-      setLastNameErrorMessage("Last Name Cant Be Empty.");
       formSubmissionPreventionFlag = true;
+      setLastNameErrorMessage("Last Name Cant Be Empty.");
     }
 
     if (password === '') {
-      setPasswordErrorMessage("Password cannot be empty.");
       formSubmissionPreventionFlag = true;
+      setPasswordErrorMessage("Password cannot be empty.");
     }
 
     if (validateEmail(email) === false) {
@@ -146,6 +152,7 @@ function RegisterMistiri() {
         setEmailErrorMessage("Please enter correct email");
       }
     }
+
     if ((/^\d{10}$/.test(phoneNumber)) === false) {
       formSubmissionPreventionFlag = true;
       if (phoneNumber === '') {
@@ -156,9 +163,10 @@ function RegisterMistiri() {
       }
     }
     if (location === '') {
-      setPasswordErrorMessage("Location cannot be empty.");
       formSubmissionPreventionFlag = true;
+      setLocationErrorMessage("Location cannot be empty.");
     }
+
     if ((/^\d{9}$/.test(panNumber)) === false) {
       formSubmissionPreventionFlag = true;
       if (panNumber === '') {
@@ -169,18 +177,18 @@ function RegisterMistiri() {
       }
     }
     if (service === '') {
-      setServiceErrorMessage("Service cannot be empty.");
       formSubmissionPreventionFlag = true;
+      setServiceErrorMessage("Service cannot be empty.");
     }
 
     if (emplyoeeStatus === '') {
-      setEmployeeStatusErrorMessage("Employee status cannot be empty.");
       formSubmissionPreventionFlag = true;
+      setEmployeeStatusErrorMessage("Employee status cannot be empty.");
     }
 
     if (aboutYou === '') {
-      setAboutYouErrorMessage("About you information cannot be empty.");
       formSubmissionPreventionFlag = true;
+      setAboutYouErrorMessage("About you information cannot be empty.");
     }
 
     if (formSubmissionPreventionFlag === false) {
@@ -199,142 +207,23 @@ function RegisterMistiri() {
       })
         .then(response => {
           console.log(response)
-          if (response.data.success) {
+          if (response.status === 200) {
+            setTrueValue("The form data is successfully submited");
             console.log("The form data is successfully submited ");
             clearFields();
           }
           else {
             console.log(response.data);
-            if (response.data.message.firstName) setFirstNameErrorMessage(response.data.message.firstName)
-            if (response.data.message.lastName) setLastNameErrorMessage(response.data.message.lastName)
-            if (response.data.message.email) setEmailErrorMessage(response.data.message.email)
-            if (response.data.message.password) setPassword(response.data.message.password)
-            if (response.data.message.phoneNo) setPhoneNumberErrorMessage(response.data.message.phoneNo)
-            if (response.data.message.location) setLocationErrorMessage(response.data.message.location)
-            if (response.data.message.panNo) setPanNumberErrorMessage(response.data.message.panNo)
-            if (response.data.message.service) setServiceErrorMessage(response.data.message.service)
-            if (response.data.message.emplyoeeStatus) setEmployeeStatusErrorMessage(response.data.message.emplyoeeStatus)
+            console.log(response.data.message);
+            
           }
         })
         .catch(error => {
           console.log("error cacthed");
           console.log(error.response)
+          setPostErrorMessage(error.response.data.message)
         });
     }
-
-
-    // event.preventDefault();
-    // //setCreatingSignal(true);
-
-    // const url = 'http://localhost:8080/registerMistiri';
-
-    // // if (firstNameErrorMessage !== '' || lastNameErrorMessage !== '') {
-    // //   formSubmissionPreventionFlag = true;
-    // // }
-
-    // if (firstName === '') {
-    //   setFirstNameErrorMessage("First Name Cant Be Empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-
-    // if (lastName === '') {
-    //   setLastNameErrorMessage("Last Name Cant Be Empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-
-    // if (password === '') {
-    //   setPasswordErrorMessage("Password cannot be empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-
-    // if (validateEmail(email) === false) {
-    //   formSubmissionPreventionFlag = true;
-    //   if (email === '') {
-    //     setEmailErrorMessage("Email Cant be Empty");
-
-    //   } else {
-    //     setEmailErrorMessage("Please enter correct email");
-    //   }
-    // }
-    // if ((/^\d{10}$/.test(phoneNumber)) === false) {
-    //   formSubmissionPreventionFlag = true;
-    //   if (phoneNumber === '') {
-    //     setPhoneNumberErrorMessage("Phone Number Cant be empty");
-
-    //   } else {
-    //     setPhoneNumberErrorMessage("Please enter correct phone number");
-    //   }
-    // }
-    // if (location === '') {
-    //   setPasswordErrorMessage("Location cannot be empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-    // if ((/^\d{9}$/.test(panNumber)) === false) {
-    //   formSubmissionPreventionFlag = true;
-    //   if (panNumber === '') {
-    //     setPanNumberErrorMessage("Pan Number Cant be empty");
-
-    //   } else {
-    //     setPanNumberErrorMessage("Please enter correct pan number");
-    //   }
-    // }
-    // if (service === '') {
-    //   setServerErrorMessage("Service cannot be empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-
-    // if (emplyoeeStatus === '') {
-    //   setEmployeeStatusErrorMessage("Employee status cannot be empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-
-    // if (aboutYou === '') {
-    //   setAboutYouErrorMessage("About you information cannot be empty.");
-    //   formSubmissionPreventionFlag = true;
-    // }
-
-    // if (formSubmissionPreventionFlag === false) {
-    //   axios.post(url,
-    //     {
-    //       firstName: "Shabda",
-    //       lastName: "Pokheral",
-    //       email: "anuragbaskotaaa@gmail.com",
-    //       password: "123456",
-    //       phoneNo: "9823366695",
-    //       location: "Biratnagar",
-    //       panNo: "123456789",
-    //       employeeStatus: "self-business",
-    //       service: "plumber",
-    //       availableStatus: true,
-    //       aboutYou: "hello, billu mau is my lop"
-    //     })
-    //     .then(res => {
-    //       const data = res.data;
-    //       console.log(data);
-    //       if (data.success) {
-    //         console.log("The form data is successfully submited ");
-    //         clearFields();
-    //        }
-    //       // else {
-    //       //   console.log(data);
-    //       //   if (data.message.firstName) setFirstNameErrorMessage(data.message.firstName)
-    //       //   if (data.message.lastName) setLastNameErrorMessage(data.message.lastName)
-    //       //   if (data.message.email) setEmailErrorMessage(data.message.email)
-    //       //   if (data.message.password) setPassword(data.message.password)
-    //       //   if (data.message.phoneNo) setPhoneNumberErrorMessage(data.message.phoneNo)
-    //       //   if (data.message.location) setLocationErrorMessage(data.message.location)
-    //       //   if (data.message.panNo) setPanNumberErrorMessage(data.message.panNo)
-    //       //   if (data.message.service) setServiceErrorMessage(data.message.service)
-    //       //   if (data.message.emplyoeeStatus) setEmployeeStatusErrorMessage(data.message.emplyoeeStatus)
-    //       // }
-    //       // setCreatingSignal(false);
-    //     })
-    //     .catch(err => {
-    //       console.log(err);
-    //       console.log("Error !!!!!!!");
-    //       //setCreatingSignal(false);
-    //       //end gif
-    //     })
   };
 
 
@@ -375,7 +264,7 @@ function RegisterMistiri() {
           <h2 className='text-4xl text-[#30333a]  font-bold text-center py-4'>Mistiri Registration</h2>
 
           <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="First Name..." name='firstName' type="text" onChange={handleFirstNameChange} value={firstName} />
+            <input className='border relative bg-gray-100 p-2 ' placeholder="First Name" name='firstName' type="text" onChange={handleFirstNameChange} value={firstName} />
             <Suggestion errorMessage={firstNameErrorMessage} />
           </div>
 
@@ -416,8 +305,9 @@ function RegisterMistiri() {
               Service:
               <div className='text-base '>
                 <select name='service' onChange={handleService} value={service}>
+                <option value="">------</option>
                   <option value="plumber">Plumber</option>
-                  <option value="plumber">Carpenter</option>
+                  <option value="carpenter">Carpenter</option>
                   <option value="engineer">Engineer</option>
                   <option value="mechanics">Mechanics</option>
                   <option value="technician">Technician</option>
@@ -449,6 +339,8 @@ function RegisterMistiri() {
           <div className='flex flex-col mb-4'>
             <input className='border relative bg-gray-100 p-2 ' placeholder="About You" name='aboutYou' type="text" onChange={handleAboutYou} value={aboutYou} />
             <Suggestion errorMessage={aboutYouErrorMessage} />
+            <Suggestion errorMessage={postErrorMessage} />
+            <SuccessText errorMessage={trueValue} />
           </div>
 
           <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
