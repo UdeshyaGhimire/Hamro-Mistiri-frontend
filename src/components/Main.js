@@ -21,6 +21,7 @@ import Engineer from "./pages/services/Engineer";
 import Mechanic from "./pages/services/Mechanic";
 import Technician from "./pages/services/Technician";
 import Carpenter from "./pages/services/Carpenter";
+import Review from "./pages/Review";
 
 
 
@@ -47,6 +48,8 @@ function Main() {
             <Route path="/hiremeform" element={<HireMeForm/> } />
             <Route path="/editinfoform" element={<EditInfoForm />} />
             <Route path="/ratemeform" element={<RateMeForm />} />
+            <Route path="/Review" element={<Review />} />
+
             <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
             <Route path="/dashboarduser" element={<DashboardUser />} />
             <Route path="*" element={<NotFound />} />

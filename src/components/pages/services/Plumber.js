@@ -75,7 +75,7 @@ function Plumber() {
                 <i class="fas fa-star"></i>
                 <i class="fa-solid fa-star-half"></i>
               </div>
-              <div class="grid-child-posts">
+              <div class="about_me">
                 <p>{plumber.aboutYou}</p>
               </div>
               <a className='' href="/hiremeform"><button class="btn draw-border">Hire Me</button></a>
