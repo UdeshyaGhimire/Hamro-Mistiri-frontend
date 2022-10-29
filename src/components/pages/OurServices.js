@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import Carpenter1 from '../../assets/carpenter1.svg'
-import Engineer from '../../assets/engineer.svg'
-import Mechanics from '../../assets/mechanics.svg'
-import Painter from '../../assets/painter.svg'
-import Plumber from '../../assets/plumber.svg'
-import Technician from '../../assets/technician.svg'
-import HireMeForm from "./HireMeForm";
+import Carpenter1 from '../../assets/carpenter1.svg';
+import Engineer from '../../assets/engineer.svg';
+import Mechanics from '../../assets/mechanics.svg';
+import Painter from '../../assets/painter.svg';
+import Plumber from '../../assets/plumber.svg';
+import Technician from '../../assets/technician.svg';
 
 
 
@@ -17,7 +16,7 @@ export default function OurServices() {
     return (
 
 
-        <div id='Our Services' className='md:h-full flex-items-center text-grey-600 bg-grey-[#30333a] '>
+        <div id='#Services' className='md:h-full flex-items-center text-grey-600 bg-grey-[#30333a] '>
 
 
             <div className='container px-0 py-14 mx-auto'>
@@ -30,7 +29,7 @@ export default function OurServices() {
             <div className='flex flex-wrap '>
 
 
-                <a className='' href='Carpenter'>
+                <a className='' href='/mistiris/Carpenter'>
 
                     <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                         <div className='h-full  overflow-hidden '>
@@ -48,7 +47,7 @@ export default function OurServices() {
                 </a>
 
 
-                <a className='' href="Engineer">
+                <a className='' href="/mistiris/Engineer">
                     <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
 
                         <div className='h-full  overflow-hidden '>
@@ -86,7 +85,7 @@ export default function OurServices() {
                     </div>
                 </a>
 
-                <a className='' href="Mechanic">
+                <a className='' href="/mistiris/Mechanic">
                     <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                         <div className='h-full  overflow-hidden '>
                             <div className='flex justify-center '>
@@ -102,7 +101,7 @@ export default function OurServices() {
                     </div>
                 </a>
 
-                <a className='' href="Technician">
+                <a className='' href="/mistiris/Technician">
                     <div className='w-[470px] h-50 p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                         <div className='h-full  overflow-hidden '>
                             <div className='flex justify-center '>
@@ -118,7 +117,7 @@ export default function OurServices() {
                     </div>
                 </a>
 
-                <a className='' href="Painter">
+                <a className='' href="/mistiris/Painter">
                     <div className='w-[470px] h-50  p-6 m-5 bg-white border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg hover:bg-[#565b68] hover:text-white transistion duration-300 ease-in'>
                         <div className='h-full  overflow-hidden '>
                             <div className='flex justify-center '>

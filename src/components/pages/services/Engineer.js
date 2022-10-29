@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Engineer.css';
+import '../../../css/Engineer.css';
 import axios from 'axios';
 
 
@@ -9,10 +9,16 @@ function Engineer() {
 
   const engineer = "engineer"
   const [engineers, setEngineers] = React.useState([]);
+  const [address, setAddress] = React.useState([]);
+
+  const handleAddress = (event) => {
+    const addresss = event.target.value;
+    setAddress(addresss);
+  };
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
-    const url = `http://localhost:8080/mistiris/${engineer}`;
+    const url = `http://localhost:8080/mistiris/${engineer}/${address}`;
     axios.get(url)
       .then((res) => {
         // console.log(res.data);
@@ -22,13 +28,33 @@ function Engineer() {
 
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [address]);
 
   return (
     <div >
 
       <section>
         <div class="text-engineer"><p><b>ENGINEERS</b></p></div>
+        
+        <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
+          <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
+            <div className=''>
+              Your Location:
+            </div>
+            <div className='text-base '>
+              <select name='yourlocation' onChange={handleAddress} value={address} >
+                <option value="">&nbsp;&nbsp;&nbsp;------</option>
+                <option value="kathmandu">Kathmandu</option>
+                <option value="lalitpur">Lalitpur</option>
+                <option value="bhaktapur">Bhaktapur</option>
+                <option value="biratnagar">Biratnagar</option>
+                <option value="birgunj">Birgunj</option>
+                <option value="dharan">Dharan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
         <div class="container-engineer">
            {engineers.map(engineer => (
                <div class="card-engineer" key={engineer.id}>
@@ -49,7 +75,7 @@ function Engineer() {
                  <i class="fas fa-star"></i>
                </div>
                <div class="grid-child-posts">
-                 <p>"I am a pro painter"</p>
+                 <p>{engineer.aboutYou}</p>
                  </div>
                <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
                <button class="btn draw-border">About Me</button>

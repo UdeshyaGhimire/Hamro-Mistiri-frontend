@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../css/Mechanic.css';
+import '../../../css/Mechanic.css';
 import axios from 'axios';
 
 
@@ -9,10 +9,16 @@ function Mechanic() {
 
   const mechanic = "mechanic"
   const [mechanics, setMechanics] = React.useState([]);
+  const [address, setAddress] = React.useState([]);
+
+  const handleAddress = (event) => {
+    const addresss = event.target.value;
+    setAddress(addresss);
+  };
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
-    const url = `http://localhost:8080/mistiris/${mechanic}`;
+    const url = `http://localhost:8080/mistiris/${mechanic}/${address}`;
     axios.get(url)
       .then((res) => {
         // console.log(res.data);
@@ -22,13 +28,33 @@ function Mechanic() {
 
       })
       .catch(err => console.log(err));
-  }, []);
+  }, [address]);
 
   return (
     <div >
 
       <section>
         <div class="text-mechanic"><p><b>MECHANICS</b></p></div>
+        
+        <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
+          <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
+            <div className=''>
+              Your Location:
+            </div>
+            <div className='text-base '>
+              <select name='yourlocation' onChange={handleAddress} value={address} >
+                <option value="">&nbsp;&nbsp;&nbsp;------</option>
+                <option value="kathmandu">Kathmandu</option>
+                <option value="lalitpur">Lalitpur</option>
+                <option value="bhaktapur">Bhaktapur</option>
+                <option value="biratnagar">Biratnagar</option>
+                <option value="birgunj">Birgunj</option>
+                <option value="dharan">Dharan</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        
         <div class="container-mechanic">
            {mechanics.map(mechanic => (
                <div class="card-mechanic" key={mechanic.id}>

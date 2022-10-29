@@ -1,6 +1,6 @@
 import React from 'react';
 import HireImg from '../../assets/hire.jpg'
-import Painter from "./Painter";
+import Painter from './services/Painter';
 
 
 function HireMeForm() {

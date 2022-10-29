@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -28,7 +29,7 @@ const Navbar = () => {
           <div className=' flex items-center pr-80 mr-20'>
             <ul className='font-semibold text-white hidden md:flex  '>
               <a href="/"><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'> Home</li> </a>
-              <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Our Services</li>
+              <AnchorLink href='/#Services'> <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Our Services</li></AnchorLink>
               <a href="RegisterMistiri"><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Become a Professional</li></a>
               <a href="#AboutUs"> <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></a>
               <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li>

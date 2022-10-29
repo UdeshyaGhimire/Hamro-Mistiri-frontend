@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 
 import RateImg from '../../assets/RateImg.jpg'
-import Painter from "./Painter";
+import Painter from './services/Painter';
 import { FaStar } from "react-icons/fa";
 
 const colors = {

@@ -31,7 +31,7 @@ function RegisterMistiri() {
   const [aboutYouErrorMessage, setAboutYouErrorMessage] = React.useState([]);
 
   const [postErrorMessage, setPostErrorMessage] = React.useState([]);
-  
+
 
   //successMessage
 
@@ -215,7 +215,7 @@ function RegisterMistiri() {
           else {
             console.log(response.data);
             console.log(response.data.message);
-            
+
           }
         })
         .catch(error => {
@@ -290,10 +290,28 @@ function RegisterMistiri() {
             <Suggestion errorMessage={phoneNumberErrorMessage} />
           </div>
 
-          <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Location" name='location' type="text" onChange={handleLocation} value={location} />
+          <div className='flex flex-col mb-4 '>
+            <div className='border relative bg-gray-100 p-2 text-left'>
+              Location:
+              <div className='text-base '>
+                <select name='loaction' onChange={handleLocation} value={location}>
+                  <option value="">&nbsp;&nbsp;&nbsp;------</option>
+                  <option value="kathmandu">Kathmandu</option>
+                  <option value="lalitpur">Lalitpur</option>
+                  <option value="bhaktapur">Bhaktapur</option>
+                  <option value="biratnagar">Biratnagar</option>
+                  <option value="birgunj">Birgunj</option>
+                  <option value="dharan">Dharan</option>
+                </select>
+              </div>
+            </div>
             <Suggestion errorMessage={locationErrorMessage} />
           </div>
+
+          {/* <div className='flex flex-col mb-4'>
+            <input className='border relative bg-gray-100 p-2 ' placeholder="Location" name='location' type="text" onChange={handleLocation} value={location} />
+            <Suggestion errorMessage={locationErrorMessage} />
+          </div> */}
 
           <div className='flex flex-col mb-4'>
             <input className='border relative bg-gray-100 p-2 ' placeholder="Pan Number" name='panNo' type="number" onChange={handlePanNumber} value={panNumber} />
@@ -305,7 +323,7 @@ function RegisterMistiri() {
               Service:
               <div className='text-base '>
                 <select name='service' onChange={handleService} value={service}>
-                <option value="">------</option>
+                  <option value="">&nbsp;&nbsp;&nbsp;------</option>
                   <option value="plumber">Plumber</option>
                   <option value="carpenter">Carpenter</option>
                   <option value="engineer">Engineer</option>

@@ -15,24 +15,17 @@ import Footer from "./pages/Footer";
 import DashboardMistiri from "./pages/DashboardMistiri";
 import DashboardUser from "./pages/DashboardUser";
 
-import Plumber from "./pages/Plumber";
-import Painter from "./pages/Painter";
-import Engineer from "./pages/Engineer";
-import Mechanic from "./pages/Mechanic";
-import Technician from "./pages/Technician";
-import Carpenter from "./pages/Carpenter";
+import Plumber from "./pages/services/Plumber";
+import Painter from "./pages/services/Painter";
+import Engineer from "./pages/services/Engineer";
+import Mechanic from "./pages/services/Mechanic";
+import Technician from "./pages/services/Technician";
+import Carpenter from "./pages/services/Carpenter";
 
 
 
 
 function Main() {
-
-  const painter ="Painter";
-  const plumber ="Plumber";
-  const engineer="Engineer";
-  const carpenter="Carpenter";
-  const mechanic="Mechanic";
-  const technican="Technician";
   return (
     <Router>
       <div >
@@ -49,16 +42,13 @@ function Main() {
             <Route   path="/mistiris/Technician" element={<Technician/>}/>
             <Route   path="/mistiris/Carpenter" element={<Carpenter/>}/>
             <Route   path="/mistiris/Painter" element={<Painter/>}/>
-            <Route path="/registeruser" element={<RegisterUser />} />
-            <Route path="/registermistiri" element={<RegisterMistiri />} />
-            <Route path="/hiremeform" element={<HireMeForm />} />
+            <Route path="/registeruser" element={<RegisterUser/>} />
+            <Route path="/registermistiri" element={<RegisterMistiri/>} />
+            <Route path="/hiremeform" element={<HireMeForm/> } />
             <Route path="/editinfoform" element={<EditInfoForm />} />
             <Route path="/ratemeform" element={<RateMeForm />} />
             <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
             <Route path="/dashboarduser" element={<DashboardUser />} />
-           
-
-
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
