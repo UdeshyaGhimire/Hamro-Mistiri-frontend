@@ -38,12 +38,18 @@ a{
     align-items: top;
     box-shadow: rgba(0, 0, 0, 0.7);
     color: white;
+    width: 500px;
   }
   
   .card__rname {
     margin-top: 1px;
     font-size: 1.5em;
-    padding-left: 8px;
+    padding-left: 0px;
+    padding-top: 10px;
+  }
+  .card__rname_outer {
+    margin-top: 1px;
+    padding-left: 20px;
     padding-top: 10px;
   }
   .round_review {
