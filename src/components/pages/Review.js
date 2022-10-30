@@ -13,7 +13,33 @@ function Review() {
         <div class="testimonial-heading">
            
             <h1>Clients Review</h1>
-        </div>
+            </div>
+        
+        <div class="small_card">
+        <div class="card-review">
+              <img class="round_review" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+              <div class="card__rname">
+                <p >Abhiyan Rimal</p> </div>
+              <div class="grid-rcontainer">
+
+                
+                 <p> kathmandu</p>
+              
+
+              </div>
+            
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+                
+              </div>
+            
+           </div>
+            </div>
+           
         
         <div class="testimonial-box-container">
             
