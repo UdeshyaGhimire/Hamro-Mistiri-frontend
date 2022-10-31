@@ -21,7 +21,7 @@ color: white;
 .container-engineer {
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-gap: 40px;
+  grid-gap: 150px;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -33,10 +33,10 @@ color: white;
 
 .card-engineer {
   background-color: #fea72b;
-  height: auto;
+  height: 630px;
   border-radius: 20px;
   margin-top:10px;
-  width: auto;
+  width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,6 +49,14 @@ color: white;
   font-size: 1.5em;
 }
 
+.about_me {
+  margin-top: 15px;
+  font-size: 1em;
+  padding-left:20px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  
+}
 .round {
   height: 160px;
   width: 160px;

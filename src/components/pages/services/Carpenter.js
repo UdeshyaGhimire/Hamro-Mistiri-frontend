@@ -74,8 +74,11 @@ function Carpenter() {
                  <i class="fas fa-star"></i>
                  <i class="fas fa-star"></i>
                </div>
+               <div class="about_me">
+                <p>{Carpenter.aboutYou}</p>
+              </div>
                <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
-               <button class="btn draw-border">About Me</button>
+               <button class="btn draw-border">Rate Me</button>
                <button class="btn draw-border">Message</button>
              </div>
            ))}
