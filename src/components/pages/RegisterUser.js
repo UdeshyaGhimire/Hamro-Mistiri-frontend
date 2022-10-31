@@ -200,12 +200,12 @@ function RegisterUser() {
     // background
 
 
-    <div className='relative w-full h-[900px] bg-zinc-900/80'>
+    <div className='relative w-full h-[900px] bg-zinc-900/80 pt-[100px]'>
       <img className='absolute w-full h-full object-cover mix-blend-overlay' src={Building} alt="/" />
       <div className='flex justify-center items-center h-full'>
         {/* Form */}
 
-        <form className='max-w-[600px] w-full mx-auto bg-white p-9 pt-2' onSubmit={handleForm}>
+        <form className='w-[600px] mx-auto bg-white p-9 pt-2' onSubmit={handleForm}>
           <h2 className='text-4xl text-[#30333a]  font-bold text-center py-4'>User Registration</h2>
 
 
@@ -258,21 +258,23 @@ function RegisterUser() {
           </div>
 
 
+          <div className='flex justify-center items-center'>
+            {creatingSignal ?
+              <LoadingIcons.Oval stroke='#6ced07'
+                fill="#06bcee"
+                fillOpacity={5}
+                height="3em"
+                speed={1}
+                strokeOpacity={6}
+                strokeWidth={5}
+              />
+              :
+              <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
+                Register
+              </button>
+            }
+          </div>
 
-          {creatingSignal ?
-            <LoadingIcons.Oval stroke='#6ced07'
-              fill="#06bcee"
-              fillOpacity={5}
-              height="3em"
-              speed={1}
-              strokeOpacity={6}
-              strokeWidth={5}
-            />
-            :
-            <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
-              Register
-            </button>
-          }
           {/* Link to mistiri login */}
 
           <p className='text-lg text-center mt-8'>Want to Register as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="RegisterMistiri">Mistiri</a> instead?</p>
