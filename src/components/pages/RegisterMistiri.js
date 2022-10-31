@@ -33,8 +33,8 @@ function RegisterMistiri() {
 
   const [postErrorMessage, setPostErrorMessage] = React.useState([]);
 
- //Buffer 
- const[creatingSignal,setCreatingSignal]=React.useState(false);
+  //Buffer 
+  const [creatingSignal, setCreatingSignal] = React.useState(false);
 
 
 
@@ -387,24 +387,25 @@ function RegisterMistiri() {
             <SuccessText errorMessage={trueValue} />
           </div>
 
-          {creatingSignal ?
-          <LoadingIcons.Oval stroke='#6ced07' 
-          fill="#06bcee"
-          fillOpacity={5}
-          height="3em"
-          speed={1}
-          strokeOpacity={6}
-          strokeWidth={5}
-          />
-           
-           : 
-           <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
-            Register
-          </button>
-           }
+          <div className='flex justify-center items-center'>
+            {creatingSignal ?
+              <LoadingIcons.Oval stroke='#6ced07'
+                fill="#06bcee"
+                fillOpacity={5}
+                height="3em"
+                speed={1}
+                strokeOpacity={6}
+                strokeWidth={5}
+              />
 
-          
-          
+              :
+              <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
+                Register
+              </button>
+            }
+          </div>
+
+
           {/* Link to mistiri login */}
 
           <p className='text-lg text-center mt-8'>Want to Register as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="RegisterUser">User</a> instead?</p>
@@ -413,6 +414,7 @@ function RegisterMistiri() {
 
         </form>
       </div>
+
 
     </div>
   );

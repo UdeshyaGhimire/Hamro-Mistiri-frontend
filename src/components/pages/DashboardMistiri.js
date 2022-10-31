@@ -11,15 +11,15 @@ function DashboardMistiri() {
                 <div className='col-span-1  grow bg-[#00000098] '>
                     <div className='pt-[105px] text-gray-600 h-full pb-9'>
 
-                        
+
 
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] h-18 md:hover:h-[80px] font-bold md:text-[17px] text-center  bg-[#30333a] border-[5px] shadow-2xl cursor-pointer border-[#fea72b]  boarder-opacity-60 rounded-sm' >
                             <div className='w-[50px] pt-2 pl-3 ' >
-                               <img className='' src={Dashb} alt="/" />
+                                <img className='' src={Dashb} alt="/" />
 
                             </div>
                             <div className=' col-span-4 pl-3 pt-2 text-2xl md:text-[22x] font-bold text-[#fffffe]'>
-                               Dashboard
+                                Dashboard
                             </div>
                         </div>
 
@@ -79,6 +79,19 @@ function DashboardMistiri() {
 
                             <form className='max-w-[800px] w-full mx-auto bg-white p-[35px] pt-2 pl-[65px] border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg'>
                                 <h2 className='text-4xl text-[#000000]  font-bold text-center py-8'>Edit Mistiri Profile</h2>
+
+                                <div className='grid grid-cols-2 mb-4 bg-white '>
+                                    <div className='text-[#000000] font-bold pt-[8px] text-right'>Availability:
+                                    </div>
+
+                                    <div className='text-base w-[155px] bg-gray-100 relative text-left p-1 ml-3 pl-3'>
+                                        <select name='availability'>
+                                            <option value="available">Available</option>
+                                            <option value="notavailable">Not Available</option>
+                                        </select>
+                                    </div>
+
+                                </div>
 
                                 <div className='grid grid-cols-4 mb-4'>
                                     <p className='text-[#000000] font-bold pt-[8px]'>First Name:</p>
