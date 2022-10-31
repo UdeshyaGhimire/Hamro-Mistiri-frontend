@@ -19,7 +19,7 @@ const Navbar = () => {
         {localStorage.getItem("userId")
           ? <div className=' px-2 flex flex-row-reverse items-center w-full h-full'>
             
-            <a ><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>Mr. {localStorage.getItem("name")}</button></a>
+            <a ><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>{localStorage.getItem("name")}</button></a>
 
             <div className='text-[#fea72b] mr-4'>/</div>
 
@@ -54,7 +54,7 @@ const Navbar = () => {
               <AnchorLink offset='-150' href='/#AboutUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></AnchorLink>
               <AnchorLink activeClass="active" hashSpy={true} offset='130' href='/#ContactUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li></AnchorLink>
               {localStorage.getItem("role")==="Mistiri" ?
-              <AnchorLink activeClass="active" hashSpy={true} offset='130' href='/#ContactUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></AnchorLink>
+              <a activeClass="active" hashSpy={true} offset='130' href='/dashboardmistiri'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a>
                :<></>
               }
             </ul>
