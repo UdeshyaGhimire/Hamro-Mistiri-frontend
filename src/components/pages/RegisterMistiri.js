@@ -4,6 +4,7 @@ import axios from 'axios';
 import Suggestion from './Suggestion';
 import validateEmail from './Utility';
 import SuccessText from './SuccessText';
+import LoadingIcons from 'react-loading-icons';
 
 function RegisterMistiri() {
 
@@ -32,10 +33,20 @@ function RegisterMistiri() {
 
   const [postErrorMessage, setPostErrorMessage] = React.useState([]);
 
+ //Buffer 
+ const[creatingSignal,setCreatingSignal]=React.useState(false);
+
+
 
   //successMessage
 
   const [trueValue, setTrueValue] = React.useState([]);
+
+
+
+
+  //spinner 
+
 
   let formSubmissionPreventionFlag = false;
 
@@ -119,10 +130,12 @@ function RegisterMistiri() {
 
 
   const handleForm = (event) => {
+    setCreatingSignal(true);
     event.preventDefault();
 
     if (firstNameErrorMessage !== '' || lastNameErrorMessage !== '') {
       formSubmissionPreventionFlag = true;
+      setCreatingSignal(false);
     }
 
     console.log("The name from the state is " + firstName + " hello");
@@ -131,6 +144,7 @@ function RegisterMistiri() {
     if (firstName === '') {
       formSubmissionPreventionFlag = true;
       setFirstNameErrorMessage("First Name Cant Be Empty.");
+      setCreatingSignal(false);
     }
 
     if (lastName === '') {
@@ -141,6 +155,7 @@ function RegisterMistiri() {
     if (password === '') {
       formSubmissionPreventionFlag = true;
       setPasswordErrorMessage("Password cannot be empty.");
+      setCreatingSignal(false);
     }
 
     if (validateEmail(email) === false) {
@@ -151,6 +166,7 @@ function RegisterMistiri() {
       } else {
         setEmailErrorMessage("Please enter correct email");
       }
+      setCreatingSignal(false);
     }
 
     if ((/^\d{10}$/.test(phoneNumber)) === false) {
@@ -161,10 +177,12 @@ function RegisterMistiri() {
       } else {
         setPhoneNumberErrorMessage("Please enter correct phone number");
       }
+      setCreatingSignal(false);
     }
     if (location === '') {
       formSubmissionPreventionFlag = true;
       setLocationErrorMessage("Location cannot be empty.");
+      setCreatingSignal(false);
     }
 
     if ((/^\d{9}$/.test(panNumber)) === false) {
@@ -175,10 +193,12 @@ function RegisterMistiri() {
       } else {
         setPanNumberErrorMessage("Please enter correct pan number");
       }
+      setCreatingSignal(false);
     }
     if (service === '') {
       formSubmissionPreventionFlag = true;
       setServiceErrorMessage("Service cannot be empty.");
+      setCreatingSignal(false);
     }
 
     if (emplyoeeStatus === '') {
@@ -189,6 +209,7 @@ function RegisterMistiri() {
     if (aboutYou === '') {
       formSubmissionPreventionFlag = true;
       setAboutYouErrorMessage("About you information cannot be empty.");
+      setCreatingSignal(false);
     }
 
     if (formSubmissionPreventionFlag === false) {
@@ -206,6 +227,7 @@ function RegisterMistiri() {
         "aboutYou": aboutYou
       })
         .then(response => {
+          // loading =false;
           console.log(response)
           if (response.status === 200) {
             setTrueValue("The form data is successfully submited");
@@ -215,13 +237,15 @@ function RegisterMistiri() {
           else {
             console.log(response.data);
             console.log(response.data.message);
-
           }
+          setCreatingSignal(false);
         })
         .catch(error => {
+          // loading = false;
           console.log("error cacthed");
           console.log(error.response)
           setPostErrorMessage(error.response.data.message)
+          setCreatingSignal(false);
         });
     }
   };
@@ -361,9 +385,24 @@ function RegisterMistiri() {
             <SuccessText errorMessage={trueValue} />
           </div>
 
-          <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
+          {creatingSignal ?
+          <LoadingIcons.Oval stroke='#6ced07' 
+          fill="#06bcee"
+          fillOpacity={5}
+          height="3em"
+          speed={1}
+          strokeOpacity={6}
+          strokeWidth={5}
+          />
+           
+           : 
+           <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
             Register
           </button>
+           }
+
+          
+          
           {/* Link to mistiri login */}
 
           <p className='text-lg text-center mt-8'>Want to Register as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="RegisterUser">User</a> instead?</p>

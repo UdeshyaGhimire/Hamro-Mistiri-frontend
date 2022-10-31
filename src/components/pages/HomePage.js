@@ -84,7 +84,7 @@ function HomePage() {
           </div>
         </div>
 {/* div for Contact us */}
-        <div className=' md:grid grid-cols-2 bg-white md:h-[500px] w-full '>
+        <div className=' md:grid grid-cols-2 bg-white md:h-[500px] w-full ' id="#ContactUs">
           <div className='p-10 pb-1 md:p-24'>
             <div className='text-2xl font-bold md:text-[35px] text-center italic pb-6 md:hover:text-[37px] hover:text-[27px] '>
               Contact Us</div>

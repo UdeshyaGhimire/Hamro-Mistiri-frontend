@@ -24,15 +24,15 @@ const Navbar = () => {
       <div className=' w-screen h-[65px] z-10 bg-[#3d414a] fixed drop-shadow-lg'>
         <div className=' px-2 flex justify-between items-center w-full h-full'>
 
-          <h1 className=' place-content-start font-bold text-[#3d414a] bg-[#fea72b] text-lg md:text-3xl sm:flex-shrink-0  mr-4 -ml-2 pl-7 pr-7 pt-3 pb-3 '>Hamro Mistiri</h1>
+        <a href='/'> <h1 className=' place-content-start font-bold text-[#3d414a] bg-[#fea72b] text-lg md:text-3xl sm:flex-shrink-0  mr-4 -ml-2 pl-7 pr-7 pt-3 pb-3 '>Hamro Mistiri</h1></a>
 
           <div className=' flex items-center pr-80 mr-20'>
             <ul className='font-semibold text-white hidden md:flex  '>
-              <a href="/"><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'> Home</li> </a>
-              <AnchorLink href='/#Services'> <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Our Services</li></AnchorLink>
+            <a href='/'><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'> Home</li> </a>
+              <AnchorLink offset='100' href='/#Services'> <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Our Services</li></AnchorLink>
               <a href="RegisterMistiri"><li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Become a Professional</li></a>
-              <a href="#AboutUs"> <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></a>
-              <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li>
+              <AnchorLink offset='-150' href='/#AboutUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></AnchorLink>
+              <AnchorLink  activeClass="active" hashSpy={true} offset='130' href='/#ContactUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li></AnchorLink>
             </ul>
           </div>
 
