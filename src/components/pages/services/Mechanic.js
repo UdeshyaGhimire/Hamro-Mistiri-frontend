@@ -74,9 +74,9 @@ function Mechanic() {
                  <i class="fas fa-star"></i>
                  <i class="fas fa-star"></i>
                </div>
-               <div class="grid-child-posts">
-                 <p>"I am a pro painter"</p>
-                 </div>
+               <div class="about_me">
+                <p>{mechanic.aboutYou}</p>
+              </div>
                <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
                <button class="btn draw-border">About Me</button>
                <button class="btn draw-border">Message</button>
