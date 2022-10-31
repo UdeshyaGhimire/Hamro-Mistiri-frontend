@@ -45,7 +45,7 @@ function RegisterMistiri() {
 
 
 
-  //spinner 
+
 
 
   let formSubmissionPreventionFlag = false;
