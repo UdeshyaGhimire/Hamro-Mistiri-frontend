@@ -7,7 +7,7 @@ import axios from 'axios';
 
 function Mechanic() {
 
-  const mechanic = "mechanic"
+  const mechanic = "mechanics"
   const [mechanics, setMechanics] = React.useState([]);
   const [address, setAddress] = React.useState([]);
 

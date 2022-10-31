@@ -230,6 +230,8 @@ function RegisterMistiri() {
           // loading =false;
           console.log(response)
           if (response.status === 200) {
+            // localStorage.setItem("SESSIONID","")
+            // localStorage.clear()
             setTrueValue("The form data is successfully submited");
             console.log("The form data is successfully submited ");
             clearFields();
