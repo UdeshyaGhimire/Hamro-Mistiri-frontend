@@ -13,9 +13,12 @@ import EditInfoForm from "./pages/EditInfoForm";
 import RateMeForm from "./pages/RateMeForm";
 import Footer from "./pages/Footer";
 import DashboardMistiri from "./pages/DashboardMistiri";
+import DashboardMistiriEdit from "./pages/DashboardMistiriEdit";
+import DashboardMistiriDelete from "./pages/DashboardMistiriDelete";
 import DashboardUser from "./pages/DashboardUser";
 import DashboardUserEdit from "./pages/DashboardUserEdit";
 import DashboardUserDelete from "./pages/DashboardUserDelete";
+
 
 import Plumber from "./pages/services/Plumber";
 import Painter from "./pages/services/Painter";
@@ -61,7 +64,10 @@ function Main() {
                 <Route path="/dashboarduser" element={<DashboardUser />} />
                 <Route path="/dashboarduseredit" element={<DashboardUserEdit />} />
                 <Route path="/dashboarduserdelete" element={<DashboardUserDelete />} />
+
                 <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
+                <Route path="/dashboardmistiriedit" element={<DashboardMistiriEdit />} />
+                <Route path="/dashboardmistiridelete" element={<DashboardMistiriDelete />} />
 
               </>
             }
