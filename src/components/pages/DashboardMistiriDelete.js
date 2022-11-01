@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 
 import High from '../../assets/high.jpg'
+import DashboardComM from "./DashboardComM";
 
-import DashboardComU from "./DashboardComU";
-
-function DashboardUserDelete() {
+function DashboardMistiriDelete() {
     return (
         <div className=' md:grid grid-cols-5 w-full h-full '>
 
 
-      <DashboardComU />
+      <DashboardComM />
 
 
       {/* Edit Form Starts Here */}
@@ -43,4 +42,4 @@ function DashboardUserDelete() {
 
 }
 
-            export default DashboardUserDelete;
+            export default DashboardMistiriDelete;
