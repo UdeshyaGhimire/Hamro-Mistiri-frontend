@@ -90,6 +90,7 @@ function Painter() {
               <button class="btn draw-border" onClick={handleClick}>Hire Me</button>
               <button class="btn draw-border">Rate Me</button>
               <button class="btn draw-border">Message</button>
+              <button class="btn draw-border">Reviews</button>
             </div>
           ))}
 

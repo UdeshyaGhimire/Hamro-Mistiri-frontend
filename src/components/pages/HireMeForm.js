@@ -27,15 +27,16 @@ function HireMeForm() {
 
               <div className=' '>
                 <div className='grid grid-cols-4  mb-4 border relative bg-gray-100 p-2 text-left rounded-md'>
-                  Service:
+                  Urgency:
                   <div className='col-span-2 text-base '>
                     <select name='service'>
-                      <option value="carpenter">Carpenter</option>
-                      <option value="engineer">Engineer</option>
-                      <option value="plumber">Plumber</option>
-                      <option value="plumber">Mechanics</option>
-                      <option value="plumber">Technician</option>
-                      <option value="plumber">Painter</option>
+                      <option value="urgent">Urgent</option>
+                      <option value="1day">In 1 day</option>
+                      <option value="2days">In 2 days</option>
+                      <option value="3days">In 3 days</option>
+                      <option value="1weeks">Within 1 week</option>
+                      <option value="2weeks">Within 2 weeks</option>
+                      <option value="others">Others</option>
                     </select>
                   </div>
                 </div>
