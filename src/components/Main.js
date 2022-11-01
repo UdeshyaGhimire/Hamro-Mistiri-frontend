@@ -14,6 +14,8 @@ import RateMeForm from "./pages/RateMeForm";
 import Footer from "./pages/Footer";
 import DashboardMistiri from "./pages/DashboardMistiri";
 import DashboardUser from "./pages/DashboardUser";
+import DashboardUserEdit from "./pages/DashboardUserEdit";
+import DashboardUserDelete from "./pages/DashboardUserDelete";
 
 import Plumber from "./pages/services/Plumber";
 import Painter from "./pages/services/Painter";
@@ -45,18 +47,22 @@ function Main() {
             <Route path="/mistiris/Painter" element={<Painter />} />
             <Route path="/registeruser" element={<RegisterUser />} />
             <Route path="/registermistiri" element={<RegisterMistiri />} />
+            <Route path="/editinfoform" element={<EditInfoForm />} />
+
             {localStorage.getItem("userId") === null ?
               <>
                 <Route path="*" element={<NotFound />} />
               </> :
               <>
                 <Route path="/hiremeform" element={<HireMeForm />} />
-                <Route path="/editinfoform" element={<EditInfoForm />} />
+
                 <Route path="/ratemeform" element={<RateMeForm />} />
                 <Route path="/Review" element={<Review />} />
-
-                <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
                 <Route path="/dashboarduser" element={<DashboardUser />} />
+                <Route path="/dashboarduseredit" element={<DashboardUserEdit />} />
+                <Route path="/dashboarduserdelete" element={<DashboardUserDelete />} />
+                <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
+
               </>
             }
 

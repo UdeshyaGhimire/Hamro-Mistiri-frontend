@@ -30,8 +30,8 @@ function DashboardMistiri() {
                                 </svg>
 
                             </div>
-                            <div className=' col-span-4 pl-3 pt-2'>
-                                My Mistiri Profile
+                            <div className=' col-span-4 pl-[7px] pt-2'>
+                               Edit My Mistiri Profile
                             </div>
                         </div>
 
