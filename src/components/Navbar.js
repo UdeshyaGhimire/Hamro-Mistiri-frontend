@@ -27,7 +27,7 @@ const Navbar = () => {
             <a><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-4 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] ' onClick={handelLogOut}>Log Out</button></a>
           </div>
           :
-          <div className=' px-2 flex flex-row-reverse items-center w-full h-full'>
+          <div className=' px-2 flex flex-row-reverse items-center w-full h-full align-right'>
 
             <a href="/RegisterUser"><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>Register</button></a>
 

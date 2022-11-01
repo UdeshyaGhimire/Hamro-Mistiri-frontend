@@ -150,7 +150,7 @@ function LogInUser() {
               :
 
               <div className='flex flex-col'>
-                <button className='w-full py-3 mt-8 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
+                <button className='w-[345px] py-3 mt-8 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
                   Sign In
                 </button>
               </div>
