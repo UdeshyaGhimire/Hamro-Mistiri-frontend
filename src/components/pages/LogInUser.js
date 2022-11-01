@@ -137,24 +137,25 @@ function LogInUser() {
             <Suggestion errorMessage={postErrorMessage} />
             <SuccessText errorMessage={trueValue} />
           </div>
+          <div className='flex justify-center items-center'>
+            {creatingSignal ?
+              <LoadingIcons.Oval stroke='#6ced07'
+                fill="#06bcee"
+                fillOpacity={5}
+                height="3em"
+                speed={1}
+                strokeOpacity={6}
+                strokeWidth={5}
+              />
+              :
 
-          {creatingSignal ?
-            <LoadingIcons.Oval stroke='#6ced07'
-              fill="#06bcee"
-              fillOpacity={5}
-              height="3em"
-              speed={1}
-              strokeOpacity={6}
-              strokeWidth={5}
-            />
-            :
-
-            <div className='flex flex-col'>
-              <button className='w-full py-3 mt-8 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
-                Sign In
-              </button>
-            </div>
-          }
+              <div className='flex flex-col'>
+                <button className='w-full py-3 mt-8 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
+                  Sign In
+                </button>
+              </div>
+            }
+          </div>
           {/* Link to mistiri login */}
           <div className=' text-center mt-8'>
             <p className='text-lg text-center mt-8'>Haven't Registered ? <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="/registeruser">Register</a> Here.</p>

@@ -80,6 +80,7 @@ function Carpenter() {
                <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
                <button class="btn draw-border">Rate Me</button>
                <button class="btn draw-border">Message</button>
+               <button class="btn draw-border">Reviews</button>
              </div>
            ))}
           
