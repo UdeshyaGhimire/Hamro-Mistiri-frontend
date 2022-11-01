@@ -16,6 +16,16 @@ function Engineer() {
     setAddress(addresss);
   };
 
+  const handleClick = (event) => {
+    event.preventDefault();
+    if(localStorage.getItem("userId")===null){
+        alert("Please Log In First");
+        window.location.href = "/loginuser";
+    }else{
+    window.location.href = "/hiremeform";
+    }
+  };
+
   React.useEffect(() => {
     console.log("hello inside useeEffect");
     const url = `http://localhost:8080/mistiris/${engineer}/${address}`;
@@ -77,7 +87,7 @@ function Engineer() {
                <div class="about_me">
                  <p>{engineer.aboutYou}</p>
                  </div>
-               <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
+               <button class="btn draw-border" onClick={handleClick}>Hire Me</button>
                <button class="btn draw-border">Rate Me</button>
                <button class="btn draw-border">Message</button>
              </div>

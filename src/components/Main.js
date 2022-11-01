@@ -37,25 +37,33 @@ function Main() {
             <Route exact path="/" element={<HomePage />} />
             <Route path="/loginuser" element={<LogInUser />} />
             <Route path="/loginmistiri" element={<LogInMistiri />} />
-            <Route   path="/mistiris/Plumber" element={<Plumber/>}/>
-            <Route   path="/mistiris/Engineer" element={<Engineer/>}/>
-            <Route   path="/mistiris/Mechanic" element={<Mechanic/>}/>
-            <Route   path="/mistiris/Technician" element={<Technician/>}/>
-            <Route   path="/mistiris/Carpenter" element={<Carpenter/>}/>
-            <Route   path="/mistiris/Painter" element={<Painter/>}/>
-            <Route path="/registeruser" element={<RegisterUser/>} />
-            <Route path="/registermistiri" element={<RegisterMistiri/>} />
-            <Route path="/hiremeform" element={<HireMeForm/> } />
-            <Route path="/editinfoform" element={<EditInfoForm />} />
-            <Route path="/ratemeform" element={<RateMeForm />} />
-            <Route path="/Review" element={<Review />} />
+            <Route path="/mistiris/Plumber" element={<Plumber />} />
+            <Route path="/mistiris/Engineer" element={<Engineer />} />
+            <Route path="/mistiris/Mechanic" element={<Mechanic />} />
+            <Route path="/mistiris/Technician" element={<Technician />} />
+            <Route path="/mistiris/Carpenter" element={<Carpenter />} />
+            <Route path="/mistiris/Painter" element={<Painter />} />
+            <Route path="/registeruser" element={<RegisterUser />} />
+            <Route path="/registermistiri" element={<RegisterMistiri />} />
+            {localStorage.getItem("userId") === null ?
+              <>
+                <Route path="*" element={<NotFound />} />
+              </> :
+              <>
+                <Route path="/hiremeform" element={<HireMeForm />} />
+                <Route path="/editinfoform" element={<EditInfoForm />} />
+                <Route path="/ratemeform" element={<RateMeForm />} />
+                <Route path="/Review" element={<Review />} />
 
-            <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
-            <Route path="/dashboarduser" element={<DashboardUser />} />
+                <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
+                <Route path="/dashboarduser" element={<DashboardUser />} />
+              </>
+            }
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </Router>
   );

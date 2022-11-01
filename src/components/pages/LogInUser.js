@@ -121,7 +121,7 @@ function LogInUser() {
         {/* Form */}
 
         <form className='max-w-[400px] w-full mx-auto bg-white p-8' onSubmit={handleForm} action='/'>
-          <h2 className='text-4xl font-bold text-center py-4 text-[#30333a]'>User Log In</h2>
+          <h2 className='text-4xl font-bold text-center py-4 text-[#30333a]'>Log In</h2>
           <div>
             <p></p>
 
@@ -132,7 +132,7 @@ function LogInUser() {
           </div>
 
           <div className='flex flex-col'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Password" type="text" name='password' value={password} onChange={handlePassword} />
+            <input className='border relative bg-gray-100 p-2 ' placeholder="Password" type="password" name='password' value={password} onChange={handlePassword} />
             <Suggestion errorMessage={passwordErrorMessage} />
             <Suggestion errorMessage={postErrorMessage} />
             <SuccessText errorMessage={trueValue} />
@@ -157,7 +157,7 @@ function LogInUser() {
           }
           {/* Link to mistiri login */}
           <div className=' text-center mt-8'>
-            <p className='text-lg text-center mt-8'>Want to Log In as a <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="LogInMistiri">Mistiri</a> instead?</p>
+            <p className='text-lg text-center mt-8'>Haven't Registered ? <a className='text-xl font-bold relative text-black hover:text-[#fcb858] underline hover:decoration-solid  capitalize hover:uppercase' href="/registeruser">Register</a> Here.</p>
 
           </div>
         </form>
