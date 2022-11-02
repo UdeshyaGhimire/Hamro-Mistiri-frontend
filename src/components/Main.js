@@ -7,13 +7,20 @@ import LogInUser from "./pages/LogInUser";
 import LogInMistiri from "./pages/LogInMistiri";
 import RegisterUser from "./pages/RegisterUser";
 import RegisterMistiri from "./pages/RegisterMistiri";
+import Chat from "./pages/Chat";
+
 
 import HireMeForm from "./pages/HireMeForm";
 import EditInfoForm from "./pages/EditInfoForm";
 import RateMeForm from "./pages/RateMeForm";
 import Footer from "./pages/Footer";
 import DashboardMistiri from "./pages/DashboardMistiri";
+import DashboardMistiriEdit from "./pages/DashboardMistiriEdit";
+import DashboardMistiriDelete from "./pages/DashboardMistiriDelete";
 import DashboardUser from "./pages/DashboardUser";
+import DashboardUserEdit from "./pages/DashboardUserEdit";
+import DashboardUserDelete from "./pages/DashboardUserDelete";
+
 
 import Plumber from "./pages/services/Plumber";
 import Painter from "./pages/services/Painter";
@@ -44,19 +51,29 @@ function Main() {
             <Route path="/mistiris/Carpenter" element={<Carpenter />} />
             <Route path="/mistiris/Painter" element={<Painter />} />
             <Route path="/registeruser" element={<RegisterUser />} />
+            <Route path="/chat" element={<Chat />} />
             <Route path="/registermistiri" element={<RegisterMistiri />} />
+            <Route path="/editinfoform" element={<EditInfoForm />} />
+
             {localStorage.getItem("userId") === null ?
               <>
                 <Route path="*" element={<NotFound />} />
               </> :
               <>
                 <Route path="/hiremeform" element={<HireMeForm />} />
+
                 <Route path="/editinfoform" element={<EditInfoForm />} />
                 <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />
+
                 <Route path="/Review" element={<Review />} />
+                <Route path="/dashboarduser" element={<DashboardUser />} />
+                <Route path="/dashboarduseredit" element={<DashboardUserEdit />} />
+                <Route path="/dashboarduserdelete" element={<DashboardUserDelete />} />
 
                 <Route path="/dashboardmistiri" element={<DashboardMistiri />} />
-                <Route path="/dashboarduser" element={<DashboardUser />} />
+                <Route path="/dashboardmistiriedit" element={<DashboardMistiriEdit />} />
+                <Route path="/dashboardmistiridelete" element={<DashboardMistiriDelete />} />
+
               </>
             }
 

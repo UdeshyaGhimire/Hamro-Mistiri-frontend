@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
 import High from '../../assets/high.jpg'
 import Dashb from '../../assets/dashb.png'
-import DashboardUser from "./DashboardUser";
+import DashboardComU from "./DashboardComU";
 
-
-function EditInfoForm() {
-
-
-  return (
-    <div>
+function DashboardUserEdit() {
+    return (
+        <div>
       <div className=' md:grid grid-cols-5 w-full h-full '>
 
 
-        <DashboardUser />
+        <DashboardComU />
 
 
         {/* Edit Form Starts Here */}
@@ -69,7 +67,6 @@ function EditInfoForm() {
             </div>
 
           </div>
-          {/* <EditInfoForm/> */}
 
         </div>
       </div >
@@ -79,13 +76,8 @@ function EditInfoForm() {
     </div >
 
 
+            );
 
-  );
 }
 
-
-
-
-
-
-export default EditInfoForm;
+            export default DashboardUserEdit;

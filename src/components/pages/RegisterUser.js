@@ -223,12 +223,12 @@ function RegisterUser() {
     // background
 
 
-    <div className='relative w-full h-[900px] bg-zinc-900/80 pt-[100px]'>
-      <img className='absolute w-full h-full object-cover mix-blend-overlay' src={Building} alt="/" />
+    <div className='relative w-full h-full bg-zinc-900/80 pt-[100px]'>
+      <img className='absolute w-full h-[770px] object-cover mix-blend-overlay' src={Building} alt="/" />
       <div className='flex justify-center items-center h-full'>
         {/* Form */}
 
-        <form className='w-[600px] mx-auto bg-white p-9 pt-2' onSubmit={handleForm}>
+        <form className='w-[600px] mx-auto bg-white p-9 pt-2 mb-16 mt-9' onSubmit={handleForm}>
           <h2 className='text-4xl text-[#30333a]  font-bold text-center py-4'>User Registration</h2>
 
 
