@@ -7,6 +7,8 @@ import LogInUser from "./pages/LogInUser";
 import LogInMistiri from "./pages/LogInMistiri";
 import RegisterUser from "./pages/RegisterUser";
 import RegisterMistiri from "./pages/RegisterMistiri";
+import Chat from "./pages/Chat";
+
 
 import HireMeForm from "./pages/HireMeForm";
 import EditInfoForm from "./pages/EditInfoForm";
@@ -49,6 +51,7 @@ function Main() {
             <Route path="/mistiris/Carpenter" element={<Carpenter />} />
             <Route path="/mistiris/Painter" element={<Painter />} />
             <Route path="/registeruser" element={<RegisterUser />} />
+            <Route path="/chat" element={<Chat />} />
             <Route path="/registermistiri" element={<RegisterMistiri />} />
             <Route path="/editinfoform" element={<EditInfoForm />} />
 
