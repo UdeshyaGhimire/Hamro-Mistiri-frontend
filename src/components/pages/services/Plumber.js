@@ -83,13 +83,19 @@ function Plumber() {
                 <p>{plumber.aboutYou}</p>
               </div>
               {/* <button class="btn draw-border" onClick={handleClick}>Hire Me</button> */}
-              <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
+              
               <button class="btn draw-border" >Hire Me</button>
-              </Link>
+              
               {/* <button class="btn draw-border" onClick={handleClick}>Rate Me</button> */}
+              <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
               <button class="btn draw-border">Rate Me</button>
+              </Link>
+
               <button class="btn draw-border">Message</button>
+              <Link to={`/Review/${plumber.id}`}>
               <button class="btn draw-border">Reviews</button>
+              </Link>
+              
             </div>
           ))}
 
