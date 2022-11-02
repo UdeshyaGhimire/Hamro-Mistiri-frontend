@@ -151,7 +151,7 @@ function RateMe() {
 
           <div className='p-4  '>
             {/* to close form */}
-            <a className='flex justify-end text-2xl font-bold text-gray-400 ' href='/'><button className='  '></button>X</a>
+            <a className='flex justify-end text-2xl font-bold text-gray-400 ' href='/mistiris/Plumber'><button className='  '></button>X</a>
 
             {/* Form starts here */}
             <form className='pt-[55px]' onSubmit={handleForm}>

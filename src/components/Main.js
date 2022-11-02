@@ -65,7 +65,7 @@ function Main() {
                 <Route path="/editinfoform" element={<EditInfoForm />} />
                 <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />
 
-                <Route path="/Review" element={<Review />} />
+                <Route path="/Review/:id" element={<Review />} />
                 <Route path="/dashboarduser" element={<DashboardUser />} />
                 <Route path="/dashboarduseredit" element={<DashboardUserEdit />} />
                 <Route path="/dashboarduserdelete" element={<DashboardUserDelete />} />
