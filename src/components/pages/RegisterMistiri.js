@@ -68,7 +68,7 @@ function RegisterMistiri() {
     setFirstNameErrorMessage("");
     setFirstName(firstNameData);
     if (firstNameData.trim() === "") {
-      setFirstNameErrorMessage("First Name onclick cant Be Empty");
+      setFirstNameErrorMessage("First Name cant Be Empty");
     }
   };
 
@@ -152,9 +152,32 @@ function RegisterMistiri() {
       setLastNameErrorMessage("Last Name Cant Be Empty.");
     }
 
-    if (password === '') {
+    if (password.length>9) {
+      console.log(password.length)
+      if ((/[A-Z]/.test(password)) === false) {
+        formSubmissionPreventionFlag = true;
+        setPasswordErrorMessage("Password must contain capital letter");
+        setCreatingSignal(false);
+
+      }
+      if ((/[a-z]/.test(password)) === false) {
+        formSubmissionPreventionFlag = true;
+        setPasswordErrorMessage("Password must contain smaller character");
+        setCreatingSignal(false);
+      }
+      if ((/[0-9]/.test(password)) === false) {
+        formSubmissionPreventionFlag = true;
+        setPasswordErrorMessage("Password must contain number");
+        setCreatingSignal(false);
+      }
+    } else {
       formSubmissionPreventionFlag = true;
-      setPasswordErrorMessage("Password cannot be empty.");
+      if (password === '') {
+        setPasswordErrorMessage("Password Cant be empty");
+
+      } else {
+        setPasswordErrorMessage("Password must be of 8 digits");
+      }
       setCreatingSignal(false);
     }
 
@@ -175,7 +198,7 @@ function RegisterMistiri() {
         setPhoneNumberErrorMessage("Phone Number Cant be empty");
 
       } else {
-        setPhoneNumberErrorMessage("Please enter correct phone number");
+        setPhoneNumberErrorMessage("Phone number must be of 10 digits");
       }
       setCreatingSignal(false);
     }
@@ -191,7 +214,7 @@ function RegisterMistiri() {
         setPanNumberErrorMessage("Pan Number Cant be empty");
 
       } else {
-        setPanNumberErrorMessage("Please enter correct pan number");
+        setPanNumberErrorMessage("Pan number must be of 9 digits");
       }
       setCreatingSignal(false);
     }
@@ -232,7 +255,7 @@ function RegisterMistiri() {
           if (response.status === 200) {
             // localStorage.setItem("SESSIONID","")
             // localStorage.clear()
-            setTrueValue("The form data is successfully submited");
+            setTrueValue("You have successfully registered!");
             console.log("The form data is successfully submited ");
             clearFields();
           }
@@ -312,7 +335,7 @@ function RegisterMistiri() {
           </div>
 
           <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Phone Number" name='phoneNo' type="number" onChange={handlePhoneNumber} value={phoneNumber} />
+            <input className='border relative bg-gray-100 p-2 ' placeholder="Phone Number" name='phoneNo' type="text" onChange={handlePhoneNumber} value={phoneNumber} />
             <Suggestion errorMessage={phoneNumberErrorMessage} />
           </div>
 
@@ -340,7 +363,7 @@ function RegisterMistiri() {
           </div> */}
 
           <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Pan Number" name='panNo' type="number" onChange={handlePanNumber} value={panNumber} />
+            <input className='border relative bg-gray-100 p-2 ' placeholder="Pan Number" name='panNo' type="text" onChange={handlePanNumber} value={panNumber} />
             <Suggestion errorMessage={panNumberErrorMessage} />
           </div>
 
