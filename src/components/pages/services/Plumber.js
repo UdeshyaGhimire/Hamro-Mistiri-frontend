@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../../css/Plumber.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 
 
@@ -16,15 +17,8 @@ function Plumber() {
     setAddress(addresss);
   };
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    if(localStorage.getItem("userId")===null){
-        alert("Please Log In First");
-        window.location.href = "/loginuser";
-    }else{
-    window.location.href = "/hiremeform";
-    }
-  };
+  
+   
 
 
   React.useEffect(() => {
@@ -88,8 +82,12 @@ function Plumber() {
               <div class="about_me">
                 <p>{plumber.aboutYou}</p>
               </div>
-              <button class="btn draw-border" onClick={handleClick}>Hire Me</button>
-              <button class="btn draw-border" onClick={handleClick}>Rate Me</button>
+              {/* <button class="btn draw-border" onClick={handleClick}>Hire Me</button> */}
+              <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
+              <button class="btn draw-border" >Hire Me</button>
+              </Link>
+              {/* <button class="btn draw-border" onClick={handleClick}>Rate Me</button> */}
+              <button class="btn draw-border">Rate Me</button>
               <button class="btn draw-border">Message</button>
             </div>
           ))}

@@ -52,7 +52,7 @@ function Main() {
               <>
                 <Route path="/hiremeform" element={<HireMeForm />} />
                 <Route path="/editinfoform" element={<EditInfoForm />} />
-                <Route path="/ratemeform" element={<RateMeForm />} />
+                <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />
                 <Route path="/Review" element={<Review />} />
 
                 <Route path="/dashboardmistiri" element={<DashboardMistiri />} />

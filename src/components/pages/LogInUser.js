@@ -84,6 +84,7 @@ function LogInUser() {
 
           if (response.status === 200) {
             if (response.data.data.isVerified === false) {
+              window.location.href = "/loginuser";
               alert("Please verify you email before you login for the first time");
             } else {
               setTrueValue("Successfully loggedIn");

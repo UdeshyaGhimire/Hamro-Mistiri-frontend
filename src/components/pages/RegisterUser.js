@@ -50,7 +50,7 @@ function RegisterUser() {
     setFirstNameErrorMessage("");
     setFirstName(firstNameData);
     if (firstNameData.trim() === "") {
-      setFirstNameErrorMessage("First Name onclick cant Be Empty");
+      setFirstNameErrorMessage("First Name can't Be Empty");
     }
   };
 
@@ -120,18 +120,42 @@ function RegisterUser() {
       formSubmissionPreventionFlag = true;
       setFirstNameErrorMessage("First Name Cant Be Empty.");
       setCreatingSignal(false);
-    }
+    } 
 
     if (lastName === '') {
       formSubmissionPreventionFlag = true;
       setLastNameErrorMessage("Last Name Cant Be Empty.");
     }
 
-    if (password === '') {
+    if (password.length>9) {
+      console.log(password.length)
+      if ((/[A-Z]/.test(password)) === false) {
+        formSubmissionPreventionFlag = true;
+        setPasswordErrorMessage("Password must contain capital letter");
+        setCreatingSignal(false);
+
+      }
+      if ((/[a-z]/.test(password)) === false) {
+        formSubmissionPreventionFlag = true;
+        setPasswordErrorMessage("Password must contain smaller character");
+        setCreatingSignal(false);
+      }
+      if ((/[0-9]/.test(password)) === false) {
+        formSubmissionPreventionFlag = true;
+        setPasswordErrorMessage("Password must contain number");
+        setCreatingSignal(false);
+      }
+    } else {
       formSubmissionPreventionFlag = true;
-      setPasswordErrorMessage("Password cannot be empty.");
+      if (password === '') {
+        setPasswordErrorMessage("Password Cant be empty");
+
+      } else {
+        setPasswordErrorMessage("Password must be of 8 digits");
+      }
       setCreatingSignal(false);
     }
+
 
     if (validateEmail(email) === false) {
       formSubmissionPreventionFlag = true;
@@ -172,8 +196,7 @@ function RegisterUser() {
           // loading =false;
           console.log(response)
           if (response.status === 200) {
-            setTrueValue("The form data is successfully submited");
-            console.log("The form data is successfully submited ");
+            setTrueValue("You have been registered successfully");
             clearFields();
           }
           else {
@@ -232,7 +255,7 @@ function RegisterUser() {
           </div>
 
           <div className='flex flex-col mb-4'>
-            <input className='border relative bg-gray-100 p-2 ' placeholder="Phone Number" type="number" name='phoneNo' value={phoneNumber} onChange={handlePhoneNumber} />
+            <input className='border relative bg-gray-100 p-2 ' placeholder="Phone Number" type="text" name='phoneNo' value={phoneNumber} onChange={handlePhoneNumber} />
             <Suggestion errorMessage={phoneNumberErrorMessage} />
           </div>
 
