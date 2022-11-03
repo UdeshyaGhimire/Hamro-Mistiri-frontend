@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../../css/Plumber.css';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -12,14 +12,37 @@ function Plumber() {
   const [plumbers, setPlumbers] = React.useState([]);
   const [address, setAddress] = React.useState([]);
 
+  var decimal=0.0;
+  var removeDecimal=0;
+
   const handleAddress = (event) => {
     const addresss = event.target.value;
     setAddress(addresss);
   };
 
-  
-   
 
+  function equalChecker() {
+    if (decimal === removeDecimal) {
+      return true;
+    } else return false;
+  };
+
+  function checker(plumber) {
+    console.log(plumber.rating);
+     decimal=plumber.rating;
+     removeDecimal=Math.trunc(decimal);
+  }
+
+
+  function loggedInChecker() {
+    if (localStorage.getItem("userId") === null) {
+      alert("Please Log In First");
+      window.location.href = "/loginuser";
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
@@ -27,9 +50,8 @@ function Plumber() {
     axios.get(url)
       .then((res) => {
         // console.log(res.data);
-        // console.log(res.data);
+        //console.log(res.data);
         setPlumbers(res.data);
-
       })
       .catch(err => console.log(err));
   }, [address]);
@@ -39,7 +61,7 @@ function Plumber() {
 
       <section>
         <div class="text-plumber"><p><b>PLUMBERS</b></p></div>
-        
+
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
           <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
             <div className=''>
@@ -58,52 +80,58 @@ function Plumber() {
             </div>
           </div>
         </div>
-        
-        <div class="container-plumber">
-          {plumbers.map(plumber => (
-            <div class="card-plumber" key={plumber.id}>
-              <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-              <div class="card__name">
-                <p >{plumber.customer.firstName}</p> </div>
-              <div class="grid-container">
 
-                <div class="grid-child-posts">
-                  {plumber.customer.loction}
+        {loggedInChecker() ?
+          <div class="container-plumber">
+            {plumbers.map(plumber => (
+              <div class="card-plumber" key={plumber.id} onLoad={checker(plumber)}>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <div class="card__name">
+                  <p >{plumber.customer.firstName}</p> </div>
+                <div class="grid-container">
+
+                  <div class="grid-child-posts">
+                    {plumber.customer.loction}
+                  </div>
+
+                </div>
+                <div class="rating">
+                  {equalChecker()
+                    ?
+                    Array.from(Array(plumber.rating), (e, i) => {
+                      return <i class="fas fa-star" key={i}></i>
+                    })
+                    : <>
+                      {Array.from(Array(plumber.rating), (e, i) => {
+                        return <i class="fas fa-star" key={i}></i>
+                      })}
+                      <i class="fa-solid fa-star-half"></i>
+                    </>
+                  }
+                </div>
+                <div class="about_me">
+                  <p>{plumber.aboutYou}</p>
                 </div>
 
+                <Link to={`/hiremeform/${plumber.id}/${plumber.customer.id}`}>
+                <button class="btn draw-border" >Hire Me</button>
+                </Link>
+
+                <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
+                  <button class="btn draw-border">Rate Me</button>
+                </Link>
+
+
+                <Link to={`/Review/${plumber.id}`}>
+                  <button class="btn draw-border">Reviews</button>
+                </Link>
+
               </div>
-              <div class="rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fa-solid fa-star-half"></i>
-              </div>
-              <div class="about_me">
-                <p>{plumber.aboutYou}</p>
-              </div>
-              {/* <button class="btn draw-border" onClick={handleClick}>Hire Me</button> */}
-              
-              <button class="btn draw-border" >Hire Me</button>
-              
-              {/* <button class="btn draw-border" onClick={handleClick}>Rate Me</button> */}
-              <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
-              <button class="btn draw-border">Rate Me</button>
-              </Link>
-
-              <Link to={`/Chat/`}>
-              <button class="btn draw-border">Message</button>
-              </Link>
-              <Link to={`/Review/${plumber.id}`}>
-              <button class="btn draw-border">Reviews</button>
-              </Link>
-              
-            </div>
-          ))}
+            ))}
 
 
-        </div>
-
+          </div>
+          : <></>}
       </section>
 
     </div>

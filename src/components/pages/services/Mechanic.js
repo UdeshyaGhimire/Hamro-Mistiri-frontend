@@ -13,20 +13,38 @@ function Mechanic() {
   const [mechanics, setMechanics] = React.useState([]);
   const [address, setAddress] = React.useState([]);
 
+  var decimal=0.0;
+  var removeDecimal=0;
+
   const handleAddress = (event) => {
     const addresss = event.target.value;
     setAddress(addresss);
   };
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    if(localStorage.getItem("userId")===null){
-        alert("Please Log In First");
-        window.location.href = "/loginuser";
-    }else{
-    window.location.href = "/hiremeform";
+  function equalChecker() {
+    if (decimal === removeDecimal) {
+      return true;
+    } else return false;
+  };
+
+  function checker(plumber) {
+    console.log(plumber.rating);
+     decimal=plumber.rating;
+     removeDecimal=Math.trunc(decimal);
+  }
+
+
+  function loggedInChecker() {
+    if (localStorage.getItem("userId") === null) {
+      alert("Please Log In First");
+      window.location.href = "/loginuser";
+      return false;
+    } else {
+      return true;
     }
   };
+
+  
 
 
   React.useEffect(() => {
@@ -67,10 +85,11 @@ function Mechanic() {
             </div>
           </div>
         </div>
-        
+
+        {loggedInChecker() ?
         <div class="container-mechanic">
            {mechanics.map(mechanic => (
-               <div class="card-mechanic" key={mechanic.id}>
+               <div class="card-mechanic" key={mechanic.id} onLoad={checker(mechanic)}>
                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
                <div class="card__name">
                  <p >{mechanic.customer.firstName}</p> </div>
@@ -82,23 +101,44 @@ function Mechanic() {
    
                </div>
                <div class="rating">
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
+               {equalChecker()
+                    ?
+                    Array.from(Array(mechanic.rating), (e, i) => {
+                      return <i class="fas fa-star" key={i}></i>
+                    })
+                    : <>
+                      {Array.from(Array(mechanic.rating), (e, i) => {
+                        return <i class="fas fa-star" key={i}></i>
+                      })}
+                      <i class="fa-solid fa-star-half"></i>
+                    </>
+                  }
                </div>
                <div class="about_me">
                 <p>{mechanic.aboutYou}</p>
               </div>
-              <a href='HireMeForm'> <button class="btn draw-border" >Hire Me</button></a> 
-              <Link to={`/Chat/`}><button class="btn draw-border">Message</button></Link>
-              <a href='RateMeForm'> <button class="btn draw-border">Rate Me</button></a>
-              <a href='Review'>  <button class="btn draw-border">Reviews</button></a>
+
+
+              <Link to={`/hiremeform/${mechanic.id}/${mechanic.customer.id}`}>
+                <button class="btn draw-border" >Hire Me</button>
+                </Link>
+
+                <Link to={`/rateMeform/${mechanic.id}/${mechanic.customer.id}`}>
+                  <button class="btn draw-border">Rate Me</button>
+                </Link>
+
+
+                <Link to={`/Review/${mechanic.id}`}>
+                  <button class="btn draw-border">Reviews</button>
+                </Link>
+
+
              </div>
            ))}
           
 
         </div>
+        : <></>}
 
       </section>
 
