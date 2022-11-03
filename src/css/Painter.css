@@ -9,6 +9,10 @@
   
 
 } 
+.main-painter{
+  height: 1000px;
+  background-color: #5a6170;
+}
 .text-painter{
 padding-top: 110px;
 background-color: #5a6170;

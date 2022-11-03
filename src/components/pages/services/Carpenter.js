@@ -63,6 +63,7 @@ function Carpenter() {
     <div >
 
       <section>
+        <div class="main_carpenter">
         <div class="text-carpenter"><p><b>CARPENTERS</b></p></div>
 
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
@@ -133,6 +134,7 @@ function Carpenter() {
 
           </div>
           : <></>}
+          </div>
       </section>
 
     </div>

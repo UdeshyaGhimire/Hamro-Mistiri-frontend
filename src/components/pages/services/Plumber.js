@@ -60,6 +60,7 @@ function Plumber() {
     <div >
 
       <section>
+        <div class="main_plumber">
         <div class="text-plumber"><p><b>PLUMBERS</b></p></div>
 
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
@@ -132,7 +133,9 @@ function Plumber() {
 
           </div>
           : <></>}
+           </div>
       </section>
+     
 
     </div>
   );

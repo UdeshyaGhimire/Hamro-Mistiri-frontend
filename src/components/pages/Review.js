@@ -53,7 +53,11 @@ function Review() {
 
     return (
         <div >
-            <section id="testimonials">
+            
+            <section> 
+            <div class="main_review">
+                <div class="testimonials">
+              
 
                 <div class="testimonial-heading">
 
@@ -116,7 +120,10 @@ function Review() {
                         </div>
                     ))}
                 </div>
+                </div>
+                </div>
             </section>
+            
         </div>
     );
 }

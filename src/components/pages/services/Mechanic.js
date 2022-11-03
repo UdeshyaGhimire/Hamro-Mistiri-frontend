@@ -65,6 +65,7 @@ function Mechanic() {
     <div >
 
       <section>
+        <div class="main_mechanic">
         <div class="text-mechanic"><p><b>MECHANICS</b></p></div>
         
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
@@ -139,6 +140,7 @@ function Mechanic() {
 
         </div>
         : <></>}
+         </div>
 
       </section>
 
