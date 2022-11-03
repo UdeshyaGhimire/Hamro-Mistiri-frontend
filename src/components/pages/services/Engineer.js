@@ -63,6 +63,7 @@ function Engineer() {
     <div >
 
       <section>
+        <div class="main_engineer">
         <div class="text-engineer"><p><b>ENGINEERS</b></p></div>
 
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
@@ -140,6 +141,7 @@ function Engineer() {
 
           </div>
           : <></>}
+           </div>
 
       </section>
 

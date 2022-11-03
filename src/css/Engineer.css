@@ -9,6 +9,11 @@
   
 
 } 
+.main_engineer{
+  height: 1000px;
+  background-color: #5a6170;
+
+}
 .text-engineer{
 padding-top: 110px;
 background-color: #5a6170;
@@ -28,6 +33,7 @@ color: white;
   background-color: #5a6170;
   font-family: 'Baloo Paaji 2', cursive;
   padding-bottom: 5px;
+  height: 1000px;
   
 }
 

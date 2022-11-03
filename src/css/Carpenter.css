@@ -9,6 +9,13 @@
   
 
 } 
+.main_carpenter{
+ 
+  height:1000px;
+  background-color: #5a6170;
+
+
+}
 .text-carpenter{
 padding-top: 110px;
 background-color: #5a6170;
@@ -24,7 +31,7 @@ color: white;
   grid-gap: 150px;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height:auto;
   background-color: #5a6170;
   font-family: 'Baloo Paaji 2', cursive;
   padding-bottom: 5px;
