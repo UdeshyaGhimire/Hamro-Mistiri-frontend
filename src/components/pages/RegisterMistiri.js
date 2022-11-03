@@ -305,7 +305,7 @@ function RegisterMistiri() {
 
   return (
     <div className='relative w-full h-full bg-zinc-900/80 pt-[100px]'>
-      <img className='absolute w-full h-[1360px] object-cover mix-blend-overlay' src={Building} alt="/" />
+      <img className='absolute w-full h-full object-cover mix-blend-overlay  ' src={Building} alt="/" />
       <div className='flex justify-center items-center h-full'>
         {/* Form */}
 
