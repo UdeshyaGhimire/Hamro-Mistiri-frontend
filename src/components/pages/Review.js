@@ -7,14 +7,25 @@ import axios from 'axios';
 
 
 
+
+
 function Review() {
     const params = useParams();
     const mistiriId = params.id;
 
 
-    const [reviews, setReviews] = React.useState([]);
+    const [decimal, setDecimal] = React.useState(0.0);
+    const [removeDecimal, setRemoveDecimal] = React.useState(0);
+
     const [mistiri, setmistiri] = React.useState([]);
 
+    const [reviews, setReviews] = React.useState([]);
+
+    const equalChecker = () => {
+        if (decimal == removeDecimal) {
+            return true;
+        } else return false;
+    };
 
     React.useEffect(() => {
         console.log("hello inside useeEffect");
@@ -34,7 +45,8 @@ function Review() {
                 // console.log(res.data);
                 console.log(res.data);
                 setmistiri(res.data);
-
+                setDecimal(res.data.rating);
+                setRemoveDecimal(Math.trunc(decimal));
             })
             .catch(err => console.log(err));
     }, []);
@@ -59,9 +71,18 @@ function Review() {
                                 <p> kathmandu</p>
                             </div>
                             <div class="rating">
-                            {Array.from(Array (mistiri.rating), (e, i) => {
-                                           return <i class="fas fa-star" key={i}></i>
-                                           })}
+                                {equalChecker
+                                 ? 
+                                Array.from(Array(mistiri.rating), (e, i) => {
+                                    return <i class="fas fa-star" key={i}></i>
+                                })
+                                    :<>
+                                    {Array.from(Array(mistiri.rating), (e, i) => {
+                                        return <i class="fas fa-star" key={i}></i>
+                                    })}
+                                    <i class="fa-solid fa-star-half"></i>
+                                    </>
+                                  }
                             </div>
                         </div>
                     </div>
@@ -84,9 +105,9 @@ function Review() {
                                     </div>
                                 </div>
                                 <div class="reviews">
-                                    {Array.from(Array (review.indivisualRating), (e, i) => {
-                                           return <i class="fas fa-star" key={i}></i>
-                                           })}
+                                    {Array.from(Array(review.indivisualRating), (e, i) => {
+                                        return <i class="fas fa-star" key={i}></i>
+                                    })}
                                 </div>
                             </div>
                             <div class="client-comment">

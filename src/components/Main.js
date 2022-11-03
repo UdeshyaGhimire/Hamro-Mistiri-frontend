@@ -60,7 +60,7 @@ function Main() {
                 <Route path="*" element={<NotFound />} />
               </> :
               <>
-                <Route path="/hiremeform" element={<HireMeForm />} />
+                <Route path="/hiremeform/:id/:cudId" element={<HireMeForm />} />
 
                 <Route path="/editinfoform" element={<EditInfoForm />} />
                 <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />

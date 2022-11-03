@@ -11,10 +11,37 @@ function Carpenter() {
   const [carpenters, setCarpenters] = React.useState([]);
   const [address, setAddress] = React.useState([]);
 
+  var decimal = 0.0;
+  var removeDecimal = 0;
+
   const handleAddress = (event) => {
     const addresss = event.target.value;
     setAddress(addresss);
   };
+
+  function equalChecker() {
+    if (decimal === removeDecimal) {
+      return true;
+    } else return false;
+  };
+
+  function checker(plumber) {
+    console.log(plumber.rating);
+    decimal = plumber.rating;
+    removeDecimal = Math.trunc(decimal);
+  }
+
+
+  function loggedInChecker() {
+    if (localStorage.getItem("userId") === null) {
+      alert("Please Log In First");
+      window.location.href = "/loginuser";
+      return false;
+    } else {
+      return true;
+    }
+  };
+
 
   React.useEffect(() => {
     console.log("hello inside useeEffect");
@@ -35,7 +62,7 @@ function Carpenter() {
 
       <section>
         <div class="text-carpenter"><p><b>CARPENTERS</b></p></div>
-        
+
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
           <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
             <div className=''>
@@ -54,39 +81,56 @@ function Carpenter() {
             </div>
           </div>
         </div>
-        
-        <div class="container-carpenter">
-           {carpenters.map(Carpenter => (
-               <div class="card-carpenter" key={carpenter.id}>
-               <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-               <div class="card__name">
-                 <p >{Carpenter.customer.firstName}</p> </div>
-               <div class="grid-container">
-   
-                 <div class="grid-child-posts">
-                 {Carpenter.customer.loction}
-                 </div>
-   
-               </div>
-               <div class="rating">
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-                 <i class="fas fa-star"></i>
-               </div>
-               <div class="about_me">
-                <p>{Carpenter.aboutYou}</p>
+
+        {loggedInChecker() ?
+          <div class="container-carpenter">
+            {carpenters.map(carpenter => (
+              <div class="card-carpenter" key={carpenter.id} onLoad={checker(plumber)}>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <div class="card__name">
+                  <p >{carpenter.customer.firstName}</p> </div>
+                <div class="grid-container">
+
+                  <div class="grid-child-posts">
+                    {carpenter.customer.loction}
+                  </div>
+
+                </div>
+                <div class="rating">
+                {equalChecker()
+                    ?
+                    Array.from(Array(carpenter.rating), (e, i) => {
+                      return <i class="fas fa-star" key={i}></i>
+                    })
+                    : <>
+                      {Array.from(Array(carpenter.rating), (e, i) => {
+                        return <i class="fas fa-star" key={i}></i>
+                      })}
+                      <i class="fa-solid fa-star-half"></i>
+                    </>
+                  }
+                </div>
+                <div class="about_me">
+                  <p>{carpenter.aboutYou}</p>
+                </div>
+                <Link to={`/hiremeform/${carpenter.id}/${carpenter.customer.id}`}>
+                <button class="btn draw-border" >Hire Me</button>
+                </Link>
+
+                <Link to={`/rateMeform/${carpenter.id}/${carpenter.customer.id}`}>
+                  <button class="btn draw-border">Rate Me</button>
+                </Link>
+
+
+                <Link to={`/Review/${carpenter.id}`}>
+                  <button class="btn draw-border">Reviews</button>
+                </Link>
               </div>
-               <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
-               <button class="btn draw-border">Rate Me</button>
-               <button class="btn draw-border">Message</button>
-               <button class="btn draw-border">Reviews</button>
-             </div>
-           ))}
-          
+            ))}
 
-        </div>
 
+          </div>
+          : <></>}
       </section>
 
     </div>
