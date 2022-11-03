@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../../css/Carpenter.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -126,8 +128,8 @@ function Carpenter() {
                   <button class="btn draw-border">Reviews</button>
                 </Link>
               </div>
-            ))}
 
+            ))}
 
           </div>
           : <></>}

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../../css/Mechanic.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -116,6 +118,7 @@ function Mechanic() {
                 <p>{mechanic.aboutYou}</p>
               </div>
 
+
               <Link to={`/hiremeform/${mechanic.id}/${mechanic.customer.id}`}>
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>
@@ -128,6 +131,7 @@ function Mechanic() {
                 <Link to={`/Review/${mechanic.id}`}>
                   <button class="btn draw-border">Reviews</button>
                 </Link>
+
 
              </div>
            ))}

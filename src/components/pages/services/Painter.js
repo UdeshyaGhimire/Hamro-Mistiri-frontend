@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../../css/Painter.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -111,6 +113,7 @@ function Painter() {
               <div class="about_me">
                 <p>{painter.aboutYou}</p>
               </div>
+
               <Link to={`/hiremeform/${painter.id}/${painter.customer.id}`}>
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>
@@ -123,6 +126,7 @@ function Painter() {
                 <Link to={`/Review/${painter.id}`}>
                   <button class="btn draw-border">Reviews</button>
                 </Link>
+
             </div>
           ))}
 
