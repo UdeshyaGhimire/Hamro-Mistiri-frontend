@@ -77,7 +77,7 @@ function Review() {
                                     return <i class="fas fa-star" key={i}></i>
                                 })
                                     :<>
-                                    {Array.from(Array(mistiri.rating), (e, i) => {
+                                    {Array.from(Array(removeDecimal), (e, i) => {
                                         return <i class="fas fa-star" key={i}></i>
                                     })}
                                     <i class="fa-solid fa-star-half"></i>
