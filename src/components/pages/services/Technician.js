@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../../css/Technician.css';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -89,7 +91,7 @@ function Technician() {
                  <p>{technician.aboutYou}</p>
                  </div>
                  <a href='HireMeForm'> <button class="btn draw-border" onClick={handleClick}>Hire Me</button></a> 
-              <a href='Chat'> <button class="btn draw-border">Message</button></a>
+                 <Link to={`/Chat/`}> <button class="btn draw-border">Message</button></Link>
               <a href='RateMeForm'> <button class="btn draw-border">Rate Me</button></a>
               <a href='Review'>  <button class="btn draw-border">Reviews</button></a>
              </div>
