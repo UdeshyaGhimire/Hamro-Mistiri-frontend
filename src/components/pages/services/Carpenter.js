@@ -87,7 +87,7 @@ function Carpenter() {
         {loggedInChecker() ?
           <div class="container-carpenter">
             {carpenters.map(carpenter => (
-              <div class="card-carpenter" key={carpenter.id} onLoad={checker(plumber)}>
+              <div class="card-carpenter" key={carpenter.id} onLoad={checker(carpenter)}>
                 <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
                 <div class="card__name">
                   <p >{carpenter.customer.firstName}</p> </div>
