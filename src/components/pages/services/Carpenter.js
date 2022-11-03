@@ -77,10 +77,10 @@ function Carpenter() {
                <div class="about_me">
                 <p>{Carpenter.aboutYou}</p>
               </div>
-               <a className='' href="HireMeForm"><button class="btn draw-border">Hire Me</button></a>
-               <button class="btn draw-border">Rate Me</button>
-               <button class="btn draw-border">Message</button>
-               <button class="btn draw-border">Reviews</button>
+              <a href='HireMeForm'> <button class="btn draw-border" >Hire Me</button></a> 
+              <a href='Chat'> <button class="btn draw-border">Message</button></a>
+              <a href='RateMeForm'> <button class="btn draw-border">Rate Me</button></a>
+              <a href='Review'>  <button class="btn draw-border">Reviews</button></a>
              </div>
            ))}
           

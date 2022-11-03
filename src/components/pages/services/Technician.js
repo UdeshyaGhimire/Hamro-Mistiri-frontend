@@ -88,10 +88,10 @@ function Technician() {
                <div class="about_me"> 
                  <p>{technician.aboutYou}</p>
                  </div>
-               <button class="btn draw-border" onClick={handleClick}>Hire Me</button>
-               <button class="btn draw-border">Rate Me</button>
-               <button class="btn draw-border">Message</button>
-               <button class="btn draw-border">Reviews</button>
+                 <a href='HireMeForm'> <button class="btn draw-border" onClick={handleClick}>Hire Me</button></a> 
+              <a href='Chat'> <button class="btn draw-border">Message</button></a>
+              <a href='RateMeForm'> <button class="btn draw-border">Rate Me</button></a>
+              <a href='Review'>  <button class="btn draw-border">Reviews</button></a>
              </div>
            ))}
           

@@ -7,6 +7,7 @@ import Craftsmen from '../../assets/craftsmen.png'
 import Phone from '../../assets/phone.svg'
 import Clock from '../../assets/clock.svg'
 import Email from '../../assets/email.svg'
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 
 
@@ -66,14 +67,14 @@ function HomePage() {
 
 
         {/* div for Become a part of Hamro Mistiri Family Today! */}
-        <div className=' md:grid grid-cols-5  md:h-[450px] w-full bg-[#f59c20] border-y-[7px] border-[#ffffff]'>
+        <div className=' md:grid grid-cols-5  md:h-[450px] w-full bg-[#f59c20] border-y-[7px] border-[#ffffff]' id="#JoinUs">
 
           <div className='md:py-[150px] py-16 md:text-right col-span-3 md:pl-[90px] text-xl text-center '>
             <div className='text-2xl  md:text-[30px]  md:pb-4 font-bold '>
               Become a part of Hamro Mistiri Family Today!</div>
             Get updated about latest news, offers and lots of other exiciting things. You are just a few minutes away from being part of something great. Don't miss this opportunity.
             <div className='text-center pl-[40px] pt-5'>
-              <a href=""> <button className='bg-slate-900 text-white p-[5px] px-5 rounded-3xl hover:bg-[#30333a]'>Join Us </button></a>
+              <a href="LogInUser"> <button className='bg-slate-900 text-white p-[5px] px-5 rounded-3xl hover:bg-[#30333a]'>Join Us </button></a>
             </div>
 
           </div>
@@ -124,7 +125,7 @@ function HomePage() {
               <div class="list-none leading-loose">
                 <li>The home services system is in high demand</li>
                 <li> as it is incredibly useful...</li>
-                <a href="LogInUser"><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#ffc676] hover:text-[#c4770d] hover:cursor-pointer mr-4 px-5 py-1 '>Read More...</button></a>
+                <AnchorLink offset='-150' href='/#AboutUs'><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#ffc676] hover:text-[#c4770d] hover:cursor-pointer mr-4 px-5 py-1 '>Read More...</button></AnchorLink>
 
 
               </div>
@@ -133,10 +134,10 @@ function HomePage() {
             <div className='pb-12'>
               <div className='text-xl font-bold pb-3'> QuickLinks<hr className='border-[#f79f24] m-5 ' /> </div>
               <ul class="list-none leading-loose  ">
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Home</li></a>
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Services</li></a>
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Become A Professional</li></a>
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Contact Us</li></a>
+                <a href="/"><li className='hover:text-[#c4770d] '>Home</li></a>
+                <AnchorLink offset='100' href='/#Services'><li className='hover:text-[#c4770d] '>Services</li></AnchorLink>
+                <a href="RegisterMistiri"><li className='hover:text-[#c4770d] '>Become A Professional</li></a>
+                <AnchorLink activeClass="active" hashSpy={true} offset='130' href='/#ContactUs'> <li className='hover:text-[#c4770d] '>Contact Us</li></AnchorLink>
 
               </ul>
 
@@ -144,10 +145,10 @@ function HomePage() {
             <div className='pb-12'>
               <div className='text-xl font-bold pb-3'> Follow Us<hr className='border-[#f79f24] m-5 ' /> </div>
               <ul class="list-none leading-loose  ">
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Facebook</li></a>
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Instagram</li></a>
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Twitter</li></a>
-                <a href="LogInUser"><li className='hover:text-[#c4770d] '>Google</li></a>
+                <a href="/"><li className='hover:text-[#c4770d] '>Facebook</li></a>
+                <a href="/"><li className='hover:text-[#c4770d] '>Instagram</li></a>
+                <a href="/"><li className='hover:text-[#c4770d] '>Twitter</li></a>
+                <a href="/"><li className='hover:text-[#c4770d] '>Google</li></a>
 
               </ul>
 
