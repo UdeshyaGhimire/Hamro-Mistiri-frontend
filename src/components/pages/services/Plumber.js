@@ -91,7 +91,9 @@ function Plumber() {
               <button class="btn draw-border">Rate Me</button>
               </Link>
 
+              <Link to={`/Chat/`}>
               <button class="btn draw-border">Message</button>
+              </Link>
               <Link to={`/Review/${plumber.id}`}>
               <button class="btn draw-border">Reviews</button>
               </Link>
