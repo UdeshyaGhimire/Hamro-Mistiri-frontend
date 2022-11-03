@@ -179,7 +179,10 @@ function RateMe() {
                   </div>
                 </div>
               </div>
-              <textarea class="mt-[30px] form-control block w-full px-3  py-1.5 text-base font-normal text-gray-700 bg-gray-100 bg-clip-padding  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-grey-900 focus:outline-none" id="ShortReview" rows="3" placeholder="Short Review" maxLength={100} value={review} onChange={handleReviewChange}></textarea>
+              {/* <textarea class="mt-[30px] form-control block w-full px-3  py-1.5 text-base font-normal text-gray-700 bg-gray-100 bg-clip-padding  border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-grey-900 focus:outline-none" id="ShortReview" rows="3" placeholder="Short Review" maxLength={100} value={review} onChange={handleReviewChange}></textarea> */}
+              <div className='flex flex-col mb-4'>
+                <input className='mt-[15px] border relative bg-gray-100 p-2 ' placeholder="Write a Review" name='aboutYou' type="text"  maxLength={100} value={review} onChange={handleReviewChange} />
+              </div>
               <Suggestion errorMessage={reviewErrorMessage} />
               <Suggestion errorMessage={postErrorMessage} />
               <SuccessText errorMessage={trueValue} />
@@ -194,7 +197,7 @@ function RateMe() {
                     strokeWidth={5}
                   />
                   :
-                  <button className='w-full py-3 mt-[40px] bg-[#666668] hover:bg-[#26282e] relative text-white hover:bold'>
+                  <button className='w-full py-3 mt-[30px] bg-[#666668] hover:bg-[#26282e] relative text-white hover:bold'>
                     Submit
                   </button>
                 }
