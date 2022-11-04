@@ -340,7 +340,7 @@ function DashboardMistirEdit() {
 
                                         :
                                         <button className='w-full py-3 mt-5 text-xl font-bold bg-[#eb9216] hover:bg-[#fcb858] relative text-white capitalize hover:uppercase'>
-                                            Register
+                                            Edit
                                         </button>
                                     }
 
