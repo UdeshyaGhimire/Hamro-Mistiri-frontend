@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -54,12 +55,12 @@ const Navbar = () => {
               <AnchorLink offset='-150' href='/#AboutUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>About Us</li></AnchorLink>
               <AnchorLink activeClass="active" hashSpy={true} offset='130' href='/#ContactUs'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Contact Us</li></AnchorLink>
               {localStorage.getItem("role") === "Mistiri" ?
-                <a activeClass="active" hashSpy={true} offset='130' href='/dashboardmistiri'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a>
+                <Link to={`/dashboardmistiri/${localStorage.getItem("userId")}`}>  <a activeClass="active" hashSpy={true} offset='130' >  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a></Link>
                 : <></>
               }
 
               {localStorage.getItem("role") === "Customer" ?
-                <a activeClass="active" hashSpy={true} offset='130' href='/dashboarduser'>  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a>
+              <Link to={`/dashboarduser/${localStorage.getItem("userId")}`}>  <a activeClass="active" hashSpy={true} offset='130' >  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a></Link>
                 : <></>
               }
 
