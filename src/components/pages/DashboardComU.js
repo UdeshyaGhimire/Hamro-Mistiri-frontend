@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
-
-import High from '../../assets/high.jpg'
 import Dashb from '../../assets/dashb.png'
+import {Link} from 'react-router-dom';
 
 function DashboardComU() {
     const handelChange = () => {
         window.location.replace('mailto:hamromistiri@gmail.com');
-      }
+    }
     return (
         <div>
             <div className='col-span-1 h-full grow bg-[#00000098] '>
                 <div className='pt-[105px] text-gray-600 h-full pb-9'>
-                    <a href="DashboardUser">
+                    <Link to={`/dashboarduser/${localStorage.getItem("userId")}`}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] h-18 md:hover:h-[80px] font-bold md:text-[17px] text-center  bg-[#30333a] border-[5px] shadow-2xl cursor-pointer border-[#fea72b]  boarder-opacity-60 rounded-sm' >
                             <div className='w-[50px] pt-2 pl-3 ' >
                                 <img className='' src={Dashb} alt="/" />
@@ -23,8 +22,8 @@ function DashboardComU() {
                             </div>
 
                         </div>
-                    </a>
-                    <a href="DashboardUserEdit">
+                    </Link>
+                    <Link to={`/dashboarduseredit/${localStorage.getItem("userId")}`}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] bg-white h-18 md:hover:h-[60px] font-bold md:text-[17px] text-center border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-sm hover:bg-gray-200 hover:border-[#2e2e2e]' >
                             <div className='w-[50px] pt-2 pl-3 ' >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -33,10 +32,10 @@ function DashboardComU() {
 
                             </div>
                             <div className=' col-span-4 pl-[7px] pt-2'>
-                               Edit My User Profile
+                                Edit My User Profile
                             </div>
                         </div>
-                    </a>
+                        </Link>
                     <a onClick={handelChange}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] bg-white h-18 md:hover:h-[60px] font-bold md:text-[17px] text-center border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-sm hover:bg-gray-200 hover:border-[#2e2e2e]' >
                             <div className='w-[50px] pt-2 pl-3 ' >

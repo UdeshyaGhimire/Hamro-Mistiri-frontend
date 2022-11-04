@@ -67,7 +67,7 @@ function Main() {
 
                 <Route path="/Review/:id" element={<Review />} />
                 <Route path="/dashboarduser/:id" element={<DashboardUser />} />
-                <Route path="/dashboarduseredit" element={<DashboardUserEdit />} />
+                <Route path="/dashboarduseredit/:id" element={<DashboardUserEdit />} />
                 <Route path="/dashboarduserdelete" element={<DashboardUserDelete />} />
 
                 <Route path="/dashboardmistiri/:id" element={<DashboardMistiri />} />
