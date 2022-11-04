@@ -67,14 +67,15 @@ function Review() {
                             </div>
                             <div class="grid-rcontainer">
                                 <p> kathmandu</p>
-                            </div>
-                            <div class="rating" > 
+                            </div> 
+                             Rating: {mistiri.rating}
+                            {/* <div class="rating" > 
                                  {console.log(mistiri?.rating)}
                                     {Array.from(Array(1), (e, i) => {
                                         return <i class="fas fa-star" key={i}></i>
                                     })}
                                 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                      
