@@ -51,7 +51,9 @@ function DashboardComM() {
                             </div>
                         </div>
                     </a>
-                    <a href="DashboardMistiriDelete">
+
+
+                    <Link to={`/dashboardmistiridelete/${localStorage.getItem("userId")}`}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] bg-white h-18 md:hover:h-[60px] font-bold md:text-[17px] text-center border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-sm hover:bg-gray-200 hover:border-[#2e2e2e]' >
                             <div className='w-[50px] pt-2 pl-3 ' >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -65,7 +67,7 @@ function DashboardComM() {
                             </div>
                         </div>
 
-                    </a>
+                        </Link>
 
 
 

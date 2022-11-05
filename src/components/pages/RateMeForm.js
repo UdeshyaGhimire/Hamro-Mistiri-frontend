@@ -113,7 +113,7 @@ function RateMe() {
             // loading =false;
             console.log(response)
             if (response.status === 200) {
-              setTrueValue("You have been registered successfully");
+              setTrueValue("Your rating has been submitted");
               clearFields();
             }
             else {
