@@ -88,7 +88,7 @@ function LogInUser() {
               alert("Please verify you email before you login for the first time");
             } else {
               setTrueValue("Successfully loggedIn");
-              console.log(response.data.data.id);
+              console.log(response.data);
               localStorage.setItem("userId", response.data.data.id);
               localStorage.setItem("name", response.data.data.firstName);
               localStorage.setItem("role", response.data.data.role);
