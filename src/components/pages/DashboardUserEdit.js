@@ -191,25 +191,25 @@ function DashboardUserEdit() {
               <form className='max-w-[800px] w-full mx-auto bg-white  pt-4 pl-[65px] p-[65px] border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-lg' onSubmit={handleForm}>
                 <h2 className='text-4xl text-[#000000]  font-bold text-center py-8'>Edit User Profile</h2>
 
-                <div className='grid grid-cols-4 mb-4'>
+                <div className='grid grid-cols-4 '>
                   <p className='text-[#000000] font-bold pt-[8px]'>First Name:</p>
                   <input className='col-span-2 w-[502px] border relative bg-gray-100 p-2  ' placeholder={userDetail.firstName} type="text" onChange={handleFirstNameChange} value={firstName} />
                 </div>
-                <div className='flex justify-center items-center'><Suggestion errorMessage={firstNameErrorMessage} /> </div>
+                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={firstNameErrorMessage} /> </div>
 
-                <div className='grid grid-cols-4 mb-4'>
+                <div className='grid grid-cols-4'>
                   <p className='text-[#000000] font-bold pt-[8px]'>Last Name:</p>
                   <input className='col-span-2 w-[502px] border relative bg-gray-100 p-2 ' placeholder={userDetail.lastName} type="text" onChange={handleLastNameChange} value={lastName} />
                 </div>
-                <div className='flex justify-center items-center'><Suggestion errorMessage={lastNameErrorMessage} /> </div>
+                <div className=' pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={lastNameErrorMessage} /> </div>
 
-                <div className='grid grid-cols-4 mb-4'>
+                <div className='grid grid-cols-4 '>
                   <div className='text-[#000000] font-bold  pt-[8px]'>Phone Number:</div>
                   <input className='col-span-2 w-[502px] border relative bg-gray-100 p-2 ' placeholder={userDetail.phoneNo} type="number" onChange={handlePhoneNumber} value={phoneNumber} />
                 </div>
-                <div className='flex justify-center items-center'><Suggestion errorMessage={phoneNumberErrorMessage} /> </div>
+                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={phoneNumberErrorMessage} /> </div>
 
-                <div className='grid grid-cols-4 mb-4'>
+                <div className='grid grid-cols-4 '>
                   <div className='text-[#000000] font-bold  pt-[8px]'>Loaction:</div>
                   <div className='border relative bg-gray-100 p-2 text-left '>
                     <select name='loaction' onChange={handleLocation} value={location}  >
@@ -224,7 +224,7 @@ function DashboardUserEdit() {
                   </div>
 
                 </div>
-                <div className='flex justify-center items-center'>
+                <div className='pl-8 mb-4 flex justify-center items-center'>
                   <Suggestion errorMessage={locationErrorMessage} />
                   <Suggestion errorMessage={postErrorMessage} />
                   <SuccessText errorMessage={trueValue} />

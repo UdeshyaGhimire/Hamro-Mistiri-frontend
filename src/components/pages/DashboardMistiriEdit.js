@@ -244,7 +244,7 @@ function DashboardMistirEdit() {
                 {/* Edit Form Starts Here */}
                 <div className='col-span-4'>
 
-                    <div className='relative w-full h-[940px] bg-black/78'>
+                    <div className='relative w-full h-[940px] bg-black/70'>
                         <img className='absolute w-full h-full object-cover mix-blend-overlay' src={High} alt="/" />
                         <div className='flex justify-center items-center h-full'>
                             {/* Form */}
@@ -267,32 +267,32 @@ function DashboardMistirEdit() {
                                 </div>
                                 <div className='flex justify-center items-center'><Suggestion errorMessage={availabilityErrorMessage} /> </div>
 
-                                <div className='grid grid-cols-4 mb-4'>
+                                <div className='grid grid-cols-4'>
                                     <p className='text-[#000000] font-bold pt-[8px]'>First Name:</p>
                                     <input className='col-span-2 w-[510px] border relative bg-gray-100 p-2  ' placeholder={mistiriDetail.customer?.firstName} type="text" onChange={handleFirstNameChange} value={firstName} />
                                 </div>
-                                <div className='flex justify-center items-center'><Suggestion errorMessage={firstNameErrorMessage} /> </div>
+                                <div className='pl-8 mb-4 flex justify-center items-center '><Suggestion errorMessage={firstNameErrorMessage} /> </div>
 
-                                <div className='grid grid-cols-4 mb-4'>
+                                <div className='grid grid-cols-4 '>
                                     <p className='text-[#000000] font-bold pt-[8px]'>Last Name:</p>
                                     <input className='col-span-2 w-[510px] border relative bg-gray-100 p-2 ' placeholder={mistiriDetail.customer?.lastName} type="text" onChange={handleLastNameChange} value={lastName} />
                     
                                 </div>
-                                <div className='flex justify-center items-center'><Suggestion errorMessage={lastNameErrorMessage} /> </div>
+                                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={lastNameErrorMessage} /> </div>
 
 
 
 
 
-                                <div className='grid grid-cols-4 mb-4'>
+                                <div className='grid grid-cols-4'>
                                     <div className='text-[#000000] font-bold  pt-[8px]'>Phone Number:</div>
                                     <input className='col-span-2 w-[510px] border relative bg-gray-100 p-2 ' placeholder={mistiriDetail.customer?.phoneNo} type="number" onChange={handlePhoneNumber} value={phoneNumber} />
 
                                 </div>
-                                <div className='flex justify-center items-center'><Suggestion errorMessage={phoneNumberErrorMessage} /> </div>
+                                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={phoneNumberErrorMessage} /> </div>
 
 
-                                <div className='grid grid-cols-4 mb-4'>
+                                <div className='grid grid-cols-4 '>
                                     <div className='text-[#000000] font-bold  pt-[8px]'>Loaction:</div>
                                     <div className='border relative bg-gray-100 p-2 text-left '>
                                         <select name='loaction' onChange={handleLocation} value={location} >
@@ -307,22 +307,22 @@ function DashboardMistirEdit() {
                                     </div>
 
                                 </div>
-                                <div className='flex justify-center items-center'><Suggestion errorMessage={locationErrorMessage} /></div>
+                                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={locationErrorMessage} /></div>
 
-                                <div className='grid grid-cols-4 mb-4'>
+                                <div className='grid grid-cols-4 '>
                                     <p className='text-[#000000] font-bold  pt-[8px]'>Pan Number:</p>
                                     <input className='col-span-2 w-[510px] border relative bg-gray-100 p-2 ' placeholder={mistiriDetail.panNo} type="number" onChange={handlePanNumber} value={panNumber} />
 
                                 </div>
-                                <div className='flex justify-center items-center'><Suggestion errorMessage={panNumberErrorMessage} /></div>
+                                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={panNumberErrorMessage} /></div>
 
 
-                                <div className='grid grid-cols-4 mb-4'>
+                                <div className='grid grid-cols-4 '>
                                     <p className='text-[#000000] font-bold pt-[8px]'>About You:</p>
                                     <input className='col-span-2 w-[510px] border relative bg-gray-100 p-2 ' placeholder={mistiriDetail.aboutYou} type="text" onChange={handleAboutYou} value={aboutYou} />
 
                                 </div>
-                                <div className='flex justify-center items-center'><Suggestion errorMessage={aboutYouErrorMessage} />
+                                <div className='pl-8 mb-4 flex justify-center items-center'><Suggestion errorMessage={aboutYouErrorMessage} />
                                     <Suggestion errorMessage={postErrorMessage} />
                                     <SuccessText errorMessage={trueValue} /></div>
 
