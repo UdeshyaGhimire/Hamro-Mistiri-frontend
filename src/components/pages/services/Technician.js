@@ -118,19 +118,22 @@ function Technician() {
                  <p>{technician.aboutYou}</p>
                  </div>
 
-                 <Link to={`/hiremeform/${technician.id}/${technician.customer.id}`}>
-                <button class="btn draw-border" >Hire Me</button>
-                </Link>
+                 {localStorage.getItem("role") === "admin" ?
+                    <>
+                        <Link to={`/deleteMistiri/${technician.id}`}>
+                         <button class="btn draw-border" >Delete</button>
+                        </Link>
+                    </> :
+                    <>
+                      <Link to={`/hiremeform/${localStorage.getItem("userId")}/${technician.id}/${technician.customer.id}`}>
+                        <button class="btn draw-border" >Hire Me</button>
+                      </Link>
 
-                {/* <Link to={`/rateMeform/${technician.id}/${technician.customer.id}`}>
-                  <button class="btn draw-border">Rate Me</button>
-                </Link> */}
+                      <Link to={`/Review/${technician.id}`}>
+                        <button class="btn draw-border">Reviews</button>
+                      </Link>
 
-
-                <Link to={`/Review/${technician.id}`}>
-                  <button class="btn draw-border">Reviews</button>
-                </Link>
-
+                    </>}
              </div>
            ))}
           

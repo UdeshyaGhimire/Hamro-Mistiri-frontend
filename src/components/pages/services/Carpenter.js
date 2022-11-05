@@ -119,17 +119,22 @@ function Carpenter() {
                 <div class="self">
                   <p>Self</p>
                 </div>
+                {localStorage.getItem("role") === "admin" ?
+                    <>
+                        <Link to={`/deleteMistiri/${carpenter.id}`}>
+                         <button class="btn draw-border" >Delete</button>
+                        </Link>
+                    </> :
+                    <>
+                      <Link to={`/hiremeform/${localStorage.getItem("userId")}/${carpenter.id}/${carpenter.customer.id}`}>
+                        <button class="btn draw-border" >Hire Me</button>
+                      </Link>
 
-                <Link to={`/hiremeform/${carpenter.id}/${carpenter.customer.id}`}>
-                <button class="btn draw-border" >Hire Me</button>
-                </Link>
+                      <Link to={`/Review/${carpenter.id}`}>
+                        <button class="btn draw-border">Reviews</button>
+                      </Link>
 
-               
-
-
-                <Link to={`/Review/${carpenter.id}`}>
-                  <button class="btn draw-border">Reviews</button>
-                </Link>
+                    </>}
               </div>
 
             ))}

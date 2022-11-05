@@ -115,17 +115,22 @@ function Painter() {
                 <p>{painter.aboutYou}</p>
               </div>
 
-              <Link to={`/hiremeform/${painter.id}/${painter.customer.id}`}>
-                <button class="btn draw-border" >Hire Me</button>
-                </Link>
+              {localStorage.getItem("role") === "admin" ?
+                    <>
+                        <Link to={`/deleteMistiri/${painter.id}`}>
+                         <button class="btn draw-border" >Delete</button>
+                        </Link>
+                    </> :
+                    <>
+                      <Link to={`/hiremeform/${localStorage.getItem("userId")}/${painter.id}/${painter.customer.id}`}>
+                        <button class="btn draw-border" >Hire Me</button>
+                      </Link>
 
-               
+                      <Link to={`/Review/${painter.id}`}>
+                        <button class="btn draw-border">Reviews</button>
+                      </Link>
 
-
-                <Link to={`/Review/${painter.id}`}>
-                  <button class="btn draw-border">Reviews</button>
-                </Link>
-
+                    </>}
             </div>
           ))}
 

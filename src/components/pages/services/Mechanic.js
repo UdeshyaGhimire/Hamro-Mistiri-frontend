@@ -120,17 +120,22 @@ function Mechanic() {
               </div>
 
 
-              <Link to={`/hiremeform/${mechanic.id}/${mechanic.customer.id}`}>
-                <button class="btn draw-border" >Hire Me</button>
-                </Link>
+              {localStorage.getItem("role") === "admin" ?
+                    <>
+                        <Link to={`/deleteMistiri/${mechanic.id}`}>
+                         <button class="btn draw-border" >Delete</button>
+                        </Link>
+                    </> :
+                    <>
+                      <Link to={`/hiremeform/${localStorage.getItem("userId")}/${mechanic.id}/${mechanic.customer.id}`}>
+                        <button class="btn draw-border" >Hire Me</button>
+                      </Link>
 
-                
+                      <Link to={`/Review/${mechanic.id}`}>
+                        <button class="btn draw-border">Reviews</button>
+                      </Link>
 
-
-                <Link to={`/Review/${mechanic.id}`}>
-                  <button class="btn draw-border">Reviews</button>
-                </Link>
-
+                    </>}
 
              </div>
            ))}

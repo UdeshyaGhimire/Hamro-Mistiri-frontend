@@ -149,7 +149,7 @@ function DashboardUserEdit() {
         .then(response => {
           console.log(response)
           if (response.status === 200) {
-            setTrueValue("You have successfully registered!");
+            setTrueValue("You're profile has been updated successfully");
             console.log("You're profile has been updated successfully");
             clearFields();
           }

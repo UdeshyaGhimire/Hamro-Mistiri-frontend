@@ -122,16 +122,22 @@ function Engineer() {
                   <p>{engineer.aboutYou}</p>
                 </div>
 
+                {localStorage.getItem("role") === "admin" ?
+                    <>
+                        <Link to={`/deleteMistiri/${engineer.id}`}>
+                         <button class="btn draw-border" >Delete</button>
+                        </Link>
+                    </> :
+                    <>
+                      <Link to={`/hiremeform/${localStorage.getItem("userId")}/${engineer.id}/${engineer.customer.id}`}>
+                        <button class="btn draw-border" >Hire Me</button>
+                      </Link>
 
-                <Link to={`/hiremeform/${engineer.id}/${engineer.customer.id}`}>
-                  <button class="btn draw-border" >Hire Me</button>
-                </Link>
+                      <Link to={`/Review/${engineer.id}`}>
+                        <button class="btn draw-border">Reviews</button>
+                      </Link>
 
-                
-
-                <Link to={`/Review/${engineer.id}`}>
-                  <button class="btn draw-border">Reviews</button>
-                </Link>
+                    </>}
 
               </div>
             ))}
