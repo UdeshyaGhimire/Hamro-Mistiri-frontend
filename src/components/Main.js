@@ -62,14 +62,14 @@ function Main() {
                 <Route path="*" element={<NotFound />} />
               </> :
               <>
-                <Route path="/hiremeform/:id/:cudId" element={<HireMeForm />} />
+                <Route path="/hiremeform/:cudId/:id/:cid" element={<HireMeForm />} />
 
                 <Route path="/editinfoform" element={<EditInfoForm />} />
                 <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />
 
                 <Route path="/Review/:id" element={<Review />} />
-                <Route path="/Histroy_mistiri" element={<Histroy_mistiri />} />
-                <Route path="/Histroy_user" element={<Histroy_user />} />
+                <Route path="/Histroy_mistiri/:id" element={<Histroy_mistiri />} />
+                <Route path="/Histroy_user/:id" element={<Histroy_user />} />
 
 
 

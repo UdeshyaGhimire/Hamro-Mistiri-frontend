@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Dashb from '../../assets/dashb.png'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function DashboardComM() {
 
     const handelChange = () => {
         window.location.replace('mailto:hamromistiri@gmail.com');
-      }
+    }
     return (
         <div>
-           
+
             <div className='col-span-1 h-full grow bg-[#00000098] '>
                 <div className='pt-[105px] text-gray-600 h-full pb-9'>
-                <Link to={`/dashboardmistiri/${localStorage.getItem("userId")}`}>
+                    <Link to={`/dashboardmistiri/${localStorage.getItem("userId")}`}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] h-18 md:hover:h-[80px] font-bold md:text-[17px] text-center  bg-[#30333a] border-[5px] shadow-2xl cursor-pointer border-[#fea72b]  boarder-opacity-60 rounded-sm' >
                             <div className='w-[50px] pt-2 pl-3 ' >
                                 <img className='' src={Dashb} alt="/" />
@@ -23,9 +23,9 @@ function DashboardComM() {
                                 Dashboard
                             </div>
                         </div>
-                        </Link>
-                    
-                        <Link to={`/dashboardmistiriedit/${localStorage.getItem("userId")}`}>
+                    </Link>
+
+                    <Link to={`/dashboardmistiriedit/${localStorage.getItem("userId")}`}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[16px] bg-white h-18 md:hover:h-[60px] font-bold md:text-[16px] text-center border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-sm hover:bg-gray-200 hover:border-[#2e2e2e]' >
                             <div className='w-[50px] pt-2 pl-3 ' >
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -34,10 +34,27 @@ function DashboardComM() {
 
                             </div>
                             <div className=' col-span-4 pl-[2px] pt-2'>
-                               Edit My Mistiri Profile
+                                Edit My Mistiri Profile
                             </div>
                         </div>
-                        </Link>
+                    </Link>
+
+                    <Link to={`/Histroy_mistiri/${localStorage.getItem("userId")}`}>
+                        <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] bg-white h-18 md:hover:h-[60px] font-bold md:text-[17px] text-center border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-sm hover:bg-gray-200 hover:border-[#2e2e2e]' >
+                            <div className='w-[50px] pt-2 pl-3 ' >
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+                                </svg>
+
+
+                            </div>
+                            <div className=' col-span-4 pl-3 pt-2'>
+                                History
+                            </div>
+                        </div>
+                    </Link>
+
+
                     <a onClick={handelChange}>
                         <div className='grid grid-cols-6 m-4 p-2 hover:m-3 hover:text-[18px] bg-white h-18 md:hover:h-[60px] font-bold md:text-[17px] text-center border-2 shadow-2xl cursor-pointer border-grey-100 boarder-opacity-60 rounded-sm hover:bg-gray-200 hover:border-[#2e2e2e]' >
                             <div className='w-[50px] pt-2 pl-3 ' >
@@ -67,7 +84,7 @@ function DashboardComM() {
                             </div>
                         </div>
 
-                        </Link>
+                    </Link>
 
 
 
