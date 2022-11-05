@@ -14,8 +14,8 @@ function Plumber() {
   const [plumbers, setPlumbers] = React.useState([]);
   const [address, setAddress] = React.useState([]);
 
-  var decimal=0.0;
-  var removeDecimal=0;
+  var decimal = 0.0;
+  var removeDecimal = 0;
 
   const handleAddress = (event) => {
     const addresss = event.target.value;
@@ -31,8 +31,8 @@ function Plumber() {
 
   function checker(plumber) {
     console.log(plumber.rating);
-     decimal=plumber.rating;
-     removeDecimal=Math.trunc(decimal);
+    decimal = plumber.rating;
+    removeDecimal = Math.trunc(decimal);
   }
 
 
@@ -63,27 +63,26 @@ function Plumber() {
 
       <section>
         <div class="main_plumber">
-        <div class="text-plumber"><p><b>PLUMBERS</b></p></div>
+          <div class="text-plumber"><p><b>PLUMBERS</b></p></div>
 
-        <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
-          <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
-            <div className=''>
-              Your Location:
-            </div>
-            <div className='text-base '>
-              <select name='yourlocation' onChange={handleAddress} value={address} >
-                <option value="">&nbsp;&nbsp;&nbsp;------</option>
-                <option value="kathmandu">Kathmandu</option>
-                <option value="lalitpur">Lalitpur</option>
-                <option value="bhaktapur">Bhaktapur</option>
-                <option value="biratnagar">Biratnagar</option>
-                <option value="birgunj">Birgunj</option>
-                <option value="dharan">Dharan</option>
-              </select>
+          <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
+            <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
+              <div className=''>
+                Your Location:
+              </div>
+              <div className='text-base '>
+                <select name='yourlocation' onChange={handleAddress} value={address} >
+                  <option value="">&nbsp;&nbsp;&nbsp;------</option>
+                  <option value="kathmandu">Kathmandu</option>
+                  <option value="lalitpur">Lalitpur</option>
+                  <option value="bhaktapur">Bhaktapur</option>
+                  <option value="biratnagar">Biratnagar</option>
+                  <option value="birgunj">Birgunj</option>
+                  <option value="dharan">Dharan</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-
         {loggedInChecker() ?
           <div class="container-plumber">
             {plumbers.map(plumber => (
@@ -118,30 +117,31 @@ function Plumber() {
                 <div class="about_me">
                   <p>{plumber.aboutYou}</p>
                 </div>
-                
+                  {localStorage.getItem("role") === "admin" ?
+                    <>
+                        <Link to={`/deleteMistiri/${plumber.id}`}>
+                         <button class="btn draw-border" >Delete</button>
+                        </Link>
+                    </> :
+                    <>
+                      <Link to={`/hiremeform/${localStorage.getItem("userId")}/${plumber.id}/${plumber.customer.id}`}>
+                        <button class="btn draw-border" >Hire Me</button>
+                      </Link>
 
-                <Link to={`/hiremeform/${localStorage.getItem("userId")}/${plumber.id}/${plumber.customer.id}`}>
-                <button class="btn draw-border" >Hire Me</button>
-                </Link>
+                      <Link to={`/Review/${plumber.id}`}>
+                        <button class="btn draw-border">Reviews</button>
+                      </Link>
 
-                {/* <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
-                  <button class="btn draw-border">Rate Me</button>
-                </Link> */}
-
-
-                <Link to={`/Review/${plumber.id}`}>
-                  <button class="btn draw-border">Reviews</button>
-                </Link>
-
-              </div>
-            ))}
+                    </>}
+                </div>
+              ))}
 
 
-          </div>
-          : <></>}
-           </div>
+            </div>
+            : <></>}
+        </div>
       </section>
-     
+
 
     </div>
   );

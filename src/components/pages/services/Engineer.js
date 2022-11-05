@@ -127,9 +127,7 @@ function Engineer() {
                   <button class="btn draw-border" >Hire Me</button>
                 </Link>
 
-                <Link to={`/rateMeform/${engineer.id}/${engineer.customer.id}`}>
-                  <button class="btn draw-border">Rate Me</button>
-                </Link>
+                
 
                 <Link to={`/Review/${engineer.id}`}>
                   <button class="btn draw-border">Reviews</button>
