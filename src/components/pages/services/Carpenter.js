@@ -116,6 +116,10 @@ function Carpenter() {
                 <div class="about_me">
                   <p>{carpenter.aboutYou}</p>
                 </div>
+                <div class="self">
+                  <p>Self</p>
+                </div>
+
                 <Link to={`/hiremeform/${carpenter.id}/${carpenter.customer.id}`}>
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>

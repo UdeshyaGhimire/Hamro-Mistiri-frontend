@@ -2,6 +2,8 @@ import React from 'react';
 import '../../../css/Plumber.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import img from '../../../images/a.jpg'
+
 
 
 
@@ -81,40 +83,40 @@ function Plumber() {
               </div>
             </div>
           </div>
+        {loggedInChecker() ?
+          <div class="container-plumber">
+            {plumbers.map(plumber => (
+              <div class="card-plumber" key={plumber.id} onLoad={checker(plumber)}>
+                <img class="round" src={img}   alt="user" />
+                <div class="card__name">
+                  <p >{plumber.customer.firstName}</p> </div>
+                <div class="grid-container">
 
-          {loggedInChecker() ?
-            <div class="container-plumber">
-              {plumbers.map(plumber => (
-                <div class="card-plumber" key={plumber.id} onLoad={checker(plumber)}>
-                  <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-                  <div class="card__name">
-                    <p >{plumber.customer.firstName}</p> </div>
-                  <div class="grid-container">
-
-                    <div class="grid-child-posts">
-                      {plumber.customer.loction}
-                    </div>
-
+                  <div class="grid-child-posts">
+                    {plumber.customer.loction}
                   </div>
-                  <div class="rating">
-                    {equalChecker()
-                      ?
-                      Array.from(Array(plumber.rating), (e, i) => {
+
+                </div>
+                <div class="rating">
+                  {equalChecker()
+                    ?
+                    Array.from(Array(plumber.rating), (e, i) => {
+                      return <i class="fas fa-star" key={i}></i>
+                    })
+                    : <>
+                      {Array.from(Array(removeDecimal), (e, i) => {
                         return <i class="fas fa-star" key={i}></i>
-                      })
-                      : <>
-                        {Array.from(Array(removeDecimal), (e, i) => {
-                          return <i class="fas fa-star" key={i}></i>
-                        })}
-                        <i class="fa-solid fa-star-half"></i>
-                      </>
-                    }
-                  </div>
-                  <div class="about_me">
-                    <p>{plumber.aboutYou}</p>
-                  </div>
-
-
+                      })}
+                      <i class="fa-solid fa-star-half"></i>
+                    </>
+                  }
+                </div>
+                <div class="self_me">
+                  <p>Self</p>
+                </div>
+                <div class="about_me">
+                  <p>{plumber.aboutYou}</p>
+                </div>
                   {localStorage.getItem("role") === "admin" ?
                     <>
                         <Link to={`/deleteMistiri/${plumber.id}`}>

@@ -2,6 +2,9 @@ import React from 'react';
 import '../../css/Review.css';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import img from '../../images/a.jpg'
+import img1 from '../../images/b.png'
+
 
 
 
@@ -64,7 +67,7 @@ function Review() {
                 <div class="small_card"  >
                   
                     <div class="card-review" key={mistiri.id}>
-                        <img class="round_review" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                        <img class="round_review" src={img} alt="user" />
                         <div class="card__rname_outer">
                             <div class="card__rname">
                                 <p >{mistiri.customer?.firstName} {mistiri.customer?.lastName}</p>
@@ -94,7 +97,7 @@ function Review() {
                             <div class="box-top">
                                 <div class="profile">
                                     <div class="profile-img">
-                                        <img src="images/c-1.jpg" />
+                                        <img src={img1} />
                                     </div>
                                     <div class="name-user">
                                         <strong>{review.customer.firstName} {review.customer.lastName}
