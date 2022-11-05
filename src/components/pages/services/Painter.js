@@ -62,6 +62,7 @@ function Painter() {
     <div >
 
       <section>
+        <div class="main-painter">
         <div class="text-painter"><p><b>PAINTER</b></p></div>
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
           <div className='grid grid-cols-2 border relative bg-gray-100 p-2 text-left '>
@@ -133,6 +134,7 @@ function Painter() {
 
         </div>
         : <></>}
+        </div>
       </section>
 
     </div>

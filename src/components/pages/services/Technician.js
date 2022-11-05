@@ -65,6 +65,7 @@ function Technician() {
     <div >
 
       <section>
+        <div class="main_technician">
         <div class="text-technician"><p><b>TECHNICIAN</b></p></div>
         
         <div className='flex flex-row-reverse bg-[#5a6170] pr-4 '>
@@ -136,7 +137,7 @@ function Technician() {
 
         </div>
         : <></>}
-
+</div>
       </section>
 
     </div>

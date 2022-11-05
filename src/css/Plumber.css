@@ -9,6 +9,10 @@
   
 
 } 
+.main_plumber{
+  height: 1000px;
+background-color: #5a6170;
+}
 .text-plumber{
 padding-top: 110px;
 background-color: #5a6170;
@@ -28,6 +32,7 @@ color: white;
   background-color: #5a6170;
   font-family: 'Baloo Paaji 2', cursive;
   padding-bottom: 5px;
+ 
   
 }
 
