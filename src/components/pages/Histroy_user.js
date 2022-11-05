@@ -3,6 +3,7 @@ import '../../css/Histroy_user.css';
 import axios from 'axios';
 import DashboardComU from "./DashboardComU";
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,60 +32,66 @@ function Histroy_user() {
 
 
 
-    return (
+  return (
 
-<div className=' md:grid grid-cols-5 w-full h-full '>
-
-
-<DashboardComU />
+    <div className=' md:grid grid-cols-5 w-full h-full '>
 
 
-{/* Edit Form Starts Here */}
-<div className='col-span-4'>
-
-<div class="table">
-<table>
-  <caption>User Histroy Page</caption>
-  <caption>You Hired:</caption>
-
-  <thead>
-    <tr>
-      <th scope="col">Problem ID</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Phone</th>
-      <th scope="col">Email</th>
-      <th scope="col">Category</th>
-      <th scope="col">Description</th>
+      <DashboardComU />
 
 
-    </tr>
-  </thead>
-  <tbody>
-  {userHistory.map(problem => (
-    <tr>
-    <td data-label="Problem ID">{problem.id}</td>
-      <td data-label="First Name">{problem.mistiriDetail?.customer?.firstName}</td>
-      <td data-label="Last Name">{problem.mistiriDetail?.customer?.lastName}</td>
-      <td data-label="Phone">{problem.mistiriDetail?.customer?.phoneNo}</td>
-      <td data-label="Email">{problem.mistiriDetail?.customer?.email}</td>
-      <td data-label="Description">{problem.mistiriDetail?.service}</td>
-      <td data-label="Description">{problem.description}</td>
+      {/* Edit Form Starts Here */}
+      <div className='col-span-4'>
 
-      
-    </tr>
-    ))}
-  </tbody>
-</table>
+        <div class="table">
+          <table>
+            <caption>User Histroy Page</caption>
+            <caption>You Hired:</caption>
 
-
-</div>
-
-</div>
+            <thead>
+              <tr>
+                <th scope="col">Problem ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+                <th scope="col">Rate</th>
 
 
+              </tr>
+            </thead>
+            <tbody>
+              {userHistory.map(problem => (
+                <tr>
+                  <td data-label="Problem ID">{problem.id}</td>
+                  <td data-label="First Name">{problem.mistiriDetail?.customer?.firstName}</td>
+                  <td data-label="Last Name">{problem.mistiriDetail?.customer?.lastName}</td>
+                  <td data-label="Phone">{problem.mistiriDetail?.customer?.phoneNo}</td>
+                  <td data-label="Email">{problem.mistiriDetail?.customer?.email}</td>
+                  <td data-label="Description">{problem.mistiriDetail?.service}</td>
+                  <td data-label="Description">{problem.description}</td>
+                  <td data-label="Description">
+                    <Link to={`/rateMeform/${problem.mistiriDetail?.id}/${problem.mistiriDetail?.customer?.id}`}>
+                      Rate Me
+                    </Link>
+                  </td>
 
-</div>
-    );
+
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+  );
 }
 export default Histroy_user;

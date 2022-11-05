@@ -118,9 +118,9 @@ function Plumber() {
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>
 
-                <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
+                {/* <Link to={`/rateMeform/${plumber.id}/${plumber.customer.id}`}>
                   <button class="btn draw-border">Rate Me</button>
-                </Link>
+                </Link> */}
 
 
                 <Link to={`/Review/${plumber.id}`}>

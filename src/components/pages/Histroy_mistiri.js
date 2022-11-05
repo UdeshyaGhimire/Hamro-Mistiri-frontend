@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 
 
 
+
 function Histroy_mistiri() {
 
   const params = useParams();
@@ -28,6 +29,10 @@ function Histroy_mistiri() {
       })
       .catch(err => console.log(err));
   }, []);
+
+  const handelClick = (event) => {
+    alert("rate me called");
+  };
 
 
   return (
@@ -53,9 +58,7 @@ function Histroy_mistiri() {
                 <th scope="col">Last Name</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Email</th>
-
                 <th scope="col">Description</th>
-
               </tr>
             </thead>
             <tbody>
@@ -67,8 +70,6 @@ function Histroy_mistiri() {
                 <td data-label="Phone">{problem.customer?.phoneNo}</td>
                 <td data-label="Email">{problem.customer?.email}</td>
                 <td data-label="Description">{problem.description}</td>
-
-
               </tr>
               ))}
             </tbody>
