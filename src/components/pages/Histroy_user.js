@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 
 
 
+
 function Histroy_user() {
 
   const params = useParams();
@@ -34,6 +35,9 @@ function Histroy_user() {
     return (
 
 <div className=' md:grid grid-cols-5 w-full h-full '>
+  
+  
+  
 
 
 <DashboardComU />
@@ -41,9 +45,13 @@ function Histroy_user() {
 
 {/* Edit Form Starts Here */}
 <div className='col-span-4'>
+  
+
 
 <div class="table">
-<table>
+  
+  
+<table > 
   <caption>User Histroy Page</caption>
   <caption>You Hired:</caption>
 
