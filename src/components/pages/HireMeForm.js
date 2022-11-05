@@ -12,6 +12,7 @@ function HireMeForm() {
 
   const params = useParams();
   const mistiriId = params.id;
+  const mistriCusID = params.cid;
   const costumerId = params.cudId;
   console.log(costumerId);
 
@@ -61,7 +62,7 @@ function HireMeForm() {
   };
 
   const handleForm = (event) => {
-    if (costumerId == localStorage.getItem("userId")) {
+    if (mistriCusID === localStorage.getItem("userId")) {
       window.location.href = "/";
       alert("You cannot hier yourself. Hier other plumber");  
     } else {
@@ -82,7 +83,6 @@ function HireMeForm() {
       }
 
       if (formSubmissionPreventionFlag === false) {
-        alert(costumerId);
         axios.post(`http://localhost:8080/${costumerId}/addProblem/${mistiriId}`, {
           "urgency": urgency,
           "description": problem
@@ -160,7 +160,7 @@ function HireMeForm() {
               <Suggestion errorMessage={problemErrorMessage} />
               <Suggestion errorMessage={postErrorMessage} />
               <SuccessText errorMessage={trueValue} />
-              <div className='flex flex-col'>
+              <div className='flex flex-col justify-center items-center'>
               {creatingSignal ?
                   <LoadingIcons.Oval stroke='#6ced07'
                     fill="#06bcee"
