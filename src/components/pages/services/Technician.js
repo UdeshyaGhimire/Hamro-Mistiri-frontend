@@ -122,9 +122,9 @@ function Technician() {
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>
 
-                <Link to={`/rateMeform/${technician.id}/${technician.customer.id}`}>
+                {/* <Link to={`/rateMeform/${technician.id}/${technician.customer.id}`}>
                   <button class="btn draw-border">Rate Me</button>
-                </Link>
+                </Link> */}
 
 
                 <Link to={`/Review/${technician.id}`}>

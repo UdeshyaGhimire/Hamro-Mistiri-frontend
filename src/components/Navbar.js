@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false)
@@ -60,7 +60,12 @@ const Navbar = () => {
               }
 
               {localStorage.getItem("role") === "Customer" ?
-              <Link to={`/dashboarduser/${localStorage.getItem("userId")}`}>  <a activeClass="active" hashSpy={true} offset='130' >  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a></Link>
+                <Link to={`/dashboarduser/${localStorage.getItem("userId")}`}>  <a activeClass="active" hashSpy={true} offset='130' >  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a></Link>
+                : <></>
+              }
+
+              {localStorage.getItem("role") === "admin" ?
+                <Link to={`/dashboardadmin`}>  <a activeClass="active" hashSpy={true} offset='130' >  <li className='hover:text-[#f9bb65] hover:cursor-pointer p-4'>Dashboard</li></a></Link>
                 : <></>
               }
 

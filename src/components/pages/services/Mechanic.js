@@ -124,9 +124,7 @@ function Mechanic() {
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>
 
-                <Link to={`/rateMeform/${mechanic.id}/${mechanic.customer.id}`}>
-                  <button class="btn draw-border">Rate Me</button>
-                </Link>
+                
 
 
                 <Link to={`/Review/${mechanic.id}`}>

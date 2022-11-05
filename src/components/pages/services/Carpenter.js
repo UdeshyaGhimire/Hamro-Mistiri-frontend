@@ -120,9 +120,7 @@ function Carpenter() {
                 <button class="btn draw-border" >Hire Me</button>
                 </Link>
 
-                <Link to={`/rateMeform/${carpenter.id}/${carpenter.customer.id}`}>
-                  <button class="btn draw-border">Rate Me</button>
-                </Link>
+               
 
 
                 <Link to={`/Review/${carpenter.id}`}>

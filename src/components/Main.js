@@ -7,7 +7,8 @@ import LogInUser from "./pages/LogInUser";
 import LogInMistiri from "./pages/LogInMistiri";
 import RegisterUser from "./pages/RegisterUser";
 import RegisterMistiri from "./pages/RegisterMistiri";
-import Chat from "./pages/Chat";
+import DeleteMistiri from "./pages/DeleteMistiri";
+import DashboardAdmin from "./pages/DashboardAdmin";
 
 
 import HireMeForm from "./pages/HireMeForm";
@@ -31,6 +32,7 @@ import Carpenter from "./pages/services/Carpenter";
 import Review from "./pages/Review";
 import Histroy_mistiri from "./pages/Histroy_mistiri";
 import Histroy_user from "./pages/Histroy_user";
+import AdminCustomer from "./pages/AdminCustomer";
 
 
 
@@ -44,22 +46,22 @@ function Main() {
         <main >
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/loginuser" element={<LogInUser />} />
-            <Route path="/loginmistiri" element={<LogInMistiri />} />
             <Route path="/mistiris/Plumber" element={<Plumber />} />
             <Route path="/mistiris/Engineer" element={<Engineer />} />
             <Route path="/mistiris/Mechanic" element={<Mechanic />} />
             <Route path="/mistiris/Technician" element={<Technician />} />
             <Route path="/mistiris/Carpenter" element={<Carpenter />} />
             <Route path="/mistiris/Painter" element={<Painter />} />
-            <Route path="/registeruser" element={<RegisterUser />} />
-            <Route path="/chat" element={<Chat />} />
-            <Route path="/registermistiri" element={<RegisterMistiri />} />
+            
             <Route path="/editinfoform" element={<EditInfoForm />} />
 
             {localStorage.getItem("userId") === null ?
               <>
-                <Route path="*" element={<NotFound />} />
+                 <Route path="/loginuser" element={<LogInUser />} />
+                 <Route path="/adminlogin" element={<LogInMistiri />} />
+                 <Route path="/registeruser" element={<RegisterUser />} />
+                 <Route path="/registermistiri" element={<RegisterMistiri />} />
+                 <Route path="*" element={<NotFound />} />
               </> :
               <>
                 <Route path="/hiremeform/:cudId/:id/:cid" element={<HireMeForm />} />
@@ -70,11 +72,6 @@ function Main() {
                 <Route path="/Review/:id" element={<Review />} />
                 <Route path="/Histroy_mistiri/:id" element={<Histroy_mistiri />} />
                 <Route path="/Histroy_user/:id" element={<Histroy_user />} />
-
-
-
-
-
                 <Route path="/dashboarduser/:id" element={<DashboardUser />} />
                 <Route path="/dashboarduseredit/:id" element={<DashboardUserEdit />} />
                 <Route path="/dashboarduserdelete/:id" element={<DashboardUserDelete />} />
@@ -86,7 +83,20 @@ function Main() {
               </>
             }
 
+            {/* admin page login */}
+            {localStorage.getItem("role")=== "admin"?
+              <>
+              <Route path="/deleteMistiri/:id" element={<DeleteMistiri />} />
+              <Route path="/dashboardadmin" element={<DashboardAdmin />} />
+              <Route path="/admincustomer" element={<AdminCustomer />} />
+              </>:
+              <>
+              </>}
+
             <Route path="*" element={<NotFound />} />
+
+
+
           </Routes>
         </main>
         <Footer />
