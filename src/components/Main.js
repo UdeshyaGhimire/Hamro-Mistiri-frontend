@@ -29,6 +29,8 @@ import Mechanic from "./pages/services/Mechanic";
 import Technician from "./pages/services/Technician";
 import Carpenter from "./pages/services/Carpenter";
 import Review from "./pages/Review";
+import Histroy_mistiri from "./pages/Histroy_mistiri";
+import Histroy_user from "./pages/Histroy_user";
 
 
 
@@ -66,6 +68,13 @@ function Main() {
                 <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />
 
                 <Route path="/Review/:id" element={<Review />} />
+                <Route path="/Histroy_mistiri" element={<Histroy_mistiri />} />
+                <Route path="/Histroy_user" element={<Histroy_user />} />
+
+
+
+
+                
                 <Route path="/dashboarduser/:id" element={<DashboardUser />} />
                 <Route path="/dashboarduseredit/:id" element={<DashboardUserEdit />} />
                 <Route path="/dashboarduserdelete/:id" element={<DashboardUserDelete />} />
