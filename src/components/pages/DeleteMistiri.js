@@ -41,13 +41,12 @@ function DeleteMistiri() {
       setCreatingSignal(true);
       event.preventDefault();
 
-        axios.post(`http://localhost:8080/${costumerId}/addProblem/${mistiriId}`)
+        axios.post(`http://localhost:8080/`)
           .then(response => {
             // loading =false;
             console.log(response)
             if (response.status === 200) {
               setTrueValue("You have deleted this mistiri");
-              clearFields();
             }
             else {
               console.log(response.data);
