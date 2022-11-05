@@ -53,8 +53,13 @@ color: white;
   margin-top: 15px;
   font-size: 1.5em;
 }
+.self_me{
+
+  color: rgb(58, 20, 224);
+}
 
 .about_me {
+  color: black;
   margin-top: 15px;
   font-size: 1em;
   padding-left:20px;
@@ -62,6 +67,7 @@ color: white;
   margin-bottom: 20px;
   
 }
+
 .round {
   height: 160px;
   width: 160px;

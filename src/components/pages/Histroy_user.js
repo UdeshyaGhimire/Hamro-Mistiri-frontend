@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
 function Histroy_user() {
 
   const params = useParams();
@@ -34,10 +35,14 @@ function Histroy_user() {
 
   return (
 
+
     <div className=' md:grid grid-cols-5 w-full h-full '>
 
 
+
       <DashboardComU />
+
+
 
 
       {/* Edit Form Starts Here */}

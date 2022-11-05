@@ -2,6 +2,8 @@ import React from 'react';
 import '../../../css/Plumber.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import img from '../../../images/a.jpg'
+
 
 
 
@@ -86,7 +88,7 @@ function Plumber() {
           <div class="container-plumber">
             {plumbers.map(plumber => (
               <div class="card-plumber" key={plumber.id} onLoad={checker(plumber)}>
-                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <img class="round" src={img}   alt="user" />
                 <div class="card__name">
                   <p >{plumber.customer.firstName}</p> </div>
                 <div class="grid-container">
@@ -110,9 +112,13 @@ function Plumber() {
                     </>
                   }
                 </div>
+                <div class="self_me">
+                  <p>Self</p>
+                </div>
                 <div class="about_me">
                   <p>{plumber.aboutYou}</p>
                 </div>
+                
 
                 <Link to={`/hiremeform/${localStorage.getItem("userId")}/${plumber.id}/${plumber.customer.id}`}>
                 <button class="btn draw-border" >Hire Me</button>
