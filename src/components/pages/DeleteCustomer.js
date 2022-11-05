@@ -8,7 +8,7 @@ import SuccessText from './SuccessText';
 import LoadingIcons from 'react-loading-icons';
 
 
-function DeleteMistiri() {
+function DeleteCustomer() {
 
   const params = useParams();
   const mistiriId = params.id;
@@ -41,7 +41,7 @@ function DeleteMistiri() {
       setCreatingSignal(true);
       event.preventDefault();
 
-      axios.delete(`http://localhost:8080/deleteMistiriByAdmin/${mistiriId}`)
+      axios.delete(`http://localhost:8080/deleteCustomerByAdmin/${mistiriId}`)
           .then(response => {
             // loading =false;
             console.log(response)
@@ -85,7 +85,7 @@ function DeleteMistiri() {
             {/* Form starts here */}
             <form className='pt-[65px]' onSubmit={handleForm}>
 
-              <h2 className='text-4xl font-bold text-center pt-0 py-8 hover:text-[#f09e2a]'>Are you sure you want to delete this mistiri ?</h2>
+              <h2 className='text-4xl font-bold text-center pt-0 py-8 hover:text-[#f09e2a]'>Are you sure you want to delete this customer ?</h2>
               <Suggestion errorMessage={postErrorMessage} />
               <SuccessText errorMessage={trueValue} />
               <div className='flex flex-col justify-center items-center'>
@@ -119,6 +119,6 @@ function DeleteMistiri() {
 
   );
 }
-export default DeleteMistiri;
+export default DeleteCustomer;
 
 

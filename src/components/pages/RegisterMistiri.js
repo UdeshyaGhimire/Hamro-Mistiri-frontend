@@ -397,11 +397,6 @@ function RegisterMistiri() {
             <Suggestion errorMessage={employeeStatusErrorMessage} />
           </div>
 
-          <div className='flex flex-col mb-4'>
-            <div className='border relative bg-gray-100 p-2 text-left'>Documents:
-              <div className='text-base '>
-                <input className=' ' placeholder="Documents" type="file" />
-              </div></div></div>
 
           <div className='flex flex-col mb-4'>
             <input className='border relative bg-gray-100 p-2 ' placeholder="About You" name='aboutYou' type="text" onChange={handleAboutYou} value={aboutYou} />

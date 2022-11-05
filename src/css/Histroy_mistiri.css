@@ -28,8 +28,12 @@ table {
   }
   
   table th,
-  table td {
+  table .tbl {
     padding: .625em;
+    text-align: center;
+  }
+  table.tb1 {
+    padding: .400em;
     text-align: center;
   }
   

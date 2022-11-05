@@ -33,6 +33,7 @@ import Review from "./pages/Review";
 import Histroy_mistiri from "./pages/Histroy_mistiri";
 import Histroy_user from "./pages/Histroy_user";
 import AdminCustomer from "./pages/AdminCustomer";
+import DeleteCustomer from "./pages/DeleteCustomer";
 
 
 
@@ -87,6 +88,7 @@ function Main() {
             {localStorage.getItem("role")=== "admin"?
               <>
               <Route path="/deleteMistiri/:id" element={<DeleteMistiri />} />
+              <Route path="/deleteCustomer/:id" element={<DeleteCustomer />} />
               <Route path="/dashboardadmin" element={<DashboardAdmin />} />
               <Route path="/admincustomer" element={<AdminCustomer />} />
               </>:
