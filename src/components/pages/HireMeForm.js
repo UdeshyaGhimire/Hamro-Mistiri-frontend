@@ -71,13 +71,13 @@ function HireMeForm() {
 
       if (urgency === '') {
         formSubmissionPreventionFlag = true;
-        setReviewErrorMessage("Urgency Cant Be Empty.");
+        setUrgencyErrorMessage("Urgency Cant Be Empty.");
         setCreatingSignal(false);
       }
 
       if (problem === '') {
         formSubmissionPreventionFlag = true;
-        setReviewErrorMessage("Problem Cant Be Empty.");
+        setProblemErrorMessage("Problem Cant Be Empty.");
         setCreatingSignal(false);
       }
 
