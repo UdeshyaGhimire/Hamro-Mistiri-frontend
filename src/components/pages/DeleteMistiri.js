@@ -74,16 +74,14 @@ function DeleteMistiri() {
       <Painter />
       <div className='fixed inset-0 bg-clack bg-opacity-30 bg-zinc-800/60 backdrop-blur-sm flex justify-center items-center'>
 
-        <div className='rounded-xl border-[5px] border-[#484949] mt-[165px]  grid grid-cols-1 md:grid-cols-2 bg-white m-auto h-[550px] shadow-lg  shadow-gray-200 sm:max-w-[900px]  '>
-          <div className=' flex w-full h-[540px] hidden md:block'>
-            <img className='inline w-full h-full' src={HireImg} alt="/" />
-          </div>
+        <div className='rounded-xl border-[5px] border-[#484949] mt-[165px] px-10  bg-white m-auto h-[370px] shadow-lg  shadow-gray-200 sm:max-w-[700px]  '>
+          
           <div className='p-4  '>
             {/* to close form */}
             <a className='flex justify-end text-2xl font-bold text-gray-400 ' href='/'><button className=''></button>X</a>
 
             {/* Form starts here */}
-            <form className='pt-[65px]' onSubmit={handleForm}>
+            <form className='pt-[25px] px-12' onSubmit={handleForm}>
 
               <h2 className='text-4xl font-bold text-center pt-0 py-8 hover:text-[#f09e2a]'>Are you sure you want to delete this mistiri ?</h2>
               <Suggestion errorMessage={postErrorMessage} />
@@ -99,7 +97,7 @@ function DeleteMistiri() {
                     strokeWidth={5}
                   />
                   :
-                  <button className='w-full py-3 mt-[30px] bg-[#666668] hover:bg-[#26282e] relative text-white hover:bold'>
+                  <button className='w-[350px] py-3 mt-[30px] bg-[#666668] hover:bg-[#26282e] relative text-white hover:bold'>
                    Yes
                   </button>
                 }
