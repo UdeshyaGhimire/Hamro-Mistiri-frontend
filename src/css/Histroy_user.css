@@ -40,6 +40,17 @@ table {
     text-transform: uppercase;
     
   }
+  table td button{
+      padding-left:12px;
+      padding-right: 12px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      background-color: rgb(161, 50, 50);
+
+      color:white;
+
+  }
+  
   
   @media screen and (max-width: 600px) {
     table {
@@ -90,7 +101,7 @@ table {
       border-bottom: 0;
     }
   }
-  
+
   
   
   
