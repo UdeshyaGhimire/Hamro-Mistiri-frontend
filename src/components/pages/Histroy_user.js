@@ -52,6 +52,7 @@ function Histroy_user() {
           <table>
             <caption>User Histroy Page</caption>
             <caption>You Hired:</caption>
+            
 
             <thead>
               <tr>
@@ -62,7 +63,7 @@ function Histroy_user() {
                 <th scope="col">Email</th>
                 <th scope="col">Category</th>
                 <th scope="col">Description</th>
-                <th scope="col">Rate</th>
+                <th scope="col">Rate Service</th>
 
 
               </tr>
@@ -75,16 +76,19 @@ function Histroy_user() {
                   <td data-label="Last Name">{problem.mistiriDetail?.customer?.lastName}</td>
                   <td data-label="Phone">{problem.mistiriDetail?.customer?.phoneNo}</td>
                   <td data-label="Email">{problem.mistiriDetail?.customer?.email}</td>
-                  <td data-label="Description">{problem.mistiriDetail?.service}</td>
+                  <td data-label="Category">{problem.mistiriDetail?.service}</td>
                   <td data-label="Description">{problem.description}</td>
-                  <td data-label="Description">
+                  <td data-label="">
+                    <button class="button">
                     <Link to={`/rateMeform/${problem.mistiriDetail?.id}/${problem.mistiriDetail?.customer?.id}`}>
-                      Rate Me
+                    Rate Me
                     </Link>
+                    </button>
                   </td>
 
 
                 </tr>
+                
               ))}
             </tbody>
           </table>
