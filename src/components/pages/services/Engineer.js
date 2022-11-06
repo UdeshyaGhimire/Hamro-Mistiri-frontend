@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../css/Engineer.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import img from '../../../images/a.jpg'
 
 
 
@@ -94,8 +95,7 @@ function Engineer() {
           <div class="container-engineer">
             {engineers.map(engineer => (
               <div class="card-engineer" key={engineer.id} onLoad={checker(engineer)}>
-                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-                <div class="card__name">
+ <img class="round" src={img}   alt="user" />                <div class="card__name">
                   <p >{engineer.customer.firstName}</p> </div>
                 <div class="grid-container">
 
@@ -117,6 +117,9 @@ function Engineer() {
                       <i class="fa-solid fa-star-half"></i>
                     </>
                   }
+                </div>
+                <div class="self_me">
+                  <p>Self</p>
                 </div>
                 <div class="about_me">
                   <p>{engineer.aboutYou}</p>

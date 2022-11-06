@@ -2,6 +2,7 @@ import React from 'react';
 import '../../../css/Painter.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import img from '../../../images/a.jpg'
 
 
 
@@ -87,8 +88,7 @@ function Painter() {
         <div class="container-painter">
           {painters.map(painter => (
             <div class="card-painter" key={painter.id} onLoad={checker(painter)}>
-              <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-              <div class="card__name">
+ <img class="round" src={img}   alt="user" />              <div class="card__name">
                 <p >{painter.customer.firstName}</p> </div>
               <div class="grid-container">
 
@@ -111,6 +111,9 @@ function Painter() {
                     </>
                   }
               </div>
+              <div class="self_me">
+                  <p>Self</p>
+                </div>
               <div class="about_me">
                 <p>{painter.aboutYou}</p>
               </div>

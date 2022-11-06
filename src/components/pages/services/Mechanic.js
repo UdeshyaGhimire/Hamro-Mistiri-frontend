@@ -2,6 +2,8 @@ import React from 'react';
 import '../../../css/Mechanic.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import img from '../../../images/a.jpg'
+
 
 
 
@@ -91,8 +93,7 @@ function Mechanic() {
         <div class="container-mechanic">
            {mechanics.map(mechanic => (
                <div class="card-mechanic" key={mechanic.id} onLoad={checker(mechanic)}>
-               <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-               <div class="card__name">
+ <img class="round" src={img}   alt="user" />               <div class="card__name">
                  <p >{mechanic.customer.firstName}</p> </div>
                <div class="grid-container">
    
@@ -115,6 +116,9 @@ function Mechanic() {
                     </>
                   }
                </div>
+               <div class="self_me">
+                  <p>Self</p>
+                </div>
                <div class="about_me">
                 <p>{mechanic.aboutYou}</p>
               </div>
