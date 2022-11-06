@@ -155,7 +155,7 @@ function HireMeForm() {
                 <Suggestion errorMessage={urgencyErrorMessage} />
               </div>
               <div className='flex flex-col mb-4'>
-                <input className='mt-[15px] border relative bg-gray-100 p-2 ' placeholder="List you're problem" name='aboutYou' type="text"  maxLength={100} value={problem} onChange={handleProblemChange} />
+                <input className='mt-[15px] border relative bg-gray-100 p-2 ' placeholder="List you're problem" name='aboutYou' type="text"  maxLength={50} value={problem} onChange={handleProblemChange} />
               </div>
               <Suggestion errorMessage={problemErrorMessage} />
               <Suggestion errorMessage={postErrorMessage} />
