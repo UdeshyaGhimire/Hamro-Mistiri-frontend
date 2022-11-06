@@ -12,7 +12,7 @@ import DashboardAdmin from "./pages/DashboardAdmin";
 
 
 import HireMeForm from "./pages/HireMeForm";
-import EditInfoForm from "./pages/EditInfoForm";
+
 import RateMeForm from "./pages/RateMeForm";
 import Footer from "./pages/Footer";
 import DashboardMistiri from "./pages/DashboardMistiri";
@@ -54,7 +54,7 @@ function Main() {
             <Route path="/mistiris/Carpenter" element={<Carpenter />} />
             <Route path="/mistiris/Painter" element={<Painter />} />
             
-            <Route path="/editinfoform" element={<EditInfoForm />} />
+         
 
             {localStorage.getItem("userId") === null ?
               <>
@@ -67,7 +67,7 @@ function Main() {
               <>
                 <Route path="/hiremeform/:cudId/:id/:cid" element={<HireMeForm />} />
 
-                <Route path="/editinfoform" element={<EditInfoForm />} />
+               
                 <Route path="/rateMeform/:id/:cusId" element={<RateMeForm />} />
 
                 <Route path="/Review/:id" element={<Review />} />
