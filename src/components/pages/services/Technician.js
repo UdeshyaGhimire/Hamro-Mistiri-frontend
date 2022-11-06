@@ -2,6 +2,8 @@ import React from 'react';
 import '../../../css/Technician.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import img from '../../../images/a.jpg'
+
 
 
 
@@ -90,8 +92,7 @@ function Technician() {
         <div class="container-technician">
            {technicans.map(technician => (
                <div class="card-technician" key={technician.id} onLoad={checker(technician)}>
-               <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-               <div class="card__name">
+ <img class="round" src={img}   alt="user" />               <div class="card__name">
                  <p >{technician.customer.firstName}</p> </div>
                <div class="grid-container">
    
@@ -114,6 +115,9 @@ function Technician() {
                     </>
                   }
                </div>
+               <div class="self_me">
+                  <p>Self</p>
+                </div>
                <div class="about_me"> 
                  <p>{technician.aboutYou}</p>
                  </div>

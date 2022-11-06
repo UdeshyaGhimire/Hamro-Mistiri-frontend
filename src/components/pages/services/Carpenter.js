@@ -2,6 +2,8 @@ import React from 'react';
 import '../../../css/Carpenter.css';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
+import img from '../../../images/a.jpg'
+
 
 
 
@@ -89,8 +91,7 @@ function Carpenter() {
           <div class="container-carpenter">
             {carpenters.map(carpenter => (
               <div class="card-carpenter" key={carpenter.id} onLoad={checker(carpenter)}>
-                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-                <div class="card__name">
+ <img class="round" src={img}   alt="user" />                <div class="card__name">
                   <p >{carpenter.customer.firstName}</p> </div>
                 <div class="grid-container">
 
@@ -112,6 +113,9 @@ function Carpenter() {
                       <i class="fa-solid fa-star-half"></i>
                     </>
                   }
+                </div>
+                <div class="self_me">
+                  <p>Self</p>
                 </div>
                 <div class="about_me">
                   <p>{carpenter.aboutYou}</p>

@@ -50,7 +50,10 @@ color: white;
   box-shadow: rgba(0, 0, 0, 0.7);
   color: white;
 }
+.self_me{
 
+  color: rgb(58, 20, 224);
+}
 .card__name {
   margin-top: 15px;
   font-size: 1.5em;

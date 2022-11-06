@@ -23,6 +23,10 @@ color: white;
 
 
 }
+.self_me{
+
+  color: rgb(58, 20, 224);
+}
 .container-mechanic {
   display: grid;
   grid-template-columns: 300px 300px 300px;
