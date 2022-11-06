@@ -112,7 +112,7 @@ function Plumber() {
                   }
                 </div>
                 <div class="self_me">
-                  <p>Self</p>
+                  <p>{plumber.employeeStatus}</p>
                 </div>
                 <div class="about_me">
                   <p>{plumber.aboutYou}</p>
