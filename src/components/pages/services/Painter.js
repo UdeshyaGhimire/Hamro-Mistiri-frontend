@@ -52,7 +52,7 @@ function Painter() {
     axios.get(url)
       .then((res) => {
         // console.log(res.data);
-        // console.log(res.data);
+         console.log(res.data);
 
         setPainters(res.data);
       })
@@ -112,7 +112,7 @@ function Painter() {
                   }
               </div>
               <div class="self_me">
-                  <p>Self</p>
+                  <p>{painter.employeeStatus}</p>
                 </div>
               <div class="about_me">
                 <p>{painter.aboutYou}</p>

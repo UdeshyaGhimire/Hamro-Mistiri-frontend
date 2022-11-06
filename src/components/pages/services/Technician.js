@@ -116,7 +116,7 @@ function Technician() {
                   }
                </div>
                <div class="self_me">
-                  <p>Self</p>
+                  <p>{technician.employeeStatus}</p>
                 </div>
                <div class="about_me"> 
                  <p>{technician.aboutYou}</p>

@@ -74,7 +74,9 @@ function DeleteMistiri() {
       <Painter />
       <div className='fixed inset-0 bg-clack bg-opacity-30 bg-zinc-800/60 backdrop-blur-sm flex justify-center items-center'>
 
+
         <div className='rounded-xl border-[5px] border-[#484949] mt-[165px] px-10  bg-white m-auto h-[370px] shadow-lg  shadow-gray-200 sm:max-w-[700px]  '>
+
           
           <div className='p-4  '>
             {/* to close form */}

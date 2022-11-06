@@ -1,6 +1,6 @@
 import React from 'react';
 import HireImg from '../../assets/hire.jpg'
-import Painter from './services/Painter';
+import AdminCustomer from './AdminCustomer';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Suggestion from './Suggestion';
@@ -71,11 +71,13 @@ function DeleteCustomer() {
 
   return (
     <div>
-      <Painter />
+      <AdminCustomer />
       <div className='fixed inset-0 bg-clack bg-opacity-30 bg-zinc-800/60 backdrop-blur-sm flex justify-center items-center'>
+
 
         <div className='rounded-xl border-[5px] border-[#484949] mt-[165px]   bg-white m-auto h-[370px] shadow-lg  shadow-gray-200 sm:max-w-[700px]  '>
          
+
           <div className='p-4  '>
             {/* to close form */}
             <a className='flex justify-end text-2xl font-bold text-gray-400 ' href='/'><button className=''></button>X</a>

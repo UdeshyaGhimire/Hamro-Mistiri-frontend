@@ -119,7 +119,7 @@ function Engineer() {
                   }
                 </div>
                 <div class="self_me">
-                  <p>Self</p>
+                  <p>{engineer.employeeStatus}</p>
                 </div>
                 <div class="about_me">
                   <p>{engineer.aboutYou}</p>
