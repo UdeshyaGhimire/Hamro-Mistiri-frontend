@@ -19,8 +19,32 @@ const Navbar = () => {
         {/* Top first row of navbar containing login and register */}
         {localStorage.getItem("userId")
           ? <div className=' px-2 flex flex-row-reverse items-center w-full h-full'>
+            {localStorage.getItem("role") === "Mistiri" ?
+            <>
+            <Link to={`/dashboardmistiri/${localStorage.getItem("userId")}`}>
+              <a ><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>{localStorage.getItem("name")}</button></a>
+              </Link>
+            </>:<></>}
 
-            <a ><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>{localStorage.getItem("name")}</button></a>
+
+            {localStorage.getItem("role") === "Customer" ?
+            <>
+            <Link to={`/dashboarduser/${localStorage.getItem("userId")}`}>
+              <a ><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>{localStorage.getItem("name")}</button></a>
+              </Link>
+            </>:<></>}
+
+
+            {localStorage.getItem("role") === "admin" ?
+            <>
+            <Link to={`/dashboardadmin`}>
+              <a ><button className='transition ease-in-out delay-150 border-none bg-transparent text-[#fea72b] mr-3 px-5 py-1 hover:-translate-y-1 hover:scale-110 hover:bg-[#fea72b] shadow hover:shadow-[#fea72b] duration-300 hover:text-[#3d414a] '>{localStorage.getItem("name")}</button></a>
+              </Link>
+            </>:<></>}
+
+
+
+            
 
             <div className='text-[#fea72b] mr-4'>/</div>
 

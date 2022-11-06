@@ -115,12 +115,11 @@ function Carpenter() {
                   }
                 </div>
                 <div class="self_me">
+                <p>{carpenter.employeeStatus}</p>
+                
                 </div>
                 <div class="about_me">
-                  <p>{carpenter.employeeStatus}</p>
-                </div>
-                <div class="self">
-                  <p>{carpenter.aboutYou}</p>
+                <p>{carpenter.aboutYou}</p>
                 </div>
                 {localStorage.getItem("role") === "admin" ?
                     <>
