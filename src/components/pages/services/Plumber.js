@@ -89,7 +89,7 @@ function Plumber() {
               <div class="card-plumber" key={plumber.id} onLoad={checker(plumber)}>
                 <img class="round" src={img}   alt="user" />
                 <div class="card__name">
-                  <p >{plumber.customer.firstName}</p> </div>
+                  <p >{plumber.customer.firstName}{" "}{plumber.customer.lastName}</p> </div>
                 <div class="grid-container">
 
                   <div class="grid-child-posts">

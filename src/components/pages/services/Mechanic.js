@@ -94,7 +94,7 @@ function Mechanic() {
            {mechanics.map(mechanic => (
                <div class="card-mechanic" key={mechanic.id} onLoad={checker(mechanic)}>
  <img class="round" src={img}   alt="user" />               <div class="card__name">
-                 <p >{mechanic.customer.firstName}</p> </div>
+                 <p >{mechanic.customer.firstName}{" "}{mechanic.customer.lastName}</p> </div>
                <div class="grid-container">
    
                  <div class="grid-child-posts">

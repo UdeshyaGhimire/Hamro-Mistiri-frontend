@@ -93,7 +93,7 @@ function Technician() {
            {technicans.map(technician => (
                <div class="card-technician" key={technician.id} onLoad={checker(technician)}>
  <img class="round" src={img}   alt="user" />               <div class="card__name">
-                 <p >{technician.customer.firstName}</p> </div>
+                 <p >{technician.customer.firstName}{" "}{technician.customer.lastName}</p> </div>
                <div class="grid-container">
    
                  <div class="grid-child-posts">

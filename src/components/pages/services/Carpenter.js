@@ -92,7 +92,7 @@ function Carpenter() {
             {carpenters.map(carpenter => (
               <div class="card-carpenter" key={carpenter.id} onLoad={checker(carpenter)}>
  <img class="round" src={img}   alt="user" />                <div class="card__name">
-                  <p >{carpenter.customer.firstName}</p> </div>
+                  <p >{carpenter.customer.firstName}{" "}{carpenter.customer.lastName}</p> </div>
                 <div class="grid-container">
 
                   <div class="grid-child-posts">

@@ -89,7 +89,7 @@ function Painter() {
           {painters.map(painter => (
             <div class="card-painter" key={painter.id} onLoad={checker(painter)}>
  <img class="round" src={img}   alt="user" />              <div class="card__name">
-                <p >{painter.customer.firstName}</p> </div>
+                <p >{painter.customer.firstName}{" "}{painter.customer.lastName}</p> </div>
               <div class="grid-container">
 
                 <div class="grid-child-posts">
