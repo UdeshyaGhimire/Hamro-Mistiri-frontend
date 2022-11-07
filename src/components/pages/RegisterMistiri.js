@@ -141,16 +141,28 @@ function RegisterMistiri() {
     console.log("The name from the state is " + firstName + " hello");
     console.log(firstName === '');
 
+    if ((/^[A-Za-z][A-Za-z0-9_]{3,29}$/.test(firstName)) === false) {
+      formSubmissionPreventionFlag = true;
     if (firstName === '') {
       formSubmissionPreventionFlag = true;
       setFirstNameErrorMessage("First Name Cant Be Empty.");
       setCreatingSignal(false);
+    }else{
+      setFirstNameErrorMessage("First letter cant be number");
     }
+    setCreatingSignal(false);
+  }
 
+  if ((/^[A-Za-z][A-Za-z0-9_]{3,29}$/.test(lastName)) === false) {
+    formSubmissionPreventionFlag = true;
     if (lastName === '') {
       formSubmissionPreventionFlag = true;
       setLastNameErrorMessage("Last Name Cant Be Empty.");
+    }else{
+      setLastNameErrorMessage("First letter cant be number");
     }
+    setCreatingSignal(false);
+  }
 
     if (password.length>9) {
       console.log(password.length)
